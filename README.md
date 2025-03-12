@@ -11,7 +11,7 @@ This project aims to develop a dual-interface system for Prestige Printing House
 
 ## Documentation
 
-- [Requirements Analysis](./docs/requirements/requirements-analysis.md)
+- [Requirements Analysis](requirements-analysis.md)
 - [Meeting Notes](./docs/meetings/)
 - [Design Documents](./docs/design/)
 
