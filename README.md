@@ -1,24 +1,42 @@
-🎯 PrintingHouseMS
-Printing house managment system project for Software Engineering Analysis &amp; Design 
 
-A comprehensive software solution for managing book printing orders, production tracking, and customer communication.
+<div align="center">
 
-📝 Project Overview
+# 🎯 **PrintingHouseMS**
 
-This project aims to develop a dual-interface system for Prestige Printing House:
-- A customer-facing portal for configuring and ordering book printing services
-- A staff-facing portal for managing orders and production workflow
+</div>
+PrintingHouseMS is a full-featured software solution designed to streamline book printing orders, production tracking, and customer communication for Prestige Printing House.
 
-📂  Documentation
 
-- [Requirements Analysis](requirements-analysis.md)
-- [Meeting Notes](./docs/meetings/)
-- [Design Documents](./docs/design/)
+## 📝 Project Overview
 
-🎓 Team
-- Jurgen 
-- Arlindo
-- Uendi 
+This project delivers a dual-interface system to meet the needs of both customers and staff:
 
-⏳ Timeline
+  🟢 Customer Portal: Configure and place book printing orders with real-time pricing and preview options.
+  
+  🟠 Staff Portal: Manage incoming orders, track production stages, and optimize workflow efficiency.
+  
+
+## 📂 Documentation
+
+  📘 [Requirements Analysis](requirements-analysis.md)
+  
+  📝 [Meeting Notes](./docs/meetings/)
+  
+  📐 [Design Documents](./docs/design/)
+  
+
+## 🎓 Team
+
+  -Jurgen
+  
+  -Arlindo
+  
+  -Uendi
+  
+##  ⏳ Timeline
 Development is scheduled across four phases from March 2025 to July 2025.
+
+## 🚀 Get Involved
+We welcome feedback and suggestions! Feel free to open issues or reach out to the team.
+
+
