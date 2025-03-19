@@ -20,9 +20,9 @@ This project delivers a dual-interface system to meet the needs of both customer
 
   📘 [Requirements Analysis](requirements-analysis.md)
   
-  📝 [Meeting Notes](docs.md)
+  📝 [Meeting Notes](empty.md)
   
-  📐 [Design Documents](./docs/design/)
+  📐 [Design Documents](docs.md)
   
 
 ## 🎓 Team
