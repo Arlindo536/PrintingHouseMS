@@ -24,44 +24,43 @@
 | NFR5 | Non-Functional | The system shall support multiple concurrent users (at least 100). | High |
 | NFR6 | Non-Functional | The staff interface shall be intuitive for users with limited technical experience. | High |
 
-
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
   <!-- Background -->
   <rect width="800" height="600" fill="white"/>
   
   <!-- Onion Diagram Circles -->
-  <circle cx="400" cy="250" r="200" fill="#8e44ad" opacity="0.8"/>
-  <circle cx="400" cy="250" r="150" fill="#16a085" opacity="0.8"/>
-  <circle cx="400" cy="250" r="100" fill="#e67e22" opacity="0.8"/>
-  <circle cx="400" cy="250" r="50" fill="#f9f9f9" stroke="#333" stroke-width="1"/>
+  <circle cx="350" cy="300" r="200" fill="#9b59b6" opacity="0.8"/>
+  <circle cx="350" cy="300" r="150" fill="#1abc9c" opacity="0.8"/>
+  <circle cx="350" cy="300" r="100" fill="#e67e22" opacity="0.8"/>
+  <circle cx="350" cy="300" r="50" fill="#f9f9f9" stroke="#333" stroke-width="1"/>
   
   <!-- Center Text -->
-  <text x="400" y="245" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">Printing</text>
-  <text x="400" y="270" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">House MS</text>
+  <text x="350" y="295" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">Printing</text>
+  <text x="350" y="320" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">House MS</text>
   
   <!-- Layer Labels and Lines -->
-  <!-- External Layer -->
-  <line x1="600" y1="250" x2="650" y2="250" stroke="#8e44ad" stroke-width="2"/>
-  <text x="655" y="240" font-family="Arial" font-size="14" font-weight="bold">External Factors</text>
-  <text x="655" y="260" font-family="Arial" font-size="12">(Customers, Suppliers,</text>
-  <text x="655" y="275" font-family="Arial" font-size="12">Shipping Providers,</text>
-  <text x="655" y="290" font-family="Arial" font-size="12">Competitors)</text>
+  <!-- External Layer (Purple) -->
+  <line x1="550" y1="300" x2="580" y2="300" stroke="#9b59b6" stroke-width="2"/>
+  <text x="585" y="305" font-family="Arial" font-size="16" font-weight="bold">External Factors</text>
+  <text x="585" y="325" font-family="Arial" font-size="14">(Customers, Suppliers,</text>
+  <text x="585" y="345" font-family="Arial" font-size="14">Shipping Providers,</text>
+  <text x="585" y="365" font-family="Arial" font-size="14">Competitors)</text>
   
-  <!-- Middle Layer -->
-  <line x1="550" y1="200" x2="650" y2="200" stroke="#16a085" stroke-width="2"/>
-  <text x="655" y="190" font-family="Arial" font-size="14" font-weight="bold">Internal Users</text>
-  <text x="655" y="210" font-family="Arial" font-size="12">(Production Workers,</text>
-  <text x="655" y="225" font-family="Arial" font-size="12">Managers, Designers,</text>
-  <text x="655" y="240" font-family="Arial" font-size="12">Sales Staff)</text>
+  <!-- Middle Layer (Green) -->
+  <line x1="500" y1="220" x2="580" y2="220" stroke="#1abc9c" stroke-width="2"/>
+  <text x="585" y="225" font-family="Arial" font-size="16" font-weight="bold">Internal Users</text>
+  <text x="585" y="245" font-family="Arial" font-size="14">(Production Workers,</text>
+  <text x="585" y="265" font-family="Arial" font-size="14">Managers, Designers,</text>
+  <text x="585" y="285" font-family="Arial" font-size="14">Sales Staff)</text>
   
-  <!-- Inner Layer -->
-  <line x1="500" y1="320" x2="650" y2="320" stroke="#e67e22" stroke-width="2"/>
-  <text x="655" y="310" font-family="Arial" font-size="14" font-weight="bold">System Modules</text>
-  <text x="655" y="330" font-family="Arial" font-size="12">(Order Management,</text>
-  <text x="655" y="345" font-family="Arial" font-size="12">File Processing,</text>
-  <text x="655" y="360" font-family="Arial" font-size="12">Production Tracking,</text>
-  <text x="655" y="375" font-family="Arial" font-size="12">Inventory, Finance)</text>
+  <!-- Inner Layer (Orange) -->
+  <line x1="450" y1="400" x2="580" y2="400" stroke="#e67e22" stroke-width="2"/>
+  <text x="585" y="405" font-family="Arial" font-size="16" font-weight="bold">System Modules</text>
+  <text x="585" y="425" font-family="Arial" font-size="14">(Order Management,</text>
+  <text x="585" y="445" font-family="Arial" font-size="14">File Processing,</text>
+  <text x="585" y="465" font-family="Arial" font-size="14">Production Tracking,</text>
+  <text x="585" y="485" font-family="Arial" font-size="14">Inventory, Finance)</text>
   
   <!-- Title -->
-  <text x="400" y="500" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">ONION DIAGRAM</text>
+  <text x="400" y="550" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">ONION DIAGRAM</text>
 </svg>
