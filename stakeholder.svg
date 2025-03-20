@@ -4,7 +4,7 @@
   
   <!-- Central System -->
   <rect x="325" y="250" width="150" height="80" rx="10" ry="10" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
-  <text x="400" y="290" font-family="Arial" font-size="20" text-anchor="middle" fill="white" font-weight="bold">Printing House MS</text>
+  <text x="400" y="290" font-family="Arial" font-size="15" text-anchor="middle" fill="white" font-weight="bold">Printing House MS</text>
   
   <!-- Primary Stakeholders -->
   <!-- Customers -->
