@@ -51,3 +51,6 @@
 1. What's one feature that would make your job significantly easier?
 2. What information do you need to share with other departments?
 3. How comfortable are you with learning new technology?
+
+##Stakeholder Diagram
+![Stakeholder Diagram](./images/stakeholder-diagram-final.svg)
