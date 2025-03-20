@@ -36,5 +36,5 @@
   <text x="585" y="485" font-family="Arial" font-size="14">Inventory, Finance)</text>
   
   <!-- Title -->
-  <text x="400" y="550" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">ONION DIAGRAM</text>
+  <text x="400" y="50" font-family="Arial" font-size="28" text-anchor="middle" font-weight="bold">ONION DIAGRAM</text>
 </svg>
