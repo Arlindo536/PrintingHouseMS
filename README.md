@@ -23,6 +23,8 @@ This project delivers a dual-interface system to meet the needs of both customer
   📝 [Meeting Notes](notes.md)
   
   📐 [Design Documents](docs.md)
+
+  ✒️[Stakeholder](stakeholder.md)
   
 
 ## 🎓 Team
