@@ -9,8 +9,8 @@
   <circle cx="350" cy="300" r="50" fill="#f9f9f9" stroke="#333" stroke-width="1"/>
   
   <!-- Center Text -->
-  <text x="350" y="295" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">Printing</text>
-  <text x="350" y="320" font-family="Arial" font-size="20" text-anchor="middle" font-weight="bold">House MS</text>
+  <text x="350" y="295" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Printing</text>
+  <text x="350" y="320" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">House MS</text>
   
   <!-- Layer Labels and Lines -->
   <!-- External Layer (Purple) -->
