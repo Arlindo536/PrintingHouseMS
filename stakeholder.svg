@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="white"/>
+  
+  <!-- Central System -->
+  <rect x="325" y="250" width="150" height="80" rx="10" ry="10" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="400" y="290" font-family="Arial" font-size="20" text-anchor="middle" fill="white" font-weight="bold">Printing House MS</text>
+  
+  <!-- Primary Stakeholders -->
+  <!-- Customers -->
+  <rect x="100" y="100" width="150" height="70" rx="10" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="175" y="140" font-family="Arial" font-size="18" text-anchor="middle" fill="white" font-weight="bold">Customers</text>
+  <line x1="175" y1="170" x2="325" y2="270" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Production Staff -->
+  <rect x="100" y="400" width="150" height="70" rx="10" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="175" y="440" font-family="Arial" font-size="18" text-anchor="middle" fill="white" font-weight="bold">Production Staff</text>
+  <line x1="175" y1="400" x2="325" y2="310" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Management -->
+  <rect x="550" y="400" width="150" height="70" rx="10" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="625" y="440" font-family="Arial" font-size="18" text-anchor="middle" fill="white" font-weight="bold">Management</text>
+  <line x1="625" y1="400" x2="475" y2="310" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Design Team -->
+  <rect x="550" y="100" width="150" height="70" rx="10" ry="10" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="625" y="140" font-family="Arial" font-size="18" text-anchor="middle" fill="white" font-weight="bold">Design Team</text>
+  <line x1="625" y1="170" x2="475" y2="270" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Secondary Stakeholders -->
+  <!-- Suppliers -->
+  <rect x="20" y="250" width="130" height="60" rx="10" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="85" y="285" font-family="Arial" font-size="16" text-anchor="middle" fill="white" font-weight="bold">Suppliers</text>
+  <line x1="150" y1="280" x2="325" y2="290" stroke="#666" stroke-width="2" stroke-dasharray="10,10"/>
+  
+  <!-- Shipping Partners -->
+  <rect x="650" y="250" width="130" height="60" rx="10" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="715" y="285" font-family="Arial" font-size="16" text-anchor="middle" fill="white" font-weight="bold">Shipping Partners</text>
+  <line x1="650" y1="280" x2="475" y2="290" stroke="#666" stroke-width="2" stroke-dasharray="10,10"/>
+  
+  <!-- IT Support -->
+  <rect x="325" y="480" width="150" height="60" rx="10" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="400" y="515" font-family="Arial" font-size="16" text-anchor="middle" fill="white" font-weight="bold">IT Support</text>
+  <line x1="400" y1="480" x2="400" y2="330" stroke="#666" stroke-width="2" stroke-dasharray="10,10"/>
+  
+  <!-- Regulators -->
+  <rect x="325" y="40" width="150" height="60" rx="10" ry="10" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="400" y="75" font-family="Arial" font-size="16" text-anchor="middle" fill="white" font-weight="bold">Regulators</text>
+  <line x1="400" y1="100" x2="400" y2="250" stroke="#666" stroke-width="2" stroke-dasharray="10,10"/>
+  
+  <!-- Legend -->
+  <rect x="650" y="480" width="20" height="20" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="680" y="495" font-family="Arial" font-size="14" text-anchor="start">Primary Stakeholders</text>
+  
+  <rect x="650" y="510" width="20" height="20" fill="#9b59b6" stroke="#8e44ad" stroke-width="2"/>
+  <text x="680" y="525" font-family="Arial" font-size="14" text-anchor="start">Secondary Stakeholders</text>
+  
+  <rect x="650" y="540" width="20" height="20" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="680" y="555" font-family="Arial" font-size="14" text-anchor="start">System</text>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">STAKEHOLDER DIAGRAM</text>
+</svg>
