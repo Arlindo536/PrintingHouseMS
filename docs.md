@@ -24,6 +24,6 @@
 | NFR5 | Non-Functional | The system shall support multiple concurrent users (at least 100). | High |
 | NFR6 | Non-Functional | The staff interface shall be intuitive for users with limited technical experience. | High |
 
+#
 
-## System Architecture
 ![Onion Diagram](onion-diagram.svg)
