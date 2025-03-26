@@ -1,56 +1,17 @@
-# Key Questions for Printing House Stakeholders
+# Stakeholders Identification Table
 
-## Customers
 
-"We want to understand how you use printing services and what would make your experience better."
+| Stakeholder | Stakeholder Role/Responsibility | Importance | Influence | Interests/Positive Impacts | Concerns |
+|------------|--------------------------------|------------|-----------|----------------------------|----------|
+| **Customers** | • Directly using the product for specific business or personal needs<br>• Solving critical problems through product utilization<br>• Primary end-users seeking solution-driven outcomes | High | High | • Transformative problem-solving capabilities<br>• Significant efficiency improvements (40-60% potential)<br>• Innovative solutions to existing challenges<br>• Direct value creation in their work/life processes | • Product integration complexity<br>• Learning curve<br>• Long-term reliability<br>• Cost-effectiveness<br>• Potential workflow disruptions |
+| **Production Staff** | • Directly responsible for manufacturing and quality control<br>• Implementing product creation processes<br>• Ensuring operational excellence and efficiency | Medium-High | Medium | • Streamlined production workflows<br>• Reduced manual labor requirements<br>• Potential for 25-35% productivity enhancement<br>• Skill development opportunities<br>• Advanced technological interaction | • Potential job role modifications<br>• Technology adaptation challenges<br>• Workplace process reengineering<br>• Skill obsolescence risks<br>• Ergonomic adjustments |
+| **Management** | • Strategic decision-makers<br>• Overseeing product development and market positioning<br>• Evaluating organizational impact and business performance | High | High | • Enhanced competitive market positioning<br>• Potential 20-30% operational efficiency improvement<br>• New revenue stream generation<br>• Strategic business growth opportunities<br>• Innovative organizational capabilities | • Return on Investment uncertainty<br>• Market expansion risks<br>• Long-term sustainability concerns<br>• Alignment with organizational vision<br>• Potential disruptive business model changes |
+| **Design Team** | • Product conceptualization and design<br>• Technical and business requirement identification<br>• Innovation and creative problem-solving | High | Medium-High | • Cutting-edge technological innovation<br>• Creative solution development<br>• Technical challenge resolution<br>• Pushing design and technological boundaries<br>• Professional growth through complex projects | • Technical and resource constraints<br>• Balancing innovation with practicality<br>• Meeting diverse stakeholder expectations<br>• Complex design challenge management<br>• Potential creative limitations |
+| **Suppliers** | • Critical component and service providers<br>• Supporting product development infrastructure<br>• Ensuring quality and timely material delivery | Medium | Medium | • Long-term business partnership opportunities<br>• Potential market segment expansion<br>• Technological collaboration<br>• Innovation ecosystem participation<br>• Diversified business relationships | • Supply chain volatility<br>• Technological compatibility challenges<br>• Pricing and contract negotiation complexities<br>• Market dependency risks<br>• Potential investment requirements |
+| **Shipping Partners** | • Product distribution management<br>• Logistics and transportation coordination<br>• Ensuring safe and timely product delivery | Medium | Medium | • Logistics operation optimization<br>• Advanced tracking mechanism implementation<br>• Technological integration opportunities<br>• Efficiency enhancement potential<br>• Process modernization | • Transportation and regulatory complexities<br>• Cost management challenges<br>• Technology integration difficulties<br>• Performance consistency<br>• Compliance requirements |
+| **IT Support** | • Technical infrastructure provision<br>• System compatibility assurance<br>• Implementation and troubleshooting support | Medium-High | Medium | • Technical system optimization<br>• Advanced technological skill development<br>• Infrastructure enhancement opportunities<br>• Innovative problem-solving platforms<br>• Technological challenge engagement | • Complex system integration<br>• Cybersecurity management<br>• Continuous learning requirements<br>• Technical complexity navigation<br>• Maintenance and support challenges |
 
-1. What frustrates you most about ordering printed books?
-2. How do you prefer to check the status of your orders?
-3. What would an ideal book preview look like to you?
-4. How do you currently handle file uploads for large documents?
-
-## Production Staff
-
-"Your insights on the production process are valuable for designing an efficient system."
-
-1. What information do you absolutely need to start working on an order?
-2. What common issues do you face with customer files?
-3. How do you prioritize jobs during busy periods?
-4. What would make tracking production status easier?
-
-## Management
-
-"We want to ensure the system provides the oversight and data you need."
-
-1. What reports are critical for your decision-making?
-2. How do you currently manage inventory and supplies?
-3. What business metrics matter most to your printing operation?
-4. How do you want to be alerted about production issues?
-
-## Design Team
-
-"Your role in translating customer needs into printable designs is crucial."
-
-1. How do you currently share design proofs with customers?
-2. What would improve your revision and approval process?
-3. What design-related information do you need from customers?
-4. What technical challenges do you face with complex designs?
-
-## Other Stakeholders
-
-"We need to understand how the system connects to your work."
-
-1. **Suppliers**: How could we improve the ordering process for materials?
-2. **Shipping Partners**: What order details do you need to process deliveries efficiently?
-3. **IT Support**: What security and maintenance concerns should we address?
-
-## For Everyone
-
-"A few general questions to help us build a better system."
-
-1. What's one feature that would make your job significantly easier?
-2. What information do you need to share with other departments?
-3. How comfortable are you with learning new technology?
-
-## Stakeholder Diagram
-![Stakeholder Diagram](stakeholder.svg)
+**Strategic Insights:**
+- Holistic stakeholder ecosystem requires adaptive, collaborative approach
+- Each group provides unique perspectives and potential value
+- Success depends on continuous communication and strategic alignment
