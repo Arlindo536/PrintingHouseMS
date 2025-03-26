@@ -15,3 +15,7 @@
 - Holistic stakeholder ecosystem requires adaptive, collaborative approach
 - Each group provides unique perspectives and potential value
 - Success depends on continuous communication and strategic alignment
+  
+#
+
+![Stakeholder Diagram](stakeholder.svg)
