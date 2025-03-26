@@ -25,6 +25,10 @@ This project delivers a dual-interface system to meet the needs of both customer
   📐 [Design Documents](docs.md)
 
   ✒️[Stakeholder](stakeholder.md)
+
+  📊 [UseCase](UseCase.md)
+
+  
   
 
 ## 🎓 Team
