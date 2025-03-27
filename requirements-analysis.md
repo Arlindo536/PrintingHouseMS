@@ -1,5 +1,5 @@
 
-💻 ## Client Interview Session Transcript ✏️
+ ## 💻 Client Interview Session Transcript ✏️
 
 **Date:** March 12, 2025  
 **Client:** Prestige Printing House  
@@ -124,7 +124,7 @@ Data visualization for order volume, types, and revenue metrics.
    - Shipping carrier APIs for delivery tracking
    - Payment gateway integration
 
-💻## UX Approach (Proposed by Arlindo)💻
+## 💻UX Approach (Proposed by Arlindo)💻
 
 1. **Customer Portal:**
    - Wizard-style book ordering process with progress indication
@@ -138,7 +138,7 @@ Data visualization for order volume, types, and revenue metrics.
    - Dark mode for production environment
    - Touch-friendly for tablet use on production floor
 
-📆## Development Timeline (Proposed by Jurgen)📆
+## 📆 Development Timeline (Proposed by Jurgen)📆
 
 1. **Phase 1 (8 weeks):**
    - Core authentication and user management
