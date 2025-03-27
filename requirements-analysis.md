@@ -105,7 +105,7 @@ Integrated messaging with notification system and email integration.
 Data visualization for order volume, types, and revenue metrics.
 *Jurgen's note: Exportable reports in multiple formats with customizable parameters.*
 
-📺## Technical Architecture (Proposed by Uendi)📺
+## 📺 Technical Architecture (Proposed by Uendi)📺
 
 1. **Frontend:**
    - React.js with Material UI for responsive design
