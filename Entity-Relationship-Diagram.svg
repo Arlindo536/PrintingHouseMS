@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<svg width="1400" height="1000" viewBox="0 0 1400 1000" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
   <!-- Styles -->
   <style>
     .entity {
@@ -47,7 +47,6 @@
     <rect class="entity" width="200" height="200" rx="5" ry="5" />
     <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
     <text class="entity-title-text" x="100" y="20">CUSTOMER</text>
-    
     <text class="attribute-text pk-text" x="10" y="50">customer_id (PK)</text>
     <text class="attribute-text" x="10" y="70">name</text>
     <text class="attribute-text" x="10" y="90">email</text>
@@ -62,7 +61,6 @@
     <rect class="entity" width="200" height="200" rx="5" ry="5" />
     <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
     <text class="entity-title-text" x="100" y="20">ORDER</text>
-    
     <text class="attribute-text pk-text" x="10" y="50">order_id (PK)</text>
     <text class="attribute-text fk-text" x="10" y="70">customer_id (FK)</text>
     <text class="attribute-text" x="10" y="90">order_date</text>
@@ -78,7 +76,6 @@
     <rect class="entity" width="200" height="150" rx="5" ry="5" />
     <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
     <text class="entity-title-text" x="100" y="20">ORDER_ITEM</text>
-    
     <text class="attribute-text pk-text" x="10" y="50">item_id (PK)</text>
     <text class="attribute-text fk-text" x="10" y="70">order_id (FK)</text>
     <text class="attribute-text fk-text" x="10" y="90">book_config_id (FK)</text>
@@ -92,7 +89,6 @@
     <rect class="entity" width="230" height="250" rx="5" ry="5" />
     <rect class="entity-title" width="230" height="30" rx="5" ry="5" />
     <text class="entity-title-text" x="115" y="20">BOOK_CONFIG</text>
-    
     <text class="attribute-text pk-text" x="10" y="50">book_config_id (PK)</text>
     <text class="attribute-text" x="10" y="70">title</text>
     <text class="attribute-text" x="10" y="90">author</text>
@@ -111,7 +107,6 @@
     <rect class="entity" width="200" height="200" rx="5" ry="5" />
     <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
     <text class="entity-title-text" x="100" y="20">PRODUCTION_STAGE</text>
-    
     <text class="attribute-text pk-text" x="10" y="50">stage_id (PK)</text>
     <text class="attribute-text fk-text" x="10" y="70">order_id (FK)</text>
     <text class="attribute-text fk-text" x="10" y="90">staff_id (FK)</text>
@@ -127,7 +122,6 @@
     <rect class="entity" width="200" height="180" rx="5" ry="5" />
     <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
     <text class="entity-title-text" x="100" y="20">STAFF</text>
-    
     <text class="attribute-text pk-text" x="10" y="50">staff_id (PK)</text>
     <text class="attribute-text" x="10" y="70">name</text>
     <text class="attribute-text" x="10" y="90">email</text>
@@ -141,7 +135,6 @@
     <rect class="entity" width="200" height="180" rx="5" ry="5" />
     <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
     <text class="entity-title-text" x="100" y="20">NOTIFICATION</text>
-    
     <text class="attribute-text pk-text" x="10" y="50">notification_id (PK)</text>
     <text class="attribute-text" x="10" y="70">recipient_id</text>
     <text class="attribute-text" x="10" y="90">recipient_type</text>
@@ -152,41 +145,34 @@
   </g>
 
   <!-- Relationships -->
-  <!-- CUSTOMER to ORDER -->
   <path class="relationship" d="M300,150 H500" />
   <text class="cardinality" x="320" y="145">1</text>
   <text class="cardinality" x="480" y="145">N</text>
-  
-  <!-- ORDER to ORDER_ITEM -->
+
   <path class="relationship" d="M700,150 H900" />
   <text class="cardinality" x="720" y="145">1</text>
   <text class="cardinality" x="880" y="145">N</text>
-  
-  <!-- ORDER_ITEM to BOOK_CONFIG -->
+
   <path class="relationship" d="M1000,250 V350" />
   <text class="cardinality" x="1010" y="270">N</text>
   <text class="cardinality" x="1010" y="330">1</text>
-  
-  <!-- ORDER to PRODUCTION_STAGE -->
+
   <path class="relationship" d="M600,300 V400" />
   <text class="cardinality" x="610" y="320">1</text>
   <text class="cardinality" x="610" y="380">N</text>
-  
-  <!-- STAFF to PRODUCTION_STAGE -->
+
   <path class="relationship" d="M300,500 H500" />
   <text class="cardinality" x="320" y="495">1</text>
   <text class="cardinality" x="480" y="495">N</text>
-  
-  <!-- CUSTOMER to NOTIFICATION -->
+
   <path class="relationship" d="M200,300 V650" stroke-dasharray="5,5" />
   <text class="cardinality" x="210" y="320">1</text>
   <text class="cardinality" x="210" y="630">N</text>
-  
-  <!-- STAFF to NOTIFICATION -->
+
   <path class="relationship" d="M300,500 Q350,600 300,650" stroke-dasharray="5,5" />
   <text class="cardinality" x="320" y="550">1</text>
   <text class="cardinality" x="310" y="630">N</text>
-  
+
   <!-- Title -->
   <text x="600" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">PrintingHouseMS - Entity Relationship Diagram</text>
 </svg>
