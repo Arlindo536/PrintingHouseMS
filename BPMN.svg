@@ -1,0 +1,227 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <style>
+    .pool {
+      fill: #ffffff;
+      stroke: #000000;
+      stroke-width: 2;
+    }
+    .lane {
+      fill: #ffffff;
+      stroke: #000000;
+      stroke-width: 1;
+    }
+    .lane-title {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      writing-mode: tb;
+      text-anchor: middle;
+    }
+    .task {
+      fill: #ffffff;
+      stroke: #000000;
+      stroke-width: 1;
+      rx: 10;
+      ry: 10;
+    }
+    .event {
+      fill: #ffffff;
+      stroke: #000000;
+      stroke-width: 2;
+    }
+    .gateway {
+      fill: #ffffff;
+      stroke: #000000;
+      stroke-width: 1;
+    }
+    .flow {
+      stroke: #000000;
+      stroke-width: 1.5;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .flow-label {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      fill: #333333;
+    }
+    .text {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      fill: #000000;
+      text-anchor: middle;
+    }
+    .title {
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      fill: #000000;
+      text-anchor: middle;
+    }
+  </style>
+  
+  <!-- Markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text class="title" x="600" y="40">PrintingHouseMS - Book Order Process</text>
+  
+  <!-- Main Pool -->
+  <rect class="pool" x="50" y="80" width="1100" height="690" />
+  
+  <!-- Lanes -->
+  <!-- Customer Lane -->
+  <rect class="lane" x="50" y="80" width="1100" height="200" />
+  <text class="lane-title" x="80" y="180">Customer</text>
+  <line x1="100" y1="80" x2="100" y2="280" stroke="#000000" stroke-width="1" />
+  
+  <!-- Order Management Lane -->
+  <rect class="lane" x="50" y="280" width="1100" height="180" />
+  <text class="lane-title" x="80" y="370">Order Management</text>
+  <line x1="100" y1="280" x2="100" y2="460" stroke="#000000" stroke-width="1" />
+  
+  <!-- Production Lane -->
+  <rect class="lane" x="50" y="460" width="1100" height="180" />
+  <text class="lane-title" x="80" y="550">Production</text>
+  <line x1="100" y1="460" x2="100" y2="640" stroke="#000000" stroke-width="1" />
+  
+  <!-- Shipping Lane -->
+  <rect class="lane" x="50" y="640" width="1100" height="130" />
+  <text class="lane-title" x="80" y="705">Shipping</text>
+  <line x1="100" y1="640" x2="100" y2="770" stroke="#000000" stroke-width="1" />
+  
+  <!-- Customer Process -->
+  <!-- Start Event -->
+  <circle class="event" cx="150" cy="180" r="20" />
+  <circle cx="150" cy="180" r="16" fill="#ffffff" stroke="#000000" stroke-width="1" />
+  
+  <!-- Configure Book Task -->
+  <rect class="task" x="210" y="150" width="120" height="60" />
+  <text class="text" x="270" y="185">Configure Book Order</text>
+  
+  <!-- Upload Manuscript Task -->
+  <rect class="task" x="370" y="150" width="120" height="60" />
+  <text class="text" x="430" y="185">Upload Manuscript</text>
+  
+  <!-- Review Quote Task -->
+  <rect class="task" x="530" y="150" width="120" height="60" />
+  <text class="text" x="590" y="185">Review Quote</text>
+  
+  <!-- Approve Proofs Task -->
+  <rect class="task" x="690" y="150" width="120" height="60" />
+  <text class="text" x="750" y="185">Approve Proofs</text>
+  
+  <!-- Receive Notification Task -->
+  <rect class="task" x="850" y="150" width="120" height="60" />
+  <text class="text" x="910" y="185">Receive Order Updates</text>
+  
+  <!-- End Event -->
+  <circle class="event" cx="1030" cy="180" r="20" />
+  <circle cx="1030" cy="180" r="16" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  <circle cx="1030" cy="180" r="12" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  
+  <!-- Order Management Process -->
+  <!-- Validate Order Task -->
+  <rect class="task" x="210" y="340" width="120" height="60" />
+  <text class="text" x="270" y="375">Validate Order</text>
+  
+  <!-- Calculate Price Task -->
+  <rect class="task" x="370" y="340" width="120" height="60" />
+  <text class="text" x="430" y="375">Calculate Price</text>
+  
+  <!-- Gateway -->
+  <rect class="gateway" x="535" y="340" width="60" height="60" transform="rotate(45 565 370)" />
+  <text class="text" x="565" y="410">Order Approved?</text>
+  
+  <!-- Create Production Order -->
+  <rect class="task" x="690" y="340" width="120" height="60" />
+  <text class="text" x="750" y="375">Create Production Order</text>
+  
+  <!-- Track Order Status -->
+  <rect class="task" x="850" y="340" width="120" height="60" />
+  <text class="text" x="910" y="375">Track Order Status</text>
+  
+  <!-- Production Process -->
+  <!-- Format Check Task -->
+  <rect class="task" x="210" y="520" width="120" height="60" />
+  <text class="text" x="270" y="555">Format Check</text>
+  
+  <!-- Printing Task -->
+  <rect class="task" x="370" y="520" width="120" height="60" />
+  <text class="text" x="430" y="555">Print Book</text>
+  
+  <!-- Binding Task -->
+  <rect class="task" x="530" y="520" width="120" height="60" />
+  <text class="text" x="590" y="555">Bind Book</text>
+  
+  <!-- Quality Control Task -->
+  <rect class="task" x="690" y="520" width="120" height="60" />
+  <text class="text" x="750" y="555">Quality Control</text>
+  
+  <!-- Gateway -->
+  <rect class="gateway" x="855" y="520" width="60" height="60" transform="rotate(45 885 550)" />
+  <text class="text" x="885" y="590">QC Passed?</text>
+  
+  <!-- Shipping Process -->
+  <!-- Package Books Task -->
+  <rect class="task" x="370" y="690" width="120" height="60" />
+  <text class="text" x="430" y="725">Package Books</text>
+  
+  <!-- Ship Order Task -->
+  <rect class="task" x="690" y="690" width="120" height="60" />
+  <text class="text" x="750" y="725">Ship Order</text>
+  
+  <!-- Flow Connections -->
+  <!-- Customer Flow -->
+  <path class="flow" d="M170 180 H210" />
+  <path class="flow" d="M330 180 H370" />
+  <path class="flow" d="M490 180 H530" />
+  <path class="flow" d="M650 180 H690" />
+  <path class="flow" d="M810 180 H850" />
+  <path class="flow" d="M970 180 H1010" />
+  
+  <!-- Order Management Flow -->
+  <path class="flow" d="M330 370 H370" />
+  <path class="flow" d="M490 370 H535" />
+  <path class="flow" d="M595 370 H690" />
+  <path class="flow" d="M810 370 H850" />
+  
+  <!-- Reject Flow -->
+  <path class="flow" d="M565 400 V430 H270 V400" />
+  <text class="flow-label" x="417" y="445">Rejected</text>
+  
+  <!-- Production Flow -->
+  <path class="flow" d="M330 550 H370" />
+  <path class="flow" d="M490 550 H530" />
+  <path class="flow" d="M650 550 H690" />
+  <path class="flow" d="M810 550 H855" />
+  
+  <!-- QC Failed Flow -->
+  <path class="flow" d="M885 580 V600 H430 V580" />
+  <text class="flow-label" x="657" y="615">Failed</text>
+  
+  <!-- Shipping Flow -->
+  <path class="flow" d="M490 720 H690" />
+  
+  <!-- Cross-Lane Flows -->
+  <path class="flow" d="M270 210 V340" />
+  <path class="flow" d="M750 400 V520" />
+  <path class="flow" d="M915 580 H970 V180" stroke-dasharray="5,5" />
+  <path class="flow" d="M885 550 H930 V370" stroke-dasharray="5,5" />
+  <path class="flow" d="M590 210 L590 285 H500 V340" stroke-dasharray="5,5" />
+  <path class="flow" d="M750 580 V690" />
+  <path class="flow" d="M750 750 V780 H1030 V200" stroke-dasharray="5,5" />
+  <path class="flow" d="M270 580 V690" />
+  
+  <!-- Extra annotations -->
+  <text class="flow-label" x="270" y="255">New Order</text>
+  <text class="flow-label" x="750" y="470">Production Request</text>
+  <text class="flow-label" x="965" y="400">Status Updates</text>
+  <text class="flow-label" x="750" y="650">Ready for Shipping</text>
+  <text class="flow-label" x="920" y="500">Order Complete</text>
+</svg>
