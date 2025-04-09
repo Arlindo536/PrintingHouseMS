@@ -1,0 +1,192 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <style>
+    .entity {
+      fill: #f5f5f5;
+      stroke: #333;
+      stroke-width: 2;
+    }
+    .entity-title {
+      fill: #4b86b4;
+      stroke: #333;
+      stroke-width: 1;
+    }
+    .entity-title-text {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      fill: white;
+      text-anchor: middle;
+    }
+    .attribute-text {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      fill: #333;
+    }
+    .pk-text {
+      font-weight: bold;
+    }
+    .fk-text {
+      font-style: italic;
+    }
+    .relationship {
+      stroke: #666;
+      stroke-width: 2;
+      fill: none;
+    }
+    .cardinality {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      fill: #333;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- CUSTOMER Entity -->
+  <g transform="translate(100, 100)">
+    <rect class="entity" width="200" height="200" rx="5" ry="5" />
+    <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
+    <text class="entity-title-text" x="100" y="20">CUSTOMER</text>
+    
+    <text class="attribute-text pk-text" x="10" y="50">customer_id (PK)</text>
+    <text class="attribute-text" x="10" y="70">name</text>
+    <text class="attribute-text" x="10" y="90">email</text>
+    <text class="attribute-text" x="10" y="110">phone</text>
+    <text class="attribute-text" x="10" y="130">address</text>
+    <text class="attribute-text" x="10" y="150">registration_date</text>
+    <text class="attribute-text" x="10" y="170">password_hash</text>
+  </g>
+
+  <!-- ORDER Entity -->
+  <g transform="translate(500, 100)">
+    <rect class="entity" width="200" height="200" rx="5" ry="5" />
+    <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
+    <text class="entity-title-text" x="100" y="20">ORDER</text>
+    
+    <text class="attribute-text pk-text" x="10" y="50">order_id (PK)</text>
+    <text class="attribute-text fk-text" x="10" y="70">customer_id (FK)</text>
+    <text class="attribute-text" x="10" y="90">order_date</text>
+    <text class="attribute-text" x="10" y="110">total_amount</text>
+    <text class="attribute-text" x="10" y="130">payment_status</text>
+    <text class="attribute-text" x="10" y="150">order_status</text>
+    <text class="attribute-text" x="10" y="170">shipping_address</text>
+    <text class="attribute-text" x="10" y="190">billing_address</text>
+  </g>
+
+  <!-- ORDER_ITEM Entity -->
+  <g transform="translate(900, 100)">
+    <rect class="entity" width="200" height="150" rx="5" ry="5" />
+    <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
+    <text class="entity-title-text" x="100" y="20">ORDER_ITEM</text>
+    
+    <text class="attribute-text pk-text" x="10" y="50">item_id (PK)</text>
+    <text class="attribute-text fk-text" x="10" y="70">order_id (FK)</text>
+    <text class="attribute-text fk-text" x="10" y="90">book_config_id (FK)</text>
+    <text class="attribute-text" x="10" y="110">quantity</text>
+    <text class="attribute-text" x="10" y="130">unit_price</text>
+    <text class="attribute-text" x="10" y="150">subtotal</text>
+  </g>
+
+  <!-- BOOK_CONFIG Entity -->
+  <g transform="translate(900, 350)">
+    <rect class="entity" width="230" height="250" rx="5" ry="5" />
+    <rect class="entity-title" width="230" height="30" rx="5" ry="5" />
+    <text class="entity-title-text" x="115" y="20">BOOK_CONFIG</text>
+    
+    <text class="attribute-text pk-text" x="10" y="50">book_config_id (PK)</text>
+    <text class="attribute-text" x="10" y="70">title</text>
+    <text class="attribute-text" x="10" y="90">author</text>
+    <text class="attribute-text" x="10" y="110">page_count</text>
+    <text class="attribute-text" x="10" y="130">page_size</text>
+    <text class="attribute-text" x="10" y="150">cover_type</text>
+    <text class="attribute-text" x="10" y="170">binding_type</text>
+    <text class="attribute-text" x="10" y="190">paper_type</text>
+    <text class="attribute-text" x="10" y="210">color_printing</text>
+    <text class="attribute-text" x="10" y="230">manuscript_file_path</text>
+    <text class="attribute-text" x="10" y="250">cover_file_path</text>
+  </g>
+
+  <!-- PRODUCTION_STAGE Entity -->
+  <g transform="translate(500, 400)">
+    <rect class="entity" width="200" height="200" rx="5" ry="5" />
+    <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
+    <text class="entity-title-text" x="100" y="20">PRODUCTION_STAGE</text>
+    
+    <text class="attribute-text pk-text" x="10" y="50">stage_id (PK)</text>
+    <text class="attribute-text fk-text" x="10" y="70">order_id (FK)</text>
+    <text class="attribute-text fk-text" x="10" y="90">staff_id (FK)</text>
+    <text class="attribute-text" x="10" y="110">stage_name</text>
+    <text class="attribute-text" x="10" y="130">start_date</text>
+    <text class="attribute-text" x="10" y="150">end_date</text>
+    <text class="attribute-text" x="10" y="170">status</text>
+    <text class="attribute-text" x="10" y="190">notes</text>
+  </g>
+
+  <!-- STAFF Entity -->
+  <g transform="translate(100, 400)">
+    <rect class="entity" width="200" height="180" rx="5" ry="5" />
+    <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
+    <text class="entity-title-text" x="100" y="20">STAFF</text>
+    
+    <text class="attribute-text pk-text" x="10" y="50">staff_id (PK)</text>
+    <text class="attribute-text" x="10" y="70">name</text>
+    <text class="attribute-text" x="10" y="90">email</text>
+    <text class="attribute-text" x="10" y="110">role</text>
+    <text class="attribute-text" x="10" y="130">department</text>
+    <text class="attribute-text" x="10" y="150">password_hash</text>
+  </g>
+
+  <!-- NOTIFICATION Entity -->
+  <g transform="translate(100, 650)">
+    <rect class="entity" width="200" height="180" rx="5" ry="5" />
+    <rect class="entity-title" width="200" height="30" rx="5" ry="5" />
+    <text class="entity-title-text" x="100" y="20">NOTIFICATION</text>
+    
+    <text class="attribute-text pk-text" x="10" y="50">notification_id (PK)</text>
+    <text class="attribute-text" x="10" y="70">recipient_id</text>
+    <text class="attribute-text" x="10" y="90">recipient_type</text>
+    <text class="attribute-text" x="10" y="110">message</text>
+    <text class="attribute-text" x="10" y="130">created_at</text>
+    <text class="attribute-text" x="10" y="150">is_read</text>
+    <text class="attribute-text" x="10" y="170">notification_type</text>
+  </g>
+
+  <!-- Relationships -->
+  <!-- CUSTOMER to ORDER -->
+  <path class="relationship" d="M300,150 H500" />
+  <text class="cardinality" x="320" y="145">1</text>
+  <text class="cardinality" x="480" y="145">N</text>
+  
+  <!-- ORDER to ORDER_ITEM -->
+  <path class="relationship" d="M700,150 H900" />
+  <text class="cardinality" x="720" y="145">1</text>
+  <text class="cardinality" x="880" y="145">N</text>
+  
+  <!-- ORDER_ITEM to BOOK_CONFIG -->
+  <path class="relationship" d="M1000,250 V350" />
+  <text class="cardinality" x="1010" y="270">N</text>
+  <text class="cardinality" x="1010" y="330">1</text>
+  
+  <!-- ORDER to PRODUCTION_STAGE -->
+  <path class="relationship" d="M600,300 V400" />
+  <text class="cardinality" x="610" y="320">1</text>
+  <text class="cardinality" x="610" y="380">N</text>
+  
+  <!-- STAFF to PRODUCTION_STAGE -->
+  <path class="relationship" d="M300,500 H500" />
+  <text class="cardinality" x="320" y="495">1</text>
+  <text class="cardinality" x="480" y="495">N</text>
+  
+  <!-- CUSTOMER to NOTIFICATION -->
+  <path class="relationship" d="M200,300 V650" stroke-dasharray="5,5" />
+  <text class="cardinality" x="210" y="320">1</text>
+  <text class="cardinality" x="210" y="630">N</text>
+  
+  <!-- STAFF to NOTIFICATION -->
+  <path class="relationship" d="M300,500 Q350,600 300,650" stroke-dasharray="5,5" />
+  <text class="cardinality" x="320" y="550">1</text>
+  <text class="cardinality" x="310" y="630">N</text>
+  
+  <!-- Title -->
+  <text x="600" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">PrintingHouseMS - Entity Relationship Diagram</text>
+</svg>
