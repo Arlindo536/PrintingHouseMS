@@ -153,3 +153,5 @@ The complete data lifecycle in PrintingHouseMS follows this general pattern:
 10. Delivery status is tracked and communicated to the customer
 
 This data flow diagram serves as a foundation for system design, database structure, and user interface development. It helps ensure that all data requirements are identified and properly addressed in the implementation of the PrintingHouseMS system.
+## 🖼️ Diagram Visualization
+![Data Flow Diagram](DataFlow.mermaid)
