@@ -132,6 +132,6 @@ This system enables efficient management of the printing house operations, from 
 - The cardinality notations (1:N) indicate the type of relationship between entities
 - Dashed lines for notification relationships indicate optional or non-essential connections
 
-## Diagram
+# 🖼️ Diagram Visualization
 
 ![Entity Relationship Diagram ](Entity-Relationship-Diagram.svg)
