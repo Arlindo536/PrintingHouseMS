@@ -1,0 +1,16 @@
+# Create folders
+mkdir -p diagrams/svg diagrams/mermaid docs requirements
+
+# Move files (examples)
+git mv DataFlow.svg diagrams/svg/
+git mv BPMN.svg diagrams/svg/
+git mv Entity-Relationship-Diagram.svg diagrams/svg/
+git mv DataFlow.mermaid diagrams/mermaid/
+git mv docs.md docs/
+git mv requirements-analysis.md requirements/
+
+# Commit the changes
+git commit -m "Reorganize repository files into folders"
+
+# Push to GitHub
+git push
