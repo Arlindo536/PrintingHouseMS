@@ -18,15 +18,15 @@ This project delivers a dual-interface system to meet the needs of both customer
 
 ## 📂 Documentation
 
-  📘 [Requirements Analysis](requirements-analysis.md)
+📘 [Requirements Analysis](folders/requirements-analysis.md)
   
-  📝 [Meeting Notes](notes.md)
+📝 [Meeting Notes](folders/notes.md)
   
-  📐 [Design Documents](docs.md)
+📐 [Design Documents](folders/docs.md)
 
-  ✒️[Stakeholder](stakeholder.md)
+✒️ [Stakeholder](folders/stakeholder.md)
 
-  📊 [UseCase](UseCase.md)
+📊 [UseCase](folders/UseCase.md)
 
   
   
