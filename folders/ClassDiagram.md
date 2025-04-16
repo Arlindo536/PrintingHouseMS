@@ -1,190 +1,94 @@
-# ✒️ PrintingHouseMS - Class Diagram Documentation 📄
+# 🖨️ PrintingHouseMS - Class Diagram 📄
 
-## Overview 📊
-This document details the Class Diagram for the PrintingHouseMS system, which represents the static structure of the book printing management system. The diagram identifies the classes within the system, their attributes, operations, and the relationships between them.
+## Overview 🧩
+Details the class structure for the PrintingHouseMS system, including attributes, operations, and relationships.
 
-## Key Components ✒️
+## Key Components 🏗️
 
-### Customer Class 📕
-- **Description**: Represents users who place book printing orders
+### 👤 Customer Class
+- **Description**: Represents users placing book printing orders
 - **Attributes**:
   - customer_id (PK)
-  - name
-  - email
-  - phone
-  - address
+  - name, email, phone, address
   - registration_date
   - password_hash
-- **Operations**:
-  - register()
-  - login()
-  - updateProfile()
-  - viewOrderHistory()
-  - placeOrder()
-- **Relationships**:
-  - One Customer places many Orders
+- **Operations**: register(), login(), updateProfile(), viewOrderHistory(), placeOrder()
+- **Relationships**: One Customer ➝ many Orders
 
-### Order Class ✒️
-- **Description**: Records details of book printing orders
+### 🧾 Order Class
+- **Description**: Details of book printing orders
 - **Attributes**:
-  - order_id (PK)
-  - customer_id (FK)
-  - order_date
-  - total_amount
-  - payment_status
-  - order_status
-  - shipping_address
-  - billing_address
-- **Operations**:
-  - calculateTotal()
-  - updateStatus()
-  - processPayment()
-  - generateInvoice()
-  - trackOrder()
+  - order_id (PK), customer_id (FK)
+  - order_date, total_amount
+  - payment_status, order_status
+  - shipping_address, billing_address
+- **Operations**: calculateTotal(), updateStatus(), processPayment(), generateInvoice(), trackOrder()
 - **Relationships**:
-  - One Order belongs to one Customer
-  - One Order contains many OrderItems
-  - One Order goes through many ProductionStages
-  - One Order has one to three Payments
+  - One Order ➝ one Customer
+  - One Order ➝ many OrderItems
+  - One Order ➝ many ProductionStages
+  - One Order ➝ 1–3 Payments
 
-### OrderItem Class 📕
-- **Description**: Contains details about individual book configurations within an order
-- **Attributes**:
-  - item_id (PK)
-  - order_id (FK)
-  - book_config_id (FK)
-  - quantity
-  - unit_price
-  - subtotal
-- **Operations**:
-  - calculateSubtotal()
-  - updateQuantity()
+### 📦 OrderItem Class
+- **Description**: Individual book configurations in an order
+- **Attributes**: item_id (PK), order_id (FK), book_config_id (FK), quantity, unit_price, subtotal
+- **Operations**: calculateSubtotal(), updateQuantity()
 - **Relationships**:
-  - Many OrderItems belong to one Order
-  - Each OrderItem references one BookConfig
+  - Many OrderItems ➝ one Order
+  - One OrderItem ➝ one BookConfig
 
-### BookConfig Class 📜
-- **Description**: Stores specifications and details about each book configuration
-- **Attributes**:
-  - book_config_id (PK)
-  - title
-  - author
-  - page_count
-  - page_size
-  - cover_type
-  - binding_type
-  - paper_type
-  - color_printing
-  - manuscript_file_path
-  - cover_file_path
-- **Operations**:
-  - calculatePricing()
-  - generatePreview()
-  - validateFiles()
+### 📚 BookConfig Class
+- **Description**: Book specs and configuration
+- **Attributes**: book_config_id (PK), title, author, page_count, page_size, cover_type, binding_type, paper_type, color_printing, manuscript_file_path, cover_file_path
+- **Operations**: calculatePricing(), generatePreview(), validateFiles()
 - **Relationships**:
-  - One BookConfig can be used in many OrderItems
-  - BookConfig uses FileManager for document storage
+  - One BookConfig ➝ many OrderItems
+  - Uses FileManager for document storage
 
-### ProductionStage Class 📉
-- **Description**: Tracks the progress of orders through different production stages
-- **Attributes**:
-  - stage_id (PK)
-  - order_id (FK)
-  - staff_id (FK)
-  - stage_name
-  - start_date
-  - end_date
-  - status
-  - notes
-- **Operations**:
-  - startStage()
-  - completeStage()
-  - addNotes()
+### ⚙️ ProductionStage Class
+- **Description**: Order progress through production stages
+- **Attributes**: stage_id (PK), order_id (FK), staff_id (FK), stage_name, start_date, end_date, status, notes
+- **Operations**: startStage(), completeStage(), addNotes()
 - **Relationships**:
-  - Many ProductionStages belong to one Order
-  - Each ProductionStage is managed by one Staff member
+  - Many ProductionStages ➝ one Order
+  - One Stage ➝ one Staff
 
-### Staff Class 📉
-- **Description**: Contains information about employees working at the printing house
-- **Attributes**:
-  - staff_id (PK)
-  - name
-  - email
-  - role
-  - department
-  - password_hash
-- **Operations**:
-  - login()
-  - updateProfile()
-  - assignTask()
-  - updateProductionStatus()
+### 👨‍🔧 Staff Class
+- **Description**: Employee data for printing house
+- **Attributes**: staff_id (PK), name, email, role, department, password_hash
+- **Operations**: login(), updateProfile(), assignTask(), updateProductionStatus()
 - **Relationships**:
-  - One Staff member manages many ProductionStages
-  - Staff receives Notifications
+  - One Staff ➝ many ProductionStages
+  - Staff ➝ receives Notifications
 
-### Notification Class ✏️
-- **Description**: Manages system notifications sent to customers and staff
-- **Attributes**:
-  - notification_id (PK)
-  - recipient_id
-  - recipient_type (customer or staff)
-  - message
-  - created_at
-  - is_read
-  - notification_type
-- **Operations**:
-  - markAsRead()
-  - send()
+### 🔔 Notification Class
+- **Description**: Alerts sent to users
+- **Attributes**: notification_id (PK), recipient_id, recipient_type, message, created_at, is_read, notification_type
+- **Operations**: markAsRead(), send()
 - **Relationships**:
   - Generated by Orders
-  - Received by Customers and Staff
+  - Received by Customers & Staff
 
-### Payment Class 📊
-- **Description**: Handles payment processing for orders
-- **Attributes**:
-  - payment_id (PK)
-  - order_id (FK)
-  - amount
-  - payment_date
-  - payment_method
-  - transaction_id
-  - status
-- **Operations**:
-  - processPayment()
-  - validatePayment()
-  - generateReceipt()
-- **Relationships**:
-  - One to three Payments belong to one Order
+### 💳 Payment Class
+- **Description**: Payment processing
+- **Attributes**: payment_id (PK), order_id (FK), amount, payment_date, payment_method, transaction_id, status
+- **Operations**: processPayment(), validatePayment(), generateReceipt()
+- **Relationships**: 1–3 Payments ➝ one Order
 
-### FileManager Class
-- **Description**: Handles file uploads and storage
-- **Attributes**:
-  - file_id (PK)
-  - related_id
-  - related_type
-  - file_path
-  - file_type
-  - upload_date
-- **Operations**:
-  - uploadFile()
-  - validateFile()
-  - getFileURL()
-- **Relationships**:
-  - Used by BookConfig for manuscript and cover files
+### 📁 FileManager Class
+- **Description**: Manages file uploads & storage
+- **Attributes**: file_id (PK), related_id, related_type, file_path, file_type, upload_date
+- **Operations**: uploadFile(), validateFile(), getFileURL()
+- **Relationships**: Used by BookConfig
 
-### ReportGenerator Class ✏️
-- **Description**: Creates system reports for business intelligence
-- **Operations**:
-  - generateSalesReport()
-  - generateProductionReport()
-  - generateCustomerReport()
-  - exportReport()
+### 📊 ReportGenerator Class
+- **Description**: Generates reports for BI
+- **Operations**: generateSalesReport(), generateProductionReport(), generateCustomerReport(), exportReport()
 
-## Class Diagram Visualization📊
+## Class Diagram Visualization 🖼️
 
 ```mermaid
 classDiagram
-    %% Customer related classes
     class Customer {
         -int customer_id
         -String name
@@ -199,8 +103,7 @@ classDiagram
         +viewOrderHistory()
         +placeOrder()
     }
-    
-    %% Order related classes
+
     class Order {
         -int order_id
         -int customer_id
@@ -216,7 +119,7 @@ classDiagram
         +generateInvoice()
         +trackOrder()
     }
-    
+
     class OrderItem {
         -int item_id
         -int order_id
@@ -227,8 +130,7 @@ classDiagram
         +calculateSubtotal()
         +updateQuantity()
     }
-    
-    %% Book Configuration classes
+
     class BookConfig {
         -int book_config_id
         -String title
@@ -245,8 +147,7 @@ classDiagram
         +generatePreview()
         +validateFiles()
     }
-    
-    %% Production related classes
+
     class ProductionStage {
         -int stage_id
         -int order_id
@@ -260,8 +161,7 @@ classDiagram
         +completeStage()
         +addNotes()
     }
-    
-    %% Staff related classes
+
     class Staff {
         -int staff_id
         -String name
@@ -274,8 +174,7 @@ classDiagram
         +assignTask()
         +updateProductionStatus()
     }
-    
-    %% Notification system
+
     class Notification {
         -int notification_id
         -int recipient_id
@@ -287,8 +186,7 @@ classDiagram
         +markAsRead()
         +send()
     }
-    
-    %% Payment processing
+
     class Payment {
         -int payment_id
         -int order_id
@@ -301,8 +199,7 @@ classDiagram
         +validatePayment()
         +generateReceipt()
     }
-    
-    %% File management
+
     class FileManager {
         -int file_id
         -int related_id
@@ -314,8 +211,7 @@ classDiagram
         +validateFile()
         +getFileURL()
     }
-    
-    %% Report generation
+
     class ReportGenerator {
         +generateSalesReport(Date startDate, Date endDate)
         +generateProductionReport()
@@ -323,7 +219,6 @@ classDiagram
         +exportReport(String format)
     }
 
-    %% Relationships
     Customer "1" -- "many" Order : places
     Order "1" -- "many" OrderItem : contains
     OrderItem "many" -- "1" BookConfig : references
@@ -334,20 +229,3 @@ classDiagram
     Order -- Notification : generates
     Customer -- Notification : receives
     Staff -- Notification : receives
-```
-
-## Implementation Notes
-
-- The class diagram serves as the foundation for the object-oriented implementation of the system
-- Primary Key (PK) and Foreign Key (FK) notations indicate database relationships
-- The relationship cardinalities (1, many, 1..3) indicate the multiplicity between classes
-- Private attributes are denoted with "-" prefix, public operations with "+" prefix
-- This diagram guides both frontend and backend implementation across the system
-
-## Next Steps
-
-The class diagram will inform:
-- Database schema design
-- API endpoint definitions
-- User interface components
-- Business logic implementation
