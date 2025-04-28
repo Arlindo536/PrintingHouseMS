@@ -20,11 +20,11 @@ This project delivers a dual-interface system to meet the needs of both customer
 |                                                         |                                                           |
 |:--------------------------------------------------------|:----------------------------------------------------------|
 | 📘 [Requirements Analysis](folders/requirements-analysis.md) | 🔄 [BPMN Diagram](folders/BPMN.md)                        |
-| 📝 [Meeting Notes](folders/notes.md)                    | 📑 [Activity Diagram](folders/ActivityDiagram.md)         |
+| 📝 [Meeting Notes](folders/notes.md)                    | 📑 [Activity Diagram](folders/AcitivityDiagram.md)         |
 | 📐 [Design Documents](folders/docs.md)                  | 🧩 [Class Diagram](folders/ClassDiagram.md)              |
 | ✒️ [Stakeholder](folders/stakeholder.md)                | 🎨 [Design Pattern](folders/DesignPattern.md)            |
 | 📊 [UseCase](folders/UseCase.md)                        | 💾 [Entity Relationship Diagram](folders/ERD.md)          |
-| 📈 [DataFlow](folders/DataFlow.md)                      | 🔄 [Onion Architecture](folders/onion-diagram.svg)        |
+| 📈 [DataFlow](folders/DataFlow.md)                      |      |
 
 ## 🎓 Team
 
