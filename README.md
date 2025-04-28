@@ -29,7 +29,18 @@ This project delivers a dual-interface system to meet the needs of both customer
 📊 [UseCase](folders/UseCase.md)
 
 📈 [DataFlow](folders/DataFlow.md)
-  
+
+🔄 [BPMN Diagram](folders/BPMN.md)
+
+📑 [Activity Diagram](folders/ActivityDiagram.md)
+
+🧩 [Class Diagram](folders/ClassDiagram.md)
+
+🎨 [Design Pattern](folders/DesignPattern.md)
+
+💾 [Entity Relationship Diagram](folders/ERD.md)
+
+🔄 [Onion Architecture](folders/onion-diagram.svg)
 
 ## 🎓 Team
 
