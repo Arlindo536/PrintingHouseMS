@@ -17,24 +17,14 @@ This project delivers a dual-interface system to meet the needs of both customer
   
 ## 📂 Documentation
 
-<div style="display: flex; flex-wrap: wrap">
-  <div style="flex: 50%; padding-right: 10px">
-    📘 <a href="folders/requirements-analysis.md">Requirements Analysis</a><br>
-    📝 <a href="folders/notes.md">Meeting Notes</a><br>
-    📐 <a href="folders/docs.md">Design Documents</a><br>
-    ✒️ <a href="folders/stakeholder.md">Stakeholder</a><br>
-    📊 <a href="folders/UseCase.md">UseCase</a><br>
-    📈 <a href="folders/DataFlow.md">DataFlow</a><br>
-  </div>
-  <div style="flex: 50%">
-    🔄 <a href="folders/BPMN.md">BPMN Diagram</a><br>
-    📑 <a href="folders/ActivityDiagram.md">Activity Diagram</a><br>
-    🧩 <a href="folders/ClassDiagram.md">Class Diagram</a><br>
-    🎨 <a href="folders/DesignPattern.md">Design Pattern</a><br>
-    💾 <a href="folders/ERD.md">Entity Relationship Diagram</a><br>
-    🔄 <a href="folders/onion-diagram.svg">Onion Architecture</a><br>
-  </div>
-</div>
+|                                                         |                                                           |
+|:--------------------------------------------------------|:----------------------------------------------------------|
+| 📘 [Requirements Analysis](folders/requirements-analysis.md) | 🔄 [BPMN Diagram](folders/BPMN.md)                        |
+| 📝 [Meeting Notes](folders/notes.md)                    | 📑 [Activity Diagram](folders/ActivityDiagram.md)         |
+| 📐 [Design Documents](folders/docs.md)                  | 🧩 [Class Diagram](folders/ClassDiagram.md)              |
+| ✒️ [Stakeholder](folders/stakeholder.md)                | 🎨 [Design Pattern](folders/DesignPattern.md)            |
+| 📊 [UseCase](folders/UseCase.md)                        | 💾 [Entity Relationship Diagram](folders/ERD.md)          |
+| 📈 [DataFlow](folders/DataFlow.md)                      | 🔄 [Onion Architecture](folders/onion-diagram.svg)        |
 
 ## 🎓 Team
 
