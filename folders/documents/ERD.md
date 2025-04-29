@@ -134,4 +134,4 @@ This system enables efficient management of the printing house operations, from 
 
 ## 🖼️ Diagram Visualization
 
-![Entity Relationship Diagram ](Entity-Relationship-Diagram.svg)
+![Entity Relationship Diagram ](/folders/diagrams/Entity-Relationship-Diagram.svg)
