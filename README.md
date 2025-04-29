@@ -16,15 +16,14 @@ This project delivers a dual-interface system to meet the needs of both customer
   🟠 Staff Portal: Manage incoming orders, track production stages, and optimize workflow efficiency.
   
 ## 📂 Documentation
-
 |                                                         |                                                           |
 |:--------------------------------------------------------|:----------------------------------------------------------|
-| 📘 [Requirements Analysis](folders/requirements-analysis.md) | 🔄 [BPMN Diagram](folders/BPMN.md)                        |
-| 📝 [Meeting Notes](folders/notes.md)                    | 📑 [Activity Diagram](folders/AcitivityDiagram.md)         |
-| 📐 [Design Documents](folders/docs.md)                  | 🧩 [Class Diagram](folders/ClassDiagram.md)              |
-| ✒️ [Stakeholder](folders/stakeholder.md)                | 🎨 [Design Pattern](folders/DesignPattern.md)            |
-| 📊 [UseCase](folders/UseCase.md)                        | 💾 [Entity Relationship Diagram](folders/ERD.md)          |
-| 📈 [DataFlow](folders/DataFlow.md)                      |      |
+| 📘 [Requirements Analysis](documents/requirements-analysis.md) | 🔄 [BPMN Diagram](documents/BPMN.md)                        |
+| 📝 [Meeting Notes](requirements/notes.md)                    | 📑 [Activity Diagram](documents/AcitivityDiagram.md)         |
+| 📐 [Design Documents](requirements/docs.md)                  | 🧩 [Class Diagram](documents/ClassDiagram.md)              |
+| ✒️ [Stakeholder](documents/stakeholder.md)                | 🎨 [Design Pattern](requirements/DesignPattern.md)            |
+| 📊 [UseCase](documents/UseCase.md)                        | 💾 [Entity Relationship Diagram](documents/ERD.md)          |
+| 📈 [DataFlow](documents/DataFlow.md)                      |      |
 
 ## 🎓 Team
 
