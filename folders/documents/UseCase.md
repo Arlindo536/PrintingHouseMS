@@ -38,4 +38,4 @@ The diagram shows interconnected use cases that demonstrate the collaborative na
 4. 📬 Final reports and order status are made available to the customer
 
 ## 🖼️ Diagram Visualization
-![Use Case Diagram](UseCaseDiagram.png)
+![Use Case Diagram](/folders/diagrams/UseCaseDiagram.png)
