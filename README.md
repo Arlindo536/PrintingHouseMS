@@ -18,12 +18,12 @@ This project delivers a dual-interface system to meet the needs of both customer
 ## 📂 Documentation
 |                                                         |                                                           |
 |:--------------------------------------------------------|:----------------------------------------------------------|
-| 📘 [Requirements Analysis](documents/requirements-analysis.md) | 🔄 [BPMN Diagram](documents/BPMN.md)                        |
-| 📝 [Meeting Notes](requirements/notes.md)                    | 📑 [Activity Diagram](documents/AcitivityDiagram.md)         |
-| 📐 [Design Documents](requirements/docs.md)                  | 🧩 [Class Diagram](documents/ClassDiagram.md)              |
-| ✒️ [Stakeholder](documents/stakeholder.md)                | 🎨 [Design Pattern](requirements/DesignPattern.md)            |
-| 📊 [UseCase](documents/UseCase.md)                        | 💾 [Entity Relationship Diagram](documents/ERD.md)          |
-| 📈 [DataFlow](documents/DataFlow.md)                      |      |
+| 📘 [Requirements Analysis](folders/requirements-analysis.md) | 🔄 [BPMN Diagram](folders/diagrams/BPMN.svg)                        |
+| 📝 [Meeting Notes](folders/requirements/notes.md)                    | 📑 [Activity Diagram](folders/documents/AcitivityDiagram.md)         |
+| 📐 [Design Documents](folders/requirements/docs.md)                  | 🧩 [Class Diagram](folders/documents/ClassDiagram.md)              |
+| ✒️ [Stakeholder](folders/documents/stakeholder.md)                | 🎨 [Design Pattern](folders/requirements/DesignPattern.md)            |
+| 📊 [UseCase](folders/documents/UseCase.md)                        | 💾 [Entity Relationship Diagram](folders/diagrams/Entity-Relationship-Diagram.svg)          |
+| 📈 [DataFlow](folders/documents/DataFlow.md)                      | 🧅 [Onion Diagram](folders/diagrams/onion-diagram.svg)      |
 
 ## 🎓 Team
 
