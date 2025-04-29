@@ -154,4 +154,4 @@ The complete data lifecycle in PrintingHouseMS follows this general pattern:
 
 This data flow diagram serves as a foundation for system design, database structure, and user interface development. It helps ensure that all data requirements are identified and properly addressed in the implementation of the PrintingHouseMS system.
 
-![Data Flow Diagram](/folders/Dataflow.png)
+![Data Flow Diagram](/folders/diagrams/Dataflow.png)
