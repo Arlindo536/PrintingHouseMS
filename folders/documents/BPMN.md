@@ -84,4 +84,4 @@ The process includes important feedback mechanisms:
 This BPMN diagram serves as a visual guide for both system implementation and operational procedures in the printing house. It ensures all stakeholders understand their roles in the book production process and how the different components of the system interact.
 
 ## 🖼️ Diagram Visualization
-![BPMN Diagram](folders/diagrams/BPMN.svg)
+![BPMN Diagram](/folders/diagrams/BPMN.svg)
