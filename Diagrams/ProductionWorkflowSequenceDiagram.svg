@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750">
+  <!-- Background -->
+  <rect width="1000" height="750" fill="#f8f9fa" />
+
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#333">Production Workflow Sequence Diagram</text>
+
+  <!-- Actor & Object Boxes -->
+  <rect x="50" y="60" width="100" height="50" rx="5" ry="5" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" />
+  <text x="100" y="90" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Order Management</text>
+  
+  <rect x="250" y="60" width="100" height="50" rx="5" ry="5" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" />
+  <text x="300" y="90" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Production Stage</text>
+  
+  <rect x="450" y="60" width="100" height="50" rx="5" ry="5" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" />
+  <text x="500" y="90" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Staff</text>
+  
+  <rect x="650" y="60" width="100" height="50" rx="5" ry="5" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" />
+  <text x="700" y="90" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Notification</text>
+
+  <rect x="850" y="60" width="100" height="50" rx="5" ry="5" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" />
+  <text x="900" y="90" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">Customer</text>
+
+  <!-- Lifelines -->
+  <line x1="100" y1="110" x2="100" y2="700" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="300" y1="110" x2="300" y2="700" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="500" y1="110" x2="500" y2="700" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="700" y1="110" x2="700" y2="700" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="900" y1="110" x2="900" y2="700" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5" />
+
+  <!-- Activation Boxes -->
+  <rect x="95" y="150" width="10" height="530" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="295" y="170" width="10" height="500" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="495" y="210" width="10" height="440" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="695" y="340" width="10" height="60" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="695" y="480" width="10" height="60" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="695" y="620" width="10" height="60" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="895" y="360" width="10" height="20" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="895" y="500" width="10" height="20" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+  <rect x="895" y="640" width="10" height="20" fill="#c8e6c9" stroke="#388e3c" stroke-width="1" />
+
+  <!-- Messages -->
+  <!-- Create Production Order -->
+  <line x1="105" y1="170" x2="295" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="200" y="165" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">1. createProductionOrder()</text>
+
+  <!-- Start Prepress Stage -->
+  <line x1="305" y1="210" x2="495" y2="210" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="400" y="205" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">2. assignPrepress()</text>
+
+  <!-- Start Prepress -->
+  <line x1="505" y1="230" x2="550" y2="230" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="230" x2="550" y2="250" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="250" x2="505" y2="250" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="570" y="240" text-anchor="start" font-family="Arial" font-size="12" fill="#333">3. startStage("prepress")</text>
+
+  <!-- Format Check -->
+  <line x1="505" y1="270" x2="550" y2="270" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="270" x2="550" y2="290" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="290" x2="505" y2="290" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="570" y="280" text-anchor="start" font-family="Arial" font-size="12" fill="#333">4. formatCheck()</text>
+
+  <!-- Prepress Complete -->
+  <line x1="505" y1="310" x2="305" y2="310" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="400" y="305" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">5. completeStage("prepress")</text>
+
+  <!-- Update Status -->
+  <line x1="305" y1="340" x2="695" y2="340" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="500" y="335" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">6. createNotification("Prepress complete")</text>
+
+  <!-- Notify Customer -->
+  <line x1="705" y1="360" x2="895" y2="360" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="800" y="355" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">7. sendNotification()</text>
+
+  <!-- Start Printing Stage -->
+  <line x1="305" y1="400" x2="495" y2="400" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="400" y="395" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">8. assignPrinting()</text>
+
+  <!-- Start Printing -->
+  <line x1="505" y1="420" x2="550" y2="420" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="420" x2="550" y2="440" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="440" x2="505" y2="440" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="570" y="430" text-anchor="start" font-family="Arial" font-size="12" fill="#333">9. startStage("printing")</text>
+
+  <!-- Printing Complete -->
+  <line x1="505" y1="460" x2="305" y2="460" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="400" y="455" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">10. completeStage("printing")</text>
+
+  <!-- Update Status -->
+  <line x1="305" y1="480" x2="695" y2="480" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="500" y="475" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">11. createNotification("Printing complete")</text>
+
+  <!-- Notify Customer -->
+  <line x1="705" y1="500" x2="895" y2="500" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="800" y="495" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">12. sendNotification()</text>
+
+  <!-- Start Binding Stage -->
+  <line x1="305" y1="540" x2="495" y2="540" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="400" y="535" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">13. assignBinding()</text>
+
+  <!-- Start Binding -->
+  <line x1="505" y1="560" x2="550" y2="560" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="560" x2="550" y2="580" stroke="#333" stroke-width="1.5" />
+  <line x1="550" y1="580" x2="505" y2="580" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="570" y="570" text-anchor="start" font-family="Arial" font-size="12" fill="#333">14. startStage("binding")</text>
+
+  <!-- Binding Complete -->
+  <line x1="505" y1="600" x2="305" y2="600" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="400" y="595" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">15. completeStage("binding")</text>
+
+  <!-- Update Status -->
+  <line x1="305" y1="620" x2="695" y2="620" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="500" y="615" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">16. createNotification("Binding complete")</text>
+
+  <!-- Notify Customer -->
+  <line x1="705" y1="640" x2="895" y2="640" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="800" y="635" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">17. sendNotification()</text>
+
+  <!-- Update Order Status -->
+  <line x1="305" y1="680" x2="105" y2="680" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+  <text x="200" y="675" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">18. updateOrderStatus("Ready for shipping")</text>
+
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+  </defs>
+</svg>
