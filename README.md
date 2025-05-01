@@ -16,14 +16,12 @@ This project delivers a dual-interface system to meet the needs of both customer
   🟠 Staff Portal: Manage incoming orders, track production stages, and optimize workflow efficiency.
   
 ## 📂 Documentation
-|                                                         |                                                           |
-|:--------------------------------------------------------|:----------------------------------------------------------|
-| 📘 [Requirements Analysis](folders/requirements-analysis.md) | 🔄 [BPMN Diagram](folders/diagrams/BPMN.svg)                        |
-| 📝 [Meeting Notes](folders/requirements/notes.md)                    | 📑 [Activity Diagram](folders/documents/AcitivityDiagram.md)         |
-| 📐 [Design Documents](folders/requirements/docs.md)                  | 🧩 [Class Diagram](folders/documents/ClassDiagram.md)              |
-| ✒️ [Stakeholder](folders/documents/stakeholder.md)                | 🎨 [Design Pattern](folders/requirements/DesignPattern.md)            |
-| 📊 [UseCase](folders/documents/UseCase.md)                        | 💾 [Entity Relationship Diagram](folders/diagrams/Entity-Relationship-Diagram.svg)          |
-| 📈 [DataFlow](folders/documents/DataFlow.md)                        |
+|                                           |                                        |
+|:------------------------------------------|:---------------------------------------|
+| 📘 [Requirements](folders/Requirements/)  | 🔄 [Diagrams](folders/Diagrams/)       |
+| 📝 [Documents](folders/Documents/)        | 🧩 [UML Modeling](folders/UMLmodeling/)|
+| ✒️ [Architecture](folders/Architecture/)  | 🎨 [Design Patterns](folders/DesignPatterns/)|
+| 📊 [Process Modeling](folders/ProcessModeling/) |
 
 ## 🎓 Team
 
