@@ -23,6 +23,7 @@ This project delivers a dual-interface system to meet the needs of both customer
 | ✒️ [Architecture](Architecture/)   | 🎨 [DesignPatterns](DesignPatterns/) |
 | 📊 [.idea](.idea/)                | ❓ [README.md](README.md)      |
 
+
 ## 🎓 Team
 
   -Jurgen
