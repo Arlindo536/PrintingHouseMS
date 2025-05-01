@@ -157,8 +157,5 @@ The diagram does not explicitly show extend relationships, but potential extensi
 - Order tracking should provide clear visual indicators of progress
 - Staff interfaces should streamline common workflow tasks
 
+![PrintingHouseMS Use Case Diagram](../Diagrams/UseCase.svg)
 ---
-
-<div align="center">
-  <p>✨ This use case documentation serves as a bridge between the user scenarios and system implementation, ensuring all stakeholder needs are properly addressed in the PrintingHouseMS system. ✨</p>
-</div>
