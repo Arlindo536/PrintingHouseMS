@@ -16,12 +16,12 @@ This project delivers a dual-interface system to meet the needs of both customer
   🟠 Staff Portal: Manage incoming orders, track production stages, and optimize workflow efficiency.
   
 ## 📂 Documentation
-|                                           |                                        |
-|:------------------------------------------|:---------------------------------------|
-| 📘 [Requirements](folders/Requirements/)  | 🔄 [Diagrams](folders/Diagrams/)       |
-| 📝 [Documents](folders/Documents/)        | 🧩 [UML Modeling](folders/UMLmodeling/)|
-| ✒️ [Architecture](folders/Architecture/)  | 🎨 [Design Patterns](folders/DesignPatterns/)|
-| 📊 [Process Modeling](folders/ProcessModeling/) |
+|                                    |                                  |
+|:-----------------------------------|:----------------------------------|
+| 📘 [Requirements](Requirements/)   | 🔄 [Diagrams](Diagrams/)         |
+| 📝 [ProcessModeling](ProcessModeling/) | 🧩 [UMLmodeling](UMLmodeling/) |
+| ✒️ [Architecture](Architecture/)   | 🎨 [DesignPatterns](DesignPatterns/) |
+| 📊 [.idea](.idea/)                | ❓ [README.md](README.md)      |
 
 ## 🎓 Team
 
