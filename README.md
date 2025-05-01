@@ -23,7 +23,7 @@ This project delivers a dual-interface system to meet the needs of both customer
 | 📐 [Design Documents](folders/requirements/docs.md)                  | 🧩 [Class Diagram](folders/documents/ClassDiagram.md)              |
 | ✒️ [Stakeholder](folders/documents/stakeholder.md)                | 🎨 [Design Pattern](folders/requirements/DesignPattern.md)            |
 | 📊 [UseCase](folders/documents/UseCase.md)                        | 💾 [Entity Relationship Diagram](folders/diagrams/Entity-Relationship-Diagram.svg)          |
-| 📈 [DataFlow](folders/documents/DataFlow.md)                      | 🧅 [Onion Diagram](folders/diagrams/onion-diagram.svg)      |
+| 📈 [DataFlow](folders/documents/DataFlow.md)                        |
 
 ## 🎓 Team
 
