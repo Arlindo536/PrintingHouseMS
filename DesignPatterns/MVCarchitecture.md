@@ -72,4 +72,4 @@ Controller Layer
    - `PaymentController`: Manages payment processing
 
 ## Diagram
-![MVC Architecture Implementation](../Diagrams/MVCPattern.svg)
+![MVC Architecture Implementation](../Diagrams/MVCarchitecture.svg)

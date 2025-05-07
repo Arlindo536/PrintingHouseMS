@@ -54,4 +54,4 @@ These patterns don't exist in isolation but work together to support system func
    - Avoid over-engineering simple solutions
 
 ## Diagram
-![Design Patterns Interaction](../Diagrams/DesignPatternsInteraction.svg)
+![Design Patterns Interaction](../Diagrams/DesignPatternInteraction.png)
