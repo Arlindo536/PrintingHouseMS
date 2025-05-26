@@ -1,0 +1,163 @@
+<svg viewBox="0 0 1300 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .pool { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .lane { fill: #ffffff; stroke: #000000; stroke-width: 1; }
+    .lane-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; writing-mode: tb; text-anchor: middle; }
+    .task { fill: #ffffff; stroke: #000000; stroke-width: 1; rx: 10; ry: 10; }
+    .event { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .gateway { fill: #ffffff; stroke: #000000; stroke-width: 1; }
+    .flow { stroke: #000000; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .flow-label { font-family: Arial, sans-serif; font-size: 11px; fill: #333333; }
+    .text { font-family: Arial, sans-serif; font-size: 11px; fill: #000000; text-anchor: middle; }
+    .title { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; fill: #000000; text-anchor: middle; }
+    .error-task { fill: #ffeeee; stroke: #cc0000; stroke-width: 1; rx: 10; ry: 10; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000" />
+    </marker>
+  </defs>
+  
+  <text class="title" x="650" y="30">File Upload - Validation Process</text>
+  
+  <!-- Main Pool -->
+  <rect class="pool" x="50" y="60" width="1200" height="480" />
+  
+  <!-- Customer Lane -->
+  <rect class="lane" x="50" y="60" width="1200" height="120" />
+  <text class="lane-title" x="80" y="120">Customer</text>
+  <line x1="110" y1="60" x2="110" y2="180" stroke="#000000" stroke-width="1" />
+  
+  <!-- File System Lane -->
+  <rect class="lane" x="50" y="180" width="1200" height="180" />
+  <text class="lane-title" x="80" y="270">File System</text>
+  <line x1="110" y1="180" x2="110" y2="360" stroke="#000000" stroke-width="1" />
+  
+  <!-- Validation Service Lane -->
+  <rect class="lane" x="50" y="360" width="1200" height="180" />
+  <text class="lane-title" x="80" y="450">Validation Service</text>
+  <line x1="110" y1="360" x2="110" y2="540" stroke="#000000" stroke-width="1" />
+  
+  <!-- Customer Process -->
+  <!-- Start Event -->
+  <circle class="event" cx="150" cy="120" r="18" />
+  <text class="text" x="150" y="95">Upload Files</text>
+  
+  <!-- Select Files -->
+  <rect class="task" x="200" y="90" width="100" height="60" />
+  <text class="text" x="250" y="110">Select Files </text>
+    <text class="text" x="250" y="130">to Upload</text>
+
+  
+  <!-- Receive Feedback -->
+  <rect class="task" x="850" y="90" width="100" height="60" />
+  <text class="text" x="900" y="110">Receive</text>
+    <text class="text" x="900" y="130">Validation Feedback</text>
+
+  
+  <!-- Fix Issues -->
+  <rect class="error-task" x="1000" y="90" width="100" height="60" />
+  <text class="text" x="1050" y="125">Fix File Issues</text>
+  
+  <!-- Success End -->
+  <circle class="event" cx="1200" cy="120" r="18" />
+  <circle cx="1200" cy="120" r="14" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  <text class="text" x="1200" y="95">Files Approved</text>
+  
+  <!-- File System Process -->
+  <!-- Upload Handler -->
+  <rect class="task" x="200" y="240" width="100" height="60" />
+  <text class="text" x="250" y="270">Handle File Upload</text>
+  
+  <!-- Check File Size -->
+  <rect class="gateway" x="340" y="240" width="50" height="50" transform="rotate(45 365 265)" />
+  <text class="text" x="365" y="270">Size OK?</text>
+  
+  <!-- Store Temp File -->
+  <rect class="task" x="420" y="240" width="100" height="60" />
+  <text class="text" x="470" y="260">Store in </text>
+    <text class="text" x="470" y="280">Temporary Storage</text>
+
+  
+  <!-- Scan for Viruses -->
+  <rect class="task" x="560" y="240" width="100" height="60" />
+  <text class="text" x="610" y="270">Virus Scan</text>
+  
+  <!-- Move to Secure Storage -->
+  <rect class="task" x="1000" y="240" width="100" height="60" />
+  <text class="text" x="1050" y="260">Move to </text>
+    <text class="text" x="1050" y="280">Secure Storage</text>
+
+  
+  <!-- Delete Temp Files -->
+  <rect class="error-task" x="700" y="240" width="100" height="60" />
+  <text class="text" x="750" y="270">Delete - Notify Error</text>
+  
+  <!-- Validation Service Process -->
+  <!-- Format Check -->
+  <rect class="task" x="420" y="420" width="100" height="60" />
+  <text class="text" x="470" y="450">Check File Format</text>
+  
+  <!-- Content Analysis -->
+  <rect class="task" x="560" y="420" width="100" height="60" />
+  <text class="text" x="610" y="440">Analyze</text>
+    <text class="text" x="610" y="460">Print Readiness</text>
+
+  
+  <!-- Gateway - Content Valid? -->
+  <rect class="gateway" x="700" y="420" width="50" height="50" transform="rotate(45 725 445)" />
+  <text class="text" x="725" y="440">Print Ready?</text>
+  
+  <!-- Generate Report -->
+  <rect class="task" x="780" y="420" width="100" height="60" />
+  <text class="text" x="830" y="440">Generate </text>
+    <text class="text" x="830" y="460">Validation Report</text>
+
+  
+  <!-- Flow Connections -->
+  <!-- Customer Flow -->
+  <path class="flow" d="M168 120 H200" />
+  <path class="flow" d="M950 120 H1000" />
+  <path class="flow" d="M1100 120 H1182" />
+  
+  <!-- File System Flow -->
+  <path class="flow" d="M300 265 H340" />
+  <path class="flow" d="M390 265 H420" />
+  <path class="flow" d="M520 265 H560" />
+  <path class="flow" d="M660 265 H700" />
+  <path class="flow" d="M1100 265 H1200 V138" stroke-dasharray="3,3" />
+  
+  <!-- Validation Flow -->
+  <path class="flow" d="M520 450 H560" />
+  <path class="flow" d="M660 450 H700" />
+  <path class="flow" d="M750 450 H780" />
+  
+  <!-- Cross-lane flows -->
+  <path class="flow" d="M250 150 V240" />
+  <path class="flow" d="M470 300 V420" />
+  <path class="flow" d="M830 420 V390 H900 V150" stroke-dasharray="3,3" />
+  
+  <!-- Error flows -->
+  <path class="flow" d="M365 290 V320 H250 V390 H150 V138" />
+  <text class="flow-label" x="270" y="335">File Too Large</text>
+  
+  <path class="flow" d="M750 240 V210 H900 V150" stroke-dasharray="3,3" />
+  <text class="flow-label" x="810
+    " y="205">Virus Detected</text>
+  
+  <path class="flow" d="M725 470 V500 H1050 V150" />
+  <text class="flow-label" x="890" y="515">Validation Failed</text>
+  
+  <!-- Success flow -->
+  <path class="flow" d="M610 300 V360 H725 V420" stroke-dasharray="3,3" />
+  <path class="flow" d="M880 450 V390 H1050 V300" stroke-dasharray="3,3" />
+  
+  <!-- Retry flow -->
+  <path class="flow" d="M1050 90 V70 H250 V90" />
+  <text class="flow-label" x="650" y="85">Re-upload Fixed Files</text>
+  
+  <!-- Additional labels -->
+  <text class="flow-label" x="650" y="400">Clean Files</text>
+  <text class="flow-label" x="750" y="470">Valid</text>
+</svg>
