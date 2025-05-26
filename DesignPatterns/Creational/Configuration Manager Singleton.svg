@@ -11,7 +11,7 @@
   <line x1="50" y1="130" x2="150" y2="130" stroke="black" stroke-width="1"/>
   <text x="60" y="145" fill="black" font-family="Arial" font-size="10">+uses</text>
   
-  <!-- Singleton Class (made wider) -->
+  <!-- Singleton Class -->
   <rect x="250" y="80" width="380" height="200" fill="white" stroke="black" stroke-width="1"/>
   <text x="440" y="100" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">ConfigurationManager</text>
   <line x1="250" y1="110" x2="630" y2="110" stroke="black" stroke-width="1"/>
@@ -41,5 +41,5 @@
   
   <!-- Labels -->
   <text x="200" y="115" fill="black" font-family="Arial" font-size="9">uses</text>
-  <text x="635" y="175" fill="black" font-family="Arial" font-size="9">instance</text>
+  <text x="665" y="185" fill="black" font-family="Arial" font-size="9">instance</text>
 </svg>
