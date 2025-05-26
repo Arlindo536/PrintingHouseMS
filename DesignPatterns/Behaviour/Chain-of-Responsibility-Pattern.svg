@@ -18,15 +18,15 @@
   <g id="order-handler">
     <rect x="450" y="220" width="300" height="140" fill="none" stroke="#4a5568" stroke-width="2"/>
     <rect x="450" y="220" width="300" height="30" fill="#4a5568"/>
-    <text x="600" y="238" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«abstract»</text>
-    <text x="600" y="248" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">OrderHandler</text>
-    <line x1="450" y1="250" x2="750" y2="250" stroke="#4a5568" stroke-width="1"/>
-    <text x="460" y="270" fill="white" font-family="Arial" font-size="12">-nextHandler: OrderHandler</text>
-    <line x1="450" y1="280" x2="750" y2="280" stroke="#4a5568" stroke-width="1"/>
-    <text x="460" y="300" fill="white" font-family="Arial" font-size="12">+setNextHandler(handler): void</text>
-    <text x="460" y="315" fill="white" font-family="Arial" font-size="12">+handleOrder(order): OrderResult</text>
-    <text x="460" y="330" fill="white" font-family="Arial" font-size="12">+canHandle(order): boolean</text>
-    <text x="460" y="345" fill="white" font-family="Arial" font-size="12">+processToNext(order): OrderResult</text>
+    <text x="600" y="235" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«abstract»</text>
+    <text x="600" y="250" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">OrderHandler</text>
+    <line x1="450" y1="260" x2="750" y2="260" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="280" fill="white" font-family="Arial" font-size="12">-nextHandler: OrderHandler</text>
+    <line x1="450" y1="290" x2="750" y2="290" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="310" fill="white" font-family="Arial" font-size="12">+setNextHandler(handler): void</text>
+    <text x="460" y="325" fill="white" font-family="Arial" font-size="12">+handleOrder(order): OrderResult</text>
+    <text x="460" y="340" fill="white" font-family="Arial" font-size="12">+canHandle(order): boolean</text>
+    <text x="460" y="355" fill="white" font-family="Arial" font-size="12">+processToNext(order): OrderResult</text>
   </g>
   
   <!-- StandardOrderHandler -->
