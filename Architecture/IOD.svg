@@ -1,0 +1,95 @@
+<svg viewBox="0 0 800 750" xmlns="http://www.w3.org/2000/svg">
+  <!-- Initial node -->
+  <circle cx="400" cy="40" r="10" fill="black" />
+  
+  <!-- Decision diamond for input type -->
+  <polygon points="400,70 430,100 400,130 370,100" stroke="black" fill="white" stroke-width="1" />
+  <text x="310" y="90" font-size="12">[new order]</text>
+  <text x="440" y="90" font-size="12">[order update]</text>
+  
+  <!-- Left branch - New Order -->
+  <line x1="370" y1="100" x2="250" y2="150" stroke="black" stroke-width="1" />
+  <line x1="430" y1="100" x2="550" y2="150" stroke="black" stroke-width="1" />
+  
+  <!-- Customer Portal container -->
+  <rect x="150" y="150" width="200" height="250" stroke="black" fill="#e6f7ff" stroke-width="1" />
+  <path d="M150,175 L175,150" stroke="black" fill="none" stroke-width="1" />
+  <text x="155" y="167" font-size="12">ui</text>
+  
+  <!-- Staff Portal container -->
+  <rect x="450" y="150" width="200" height="250" stroke="black" fill="#fff2e6" stroke-width="1" />
+  <path d="M450,175 L475,150" stroke="black" fill="none" stroke-width="1" />
+  <text x="455" y="167" font-size="12">ui</text>
+  
+  <!-- Customer Portal components -->
+  <rect x="170" y="175" width="65" height="25" stroke="black" fill="white" stroke-width="1" />
+  <text x="202" y="192" text-anchor="middle" font-size="12">Customer</text>
+  
+  <rect x="265" y="175" width="65" height="25" stroke="black" fill="white" stroke-width="1" />
+  <text x="297" y="192" text-anchor="middle" font-size="12">OrderForm</text>
+  
+  <!-- Staff Portal components -->
+  <rect x="470" y="175" width="65" height="25" stroke="black" fill="white" stroke-width="1" />
+  <text x="502" y="192" text-anchor="middle" font-size="12">Production</text>
+  
+  <rect x="565" y="175" width="65" height="25" stroke="black" fill="white" stroke-width="1" />
+  <text x="597" y="192" text-anchor="middle" font-size="12">Database</text>
+  
+  <!-- Customer Portal lifelines -->
+  <line x1="202" y1="200" x2="202" y2="370" stroke="black" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="297" y1="200" x2="297" y2="370" stroke="black" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- Staff Portal lifelines -->
+  <line x1="502" y1="200" x2="502" y2="370" stroke="black" stroke-width="1" stroke-dasharray="5,5" />
+  <line x1="597" y1="200" x2="597" y2="370" stroke="black" stroke-width="1" stroke-dasharray="5,5" />
+  
+  <!-- Customer Portal interactions -->
+  <line x1="202" y1="220" x2="297" y2="220" stroke="black" stroke-width="1" />
+  <polygon points="287,215 297,220 287,225" fill="black" />
+  <text x="250" y="215" text-anchor="middle" font-size="10">selectOptions</text>
+  
+  <line x1="297" y1="240" x2="202" y2="240" stroke="black" stroke-width="1" stroke-dasharray="5,5" />
+  <polygon points="212,235 202,240 212,245" fill="black" />
+  <text x="250" y="235" text-anchor="middle" font-size="10">priceEstimate</text>
+  
+  <line x1="202" y1="260" x2="297" y2="260" stroke="black" stroke-width="1" />
+  <polygon points="287,255 297,260 287,265" fill="black" />
+  <text x="250" y="255" text-anchor="middle" font-size="10">submitOrder</text>
+  
+  <rect x="265" y="280" width="65" height="40" stroke="black" fill="white" stroke-width="1" />
+  <text x="297" y="300" text-anchor="middle" font-size="10">Order</text>
+  <text x="297" y="315" text-anchor="middle" font-size="10">Confirmation</text>
+  
+  <!-- Staff Portal interactions -->
+  <line x1="502" y1="220" x2="597" y2="220" stroke="black" stroke-width="1" />
+  <polygon points="587,215 597,220 587,225" fill="black" />
+  <text x="550" y="215" text-anchor="middle" font-size="10">updateStatus</text>
+  
+  <rect x="470" y="260" width="65" height="40" stroke="black" fill="white" stroke-width="1" />
+  <text x="502" y="280" text-anchor="middle" font-size="10">Production</text>
+  <text x="502" y="295" text-anchor="middle" font-size="10">Schedule</text>
+  
+  <!-- Decision diamond for output type -->
+  <polygon points="400,450 430,480 400,510 370,480" stroke="black" fill="white" stroke-width="1" />
+  
+  <!-- Connecting lines to decision diamond -->
+  <line x1="250" y1="400" x2="370" y2="480" stroke="black" stroke-width="1" />
+  <line x1="550" y1="400" x2="430" y2="480" stroke="black" stroke-width="1" />
+  
+  <!-- Final output -->
+  <rect x="320" y="540" width="160" height="60" stroke="black" fill="white" stroke-width="1" />
+  <path d="M320,560 L340,540" stroke="black" fill="none" stroke-width="1" />
+  <text x="324" y="553" font-size="12">out</text>
+  <text x="400" y="575" text-anchor="middle" font-size="12">Order Processed:</text>
+  <text x="400" y="590" text-anchor="middle" font-size="12">Confirmation/Update</text>
+  
+  <!-- Line to final output -->
+  <line x1="400" y1="510" x2="400" y2="540" stroke="black" stroke-width="1" />
+  
+  <!-- Final node -->
+  <circle cx="400" cy="630" r="10" stroke="black" stroke-width="1" fill="white" />
+  <circle cx="400" cy="630" r="8" fill="black" />
+  
+  <!-- Line to final node -->
+  <line x1="400" y1="600" x2="400" y2="620" stroke="black" stroke-width="1" />
+</svg>
