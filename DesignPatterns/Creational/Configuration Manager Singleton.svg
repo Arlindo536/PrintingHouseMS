@@ -1,0 +1,45 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" fill="black" font-family="Arial" font-size="16" font-weight="bold">Singleton - PrintingHouseMS Configuration Manager</text>
+  
+  <!-- Client -->
+  <rect x="50" y="100" width="100" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="100" y="120" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Client</text>
+  <line x1="50" y1="130" x2="150" y2="130" stroke="black" stroke-width="1"/>
+  <text x="60" y="145" fill="black" font-family="Arial" font-size="10">+uses</text>
+  
+  <!-- Singleton Class -->
+  <rect x="250" y="80" width="300" height="200" fill="white" stroke="black" stroke-width="1"/>
+  <text x="400" y="100" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">ConfigurationManager</text>
+  <line x1="250" y1="110" x2="550" y2="110" stroke="black" stroke-width="1"/>
+  <text x="260" y="125" fill="black" font-family="Arial" font-size="10">-static instance: ConfigurationManager</text>
+  <text x="260" y="140" fill="black" font-family="Arial" font-size="10">-printerSettings: Map</text>
+  <text x="260" y="155" fill="black" font-family="Arial" font-size="10">-paperTypes: List</text>
+  <text x="260" y="170" fill="black" font-family="Arial" font-size="10">-bindingOptions: List</text>
+  <text x="260" y="185" fill="black" font-family="Arial" font-size="10">-pricingRules: Map</text>
+  <line x1="250" y1="195" x2="550" y2="195" stroke="black" stroke-width="1"/>
+  <text x="260" y="210" fill="black" font-family="Arial" font-size="10">+static getInstance(): ConfigurationManager</text>
+  <text x="260" y="225" fill="black" font-family="Arial" font-size="10">+getPrinterSettings(): Map</text>
+  <text x="260" y="240" fill="black" font-family="Arial" font-size="10">+updatePricingRules(): void</text>
+  <text x="260" y="255" fill="black" font-family="Arial" font-size="10">+getAvailablePaperTypes(): List</text>
+  <text x="260" y="270" fill="black" font-family="Arial" font-size="10">+validateConfiguration(): boolean</text>
+  
+  <!-- Self-reference arrow -->
+  <path d="M 550 150 Q 580 150 580 180 Q 580 210 550 210" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Client uses arrow -->
+  <line x1="150" y1="125" x2="250" y2="125" stroke="black" stroke-width="1" marker-end="url(#arrow)"/>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Labels -->
+  <text x="200" y="115" fill="black" font-family="Arial" font-size="9">uses</text>
+  <text x="590" y="175" fill="black" font-family="Arial" font-size="9">instance</text>
+</svg>
