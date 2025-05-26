@@ -1,0 +1,68 @@
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="700" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" fill="black" font-family="Arial" font-size="16" font-weight="bold">Builder Pattern - PrintingHouseMS Order Builder</text>
+  
+  <!-- Client -->
+  <rect x="50" y="70" width="100" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="100" y="90" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Client</text>
+  <line x1="50" y1="100" x2="150" y2="100" stroke="black" stroke-width="1"/>
+  <text x="60" y="115" fill="black" font-family="Arial" font-size="10">+constructOrder(): void</text>
+  
+  <!-- Builder -->
+  <rect x="250" y="50" width="200" height="180" fill="white" stroke="black" stroke-width="1"/>
+  <text x="350" y="70" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">OrderBuilder</text>
+  <line x1="250" y1="80" x2="450" y2="80" stroke="black" stroke-width="1"/>
+  <text x="260" y="95" fill="black" font-family="Arial" font-size="10">+setCustomer(customer): OrderBuilder</text>
+  <text x="260" y="110" fill="black" font-family="Arial" font-size="10">+setBookSpecs(specs): OrderBuilder</text>
+  <text x="260" y="125" fill="black" font-family="Arial" font-size="10">+setPaperType(type): OrderBuilder</text>
+  <text x="260" y="140" fill="black" font-family="Arial" font-size="10">+setBindingType(type): OrderBuilder</text>
+  <text x="260" y="155" fill="black" font-family="Arial" font-size="10">+setQuantity(qty): OrderBuilder</text>
+  <text x="260" y="170" fill="black" font-family="Arial" font-size="10">+setDeliveryDate(date): OrderBuilder</text>
+  <text x="260" y="185" fill="black" font-family="Arial" font-size="10">+setPriority(priority): OrderBuilder</text>
+  <text x="260" y="200" fill="black" font-family="Arial" font-size="10">+addSpecialInstructions(text): OrderBuilder</text>
+  <text x="260" y="215" fill="black" font-family="Arial" font-size="10">+build(): Order</text>
+  
+  <!-- Product -->
+  <rect x="500" y="80" width="150" height="150" fill="white" stroke="black" stroke-width="1"/>
+  <text x="575" y="100" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Order</text>
+  <line x1="500" y1="110" x2="650" y2="110" stroke="black" stroke-width="1"/>
+  <text x="510" y="125" fill="black" font-family="Arial" font-size="10">-customer: Customer</text>
+  <text x="510" y="140" fill="black" font-family="Arial" font-size="10">-bookSpecs: BookSpecs</text>
+  <text x="510" y="155" fill="black" font-family="Arial" font-size="10">-paperType: PaperType</text>
+  <text x="510" y="170" fill="black" font-family="Arial" font-size="10">-bindingType: BindingType</text>
+  <text x="510" y="185" fill="black" font-family="Arial" font-size="10">-quantity: int</text>
+  <text x="510" y="200" fill="black" font-family="Arial" font-size="10">-deliveryDate: Date</text>
+  <text x="510" y="215" fill="black" font-family="Arial" font-size="10">-priority: Priority</text>
+  
+  <!-- Concrete Builder -->
+  <rect x="250" y="280" width="200" height="100" fill="white" stroke="black" stroke-width="1"/>
+  <text x="350" y="300" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">StandardOrderBuilder</text>
+  <line x1="250" y1="310" x2="450" y2="310" stroke="black" stroke-width="1"/>
+  <text x="260" y="325" fill="black" font-family="Arial" font-size="10">-order: Order</text>
+  <line x1="250" y1="335" x2="450" y2="335" stroke="black" stroke-width="1"/>
+  <text x="260" y="350" fill="black" font-family="Arial" font-size="10">+setBookSpecs(specs): OrderBuilder</text>
+  <text x="260" y="365" fill="black" font-family="Arial" font-size="10">+build(): Order</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Client uses Builder -->
+  <line x1="150" y1="100" x2="250" y2="100" stroke="black" stroke-width="1" marker-end="url(#arrow)"/>
+  
+  <!-- Builder creates Product -->
+  <line x1="450" y1="150" x2="500" y2="150" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  
+  <!-- Inheritance -->
+  <line x1="350" y1="280" x2="350" y2="230" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Labels -->
+  <text x="200" y="90" fill="black" font-family="Arial" font-size="9">uses</text>
+  <text x="470" y="140" fill="black" font-family="Arial" font-size="9">creates</text>
+</svg>
