@@ -1,0 +1,23 @@
+graph TD
+
+Customer([Customer])
+Staff([Staff])
+DS3[(Book Configurations DB)]
+
+P2.1((2.1<br>Select Binding))
+P2.2((2.2<br>Select Paper Type))
+P2.3((2.3<br>Enter Dimensions))
+P2.4((2.4<br>Upload Files))
+P2.5((2.5<br>Preview Cover))
+
+Customer -->|"1. Choose binding"| P2.1
+P2.1 -->|"2. Save"| DS3
+Customer -->|"3. Choose paper"| P2.2
+P2.2 -->|"4. Save"| DS3
+Customer -->|"5. Set dimensions"| P2.3
+P2.3 -->|"6. Save"| DS3
+Customer -->|"7. Upload files"| P2.4
+P2.4 -->|"8. Store assets"| DS3
+Customer -->|"9. Preview"| P2.5
+P2.5 -->|"10. 3D render"| Customer
+Staff -->|"11. Review specs"| DS3
