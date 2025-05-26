@@ -1,0 +1,253 @@
+<svg width="1200" height="2000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="2000" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="24" font-weight="bold">🧍‍♂️ Singleton Pattern Implementation</text>
+  
+  <!-- Overview Section -->
+  <rect x="50" y="70" width="1100" height="120" fill="white" stroke="#3498db" stroke-width="2" rx="10"/>
+  <text x="70" y="100" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Overview</text>
+  <text x="70" y="125" fill="#34495e" font-family="Arial" font-size="14">The Singleton Pattern restricts the instantiation of a class to a single instance and provides global access to that instance.</text>
+  <text x="70" y="145" fill="#34495e" font-family="Arial" font-size="14">In PrintingHouseMS, this pattern ensures only one instance of critical system managers exists, providing</text>
+  <text x="70" y="165" fill="#34495e" font-family="Arial" font-size="14">centralized control over printing operations, authentication, and configuration.</text>
+  
+  <!-- Problem Solved Section -->
+  <rect x="50" y="210" width="1100" height="160" fill="white" stroke="#e74c3c" stroke-width="2" rx="10"/>
+  <text x="70" y="240" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Problem Solved</text>
+  <text x="90" y="265" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Resource Control:</text>
+  <text x="250" y="265" fill="#34495e" font-family="Arial" font-size="14">Prevents multiple instances of components that should only exist once</text>
+  <text x="90" y="285" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Global Access:</text>
+  <text x="250" y="285" fill="#34495e" font-family="Arial" font-size="14">Provides a single access point to critical system services</text>
+  <text x="90" y="305" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• State Consistency:</text>
+  <text x="250" y="305" fill="#34495e" font-family="Arial" font-size="14">Ensures consistent state across the printing house application</text>
+  <text x="90" y="325" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• System Coordination:</text>
+  <text x="250" y="325" fill="#34495e" font-family="Arial" font-size="14">Centralizes management of shared resources like print queues and configurations</text>
+  <text x="90" y="345" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Print Job Coordination:</text>
+  <text x="250" y="345" fill="#34495e" font-family="Arial" font-size="14">Prevents conflicts in printer assignments and job scheduling</text>
+  
+  <!-- Implementation Section -->
+  <rect x="50" y="390" width="1100" height="280" fill="white" stroke="#9b59b6" stroke-width="2" rx="10"/>
+  <text x="70" y="420" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Implementation in PrintingHouseMS</text>
+  
+  <!-- Structure Subsection -->
+  <text x="90" y="450" fill="#2c3e50" font-family="Arial" font-size="16" font-weight="bold">Structure</text>
+  
+  <!-- ConfigurationManager Structure -->
+  <rect x="110" y="470" width="320" height="180" fill="#ecf0f1" stroke="#95a5a6" stroke-width="1" rx="5"/>
+  <text x="270" y="490" text-anchor="middle" fill="#2c3e50" font-family="Courier New" font-size="14" font-weight="bold">ConfigurationManager</text>
+  <text x="120" y="510" fill="#34495e" font-family="Courier New" font-size="12">├─ -instance: ConfigurationManager (static)</text>
+  <text x="120" y="530" fill="#34495e" font-family="Courier New" font-size="12">├─ -printerSettings: Map</text>
+  <text x="120" y="550" fill="#34495e" font-family="Courier New" font-size="12">├─ -paperTypes: List</text>
+  <text x="120" y="570" fill="#34495e" font-family="Courier New" font-size="12">├─ -bindingOptions: List</text>
+  <text x="120" y="590" fill="#34495e" font-family="Courier New" font-size="12">├─ -pricingRules: Map</text>
+  <text x="120" y="610" fill="#34495e" font-family="Courier New" font-size="12">├─ -ConfigurationManager() (private)</text>
+  <text x="120" y="630" fill="#34495e" font-family="Courier New" font-size="12">└─ +getInstance(): ConfigurationManager</text>
+  
+  <!-- PrintQueueManager Structure -->
+  <rect x="450" y="470" width="300" height="180" fill="#ecf0f1" stroke="#95a5a6" stroke-width="1" rx="5"/>
+  <text x="600" y="490" text-anchor="middle" fill="#2c3e50" font-family="Courier New" font-size="14" font-weight="bold">PrintQueueManager</text>
+  <text x="460" y="510" fill="#34495e" font-family="Courier New" font-size="12">├─ -instance: PrintQueueManager (static)</text>
+  <text x="460" y="530" fill="#34495e" font-family="Courier New" font-size="12">├─ -activeJobs: Queue</text>
+  <text x="460" y="550" fill="#34495e" font-family="Courier New" font-size="12">├─ -printerRegistry: Map</text>
+  <text x="460" y="570" fill="#34495e" font-family="Courier New" font-size="12">├─ -queueStatus: Status</text>
+  <text x="460" y="590" fill="#34495e" font-family="Courier New" font-size="12">├─ -PrintQueueManager() (private)</text>
+  <text x="460" y="610" fill="#34495e" font-family="Courier New" font-size="12">└─ +getInstance(): PrintQueueManager</text>
+  
+  <!-- AuthenticationService Structure -->
+  <rect x="770" y="470" width="320" height="180" fill="#ecf0f1" stroke="#95a5a6" stroke-width="1" rx="5"/>
+  <text x="930" y="490" text-anchor="middle" fill="#2c3e50" font-family="Courier New" font-size="14" font-weight="bold">AuthenticationService</text>
+  <text x="780" y="510" fill="#34495e" font-family="Courier New" font-size="12">├─ -instance: AuthenticationService (static)</text>
+  <text x="780" y="530" fill="#34495e" font-family="Courier New" font-size="12">├─ -userSession: Session</text>
+  <text x="780" y="550" fill="#34495e" font-family="Courier New" font-size="12">├─ -tokenManager: TokenManager</text>
+  <text x="780" y="570" fill="#34495e" font-family="Courier New" font-size="12">├─ -securityPolicies: Map</text>
+  <text x="780" y="590" fill="#34495e" font-family="Courier New" font-size="12">├─ -AuthenticationService() (private)</text>
+  <text x="780" y="610" fill="#34495e" font-family="Courier New" font-size="12">└─ +getInstance(): AuthenticationService</text>
+  
+  <!-- Key Components Section -->
+  <rect x="50" y="690" width="1100" height="180" fill="white" stroke="#f39c12" stroke-width="2" rx="10"/>
+  <text x="70" y="720" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Key Components</text>
+  <text x="90" y="745" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">1. Private Constructor:</text>
+  <text x="280" y="745" fill="#34495e" font-family="Arial" font-size="14">Prevents external instantiation of critical system managers</text>
+  <text x="90" y="765" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">2. Static Instance:</text>
+  <text x="280" y="765" fill="#34495e" font-family="Arial" font-size="14">Single shared instance stored as a private static field</text>
+  <text x="90" y="785" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">3. Static Access Method:</text>
+  <text x="280" y="785" fill="#34495e" font-family="Arial" font-size="14">Public method to access the instance (getInstance())</text>
+  <text x="90" y="805" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">4. Thread-Safety Mechanism:</text>
+  <text x="280" y="805" fill="#34495e" font-family="Arial" font-size="14">Ensures thread-safe instantiation in multi-user printing environment</text>
+  <text x="90" y="825" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">5. State Management:</text>
+  <text x="280" y="825" fill="#34495e" font-family="Arial" font-size="14">Maintains consistent state for printing configurations, queues, and user sessions</text>
+  <text x="90" y="845" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">6. Resource Coordination:</text>
+  <text x="280" y="845" fill="#34495e" font-family="Arial" font-size="14">Centralizes management of shared printing house resources</text>
+  
+  <!-- Benefits Section -->
+  <rect x="50" y="890" width="1100" height="200" fill="white" stroke="#27ae60" stroke-width="2" rx="10"/>
+  <text x="70" y="920" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Benefits in Our PrintingHouseMS System</text>
+  <text x="90" y="945" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Centralized Print Queue Management:</text>
+  <text x="350" y="945" fill="#34495e" font-family="Arial" font-size="14">All print jobs are managed through a single queue manager</text>
+  <text x="90" y="965" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Unified Configuration Control:</text>
+  <text x="350" y="965" fill="#34495e" font-family="Arial" font-size="14">System-wide printing settings managed consistently</text>
+  <text x="90" y="985" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Secure Authentication:</text>
+  <text x="350" y="985" fill="#34495e" font-family="Arial" font-size="14">Single authentication service ensures consistent security policies</text>
+  <text x="90" y="1005" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Resource Optimization:</text>
+  <text x="350" y="1005" fill="#34495e" font-family="Arial" font-size="14">Prevents redundant instances of resource-intensive printing managers</text>
+  <text x="90" y="1025" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Consistent Pricing:</text>
+  <text x="350" y="1025" fill="#34495e" font-family="Arial" font-size="14">Single configuration manager ensures uniform pricing across all orders</text>
+  <text x="90" y="1045" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Print Job Coordination:</text>
+  <text x="350" y="1045" fill="#34495e" font-family="Arial" font-size="14">Prevents conflicts in printer assignments and job scheduling</text>
+  <text x="90" y="1065" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">• Operational Efficiency:</text>
+  <text x="350" y="1065" fill="#34495e" font-family="Arial" font-size="14">Single point of control for all printing operations</text>
+  
+  <!-- Usage Example Section -->
+  <rect x="50" y="1110" width="1100" height="240" fill="white" stroke="#8e44ad" stroke-width="2" rx="10"/>
+  <text x="70" y="1140" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Usage Example Scenario - Print Order Processing Flow</text>
+  <text x="90" y="1165" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">1. Authentication:</text>
+  <text x="220" y="1165" fill="#34495e" font-family="Arial" font-size="14">User login calls AuthenticationService.getInstance() for credential validation</text>
+  <text x="90" y="1185" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">2. Configuration Access:</text>
+  <text x="220" y="1185" fill="#34495e" font-family="Arial" font-size="14">Order processing calls ConfigurationManager.getInstance() to get pricing rules and paper types</text>
+  <text x="90" y="1205" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">3. Queue Management:</text>
+  <text x="220" y="1205" fill="#34495e" font-family="Arial" font-size="14">New print job calls PrintQueueManager.getInstance() to add job to the printing queue</text>
+  <text x="90" y="1225" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">4. Printer Assignment:</text>
+  <text x="220" y="1225" fill="#34495e" font-family="Arial" font-size="14">Queue manager uses the same instance to assign jobs to available printers</text>
+  <text x="90" y="1245" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">5. Status Updates:</text>
+  <text x="220" y="1245" fill="#34495e" font-family="Arial" font-size="14">All system components use the same queue manager instance to track job progress</text>
+  <text x="90" y="1265" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">6. Billing Calculation:</text>
+  <text x="220" y="1265" fill="#34495e" font-family="Arial" font-size="14">Pricing calculations use the same configuration manager instance for consistent rates</text>
+  <text x="90" y="1285" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">7. Multi-User Coordination:</text>
+  <text x="220" y="1285" fill="#34495e" font-family="Arial" font-size="14">Multiple staff members access shared instances simultaneously for coordinated operations</text>
+  <text x="90" y="1305" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">8. Security Enforcement:</text>
+  <text x="220" y="1305" fill="#34495e" font-family="Arial" font-size="14">All authentication requests go through the same AuthenticationService instance</text>
+  <text x="90" y="1325" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">9. Configuration Changes:</text>
+  <text x="220" y="1325" fill="#34495e" font-family="Arial" font-size="14">Updates affect all users immediately through the shared ConfigurationManager</text>
+  
+  <!-- Singleton Applied To Section -->
+  <rect x="50" y="1370" width="1100" height="200" fill="white" stroke="#e67e22" stroke-width="2" rx="10"/>
+  <text x="70" y="1400" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Singleton Applied To</text>
+  <text x="90" y="1425" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">1. ConfigurationManager:</text>
+  <text x="90" y="1445" fill="#34495e" font-family="Arial" font-size="14">   • Manages printer settings, paper types, binding options, and pricing rules</text>
+  <text x="90" y="1465" fill="#34495e" font-family="Arial" font-size="14">   • Ensures consistent configuration across all printing operations</text>
+  <text x="90" y="1485" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">2. PrintQueueManager:</text>
+  <text x="90" y="1505" fill="#34495e" font-family="Arial" font-size="14">   • Controls print job queue and printer registry</text>
+  <text x="90" y="1525" fill="#34495e" font-family="Arial" font-size="14">   • Manages job scheduling and printer assignments</text>
+  <text x="90" y="1545" fill="#34495e" font-family="Arial" font-size="14" font-weight="bold">3. AuthenticationService:</text>
+  <text x="90" y="1565" fill="#34495e" font-family="Arial" font-size="14">   • Handles user authentication and session management</text>
+  
+  <!-- Additional Singletons -->
+  <rect x="600" y="1425" width="480" height="120" fill="#ecf0f1" stroke="#95a5a6" stroke-width="1" rx="5"/>
+  <text x="840" y="1445" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="14" font-weight="bold">Additional Singletons (Future Implementation)</text>
+  <text x="620" y="1465" fill="#34495e" font-family="Arial" font-size="12">• LoggingService: Centralized logging for all printing operations</text>
+  <text x="620" y="1485" fill="#34495e" font-family="Arial" font-size="12">• DatabaseConnectionPool: Manages database connections</text>
+  <text x="620" y="1505" fill="#34495e" font-family="Arial" font-size="12">• NotificationManager: Handles customer and staff notifications</text>
+  <text x="620" y="1525" fill="#34495e" font-family="Arial" font-size="12">• ReportingEngine: Generates system-wide reports and analytics</text>
+  
+  <!-- Diagram Section -->
+  <rect x="50" y="1590" width="1100" height="380" fill="white" stroke="#34495e" stroke-width="2" rx="10"/>
+  <text x="70" y="1620" fill="#2c3e50" font-family="Arial" font-size="18" font-weight="bold">Singleton Pattern Diagrams</text>
+  
+  <!-- ConfigurationManager Diagram -->
+  <rect x="80" y="1640" width="340" height="100" fill="#ecf0f1" stroke="#3498db" stroke-width="2" rx="5"/>
+  <text x="250" y="1660" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="14" font-weight="bold">ConfigurationManager Singleton</text>
+  
+  <!-- Client box -->
+  <rect x="100" y="1680" width="80" height="40" fill="white" stroke="black" stroke-width="1"/>
+  <text x="140" y="1700" text-anchor="middle" fill="black" font-family="Arial" font-size="10" font-weight="bold">Client</text>
+  
+  <!-- ConfigurationManager box -->
+  <rect x="220" y="1670" width="180" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="310" y="1685" text-anchor="middle" fill="black" font-family="Arial" font-size="10" font-weight="bold">ConfigurationManager</text>
+  <line x1="220" y1="1690" x2="400" y2="1690" stroke="black" stroke-width="1"/>
+  <text x="225" y="1705" fill="black" font-family="Arial" font-size="8">-static instance</text>
+  <text x="225" y="1715" fill="black" font-family="Arial" font-size="8">+getInstance()</text>
+  <text x="225" y="1725" fill="black" font-family="Arial" font-size="8">+getPrinterSettings()</text>
+  
+  <!-- Arrow from Client to ConfigurationManager -->
+  <line x1="180" y1="1700" x2="220" y2="1700" stroke="black" stroke-width="1" marker-end="url(#arrow1)"/>
+  <text x="195" y="1695" fill="black" font-family="Arial" font-size="8">uses</text>
+  
+  <!-- Self-reference arrow -->
+  <path d="M 400 1680 Q 420 1680 420 1700 Q 420 1720 400 1720" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow1)"/>
+  <text x="425" y="1705" fill="black" font-family="Arial" font-size="8">instance</text>
+  
+  <!-- PrintQueueManager Diagram -->
+  <rect x="440" y="1640" width="340" height="100" fill="#ecf0f1" stroke="#e74c3c" stroke-width="2" rx="5"/>
+  <text x="610" y="1660" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="14" font-weight="bold">PrintQueueManager Singleton</text>
+  
+  <!-- Client box -->
+  <rect x="460" y="1680" width="80" height="40" fill="white" stroke="black" stroke-width="1"/>
+  <text x="500" y="1700" text-anchor="middle" fill="black" font-family="Arial" font-size="10" font-weight="bold">Client</text>
+  
+  <!-- PrintQueueManager box -->
+  <rect x="580" y="1670" width="180" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="670" y="1685" text-anchor="middle" fill="black" font-family="Arial" font-size="10" font-weight="bold">PrintQueueManager</text>
+  <line x1="580" y1="1690" x2="760" y2="1690" stroke="black" stroke-width="1"/>
+  <text x="585" y="1705" fill="black" font-family="Arial" font-size="8">-static instance</text>
+  <text x="585" y="1715" fill="black" font-family="Arial" font-size="8">+getInstance()</text>
+  <text x="585" y="1725" fill="black" font-family="Arial" font-size="8">+addJobToQueue()</text>
+  
+  <!-- Arrow from Client to PrintQueueManager -->
+  <line x1="540" y1="1700" x2="580" y2="1700" stroke="black" stroke-width="1" marker-end="url(#arrow1)"/>
+  <text x="555" y="1695" fill="black" font-family="Arial" font-size="8">uses</text>
+  
+  <!-- Self-reference arrow -->
+  <path d="M 760 1680 Q 780 1680 780 1700 Q 780 1720 760 1720" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow1)"/>
+  <text x="785" y="1705" fill="black" font-family="Arial" font-size="8">instance</text>
+  
+  <!-- AuthenticationService Diagram -->
+  <rect x="80" y="1760" width="340" height="100" fill="#ecf0f1" stroke="#9b59b6" stroke-width="2" rx="5"/>
+  <text x="250" y="1780" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="14" font-weight="bold">AuthenticationService Singleton</text>
+  
+  <!-- Client box -->
+  <rect x="100" y="1800" width="80" height="40" fill="white" stroke="black" stroke-width="1"/>
+  <text x="140" y="1820" text-anchor="middle" fill="black" font-family="Arial" font-size="10" font-weight="bold">Client</text>
+  
+  <!-- AuthenticationService box -->
+  <rect x="220" y="1790" width="180" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="310" y="1805" text-anchor="middle" fill="black" font-family="Arial" font-size="10" font-weight="bold">AuthenticationService</text>
+  <line x1="220" y1="1810" x2="400" y2="1810" stroke="black" stroke-width="1"/>
+  <text x="225" y="1825" fill="black" font-family="Arial" font-size="8">-static instance</text>
+  <text x="225" y="1835" fill="black" font-family="Arial" font-size="8">+getInstance()</text>
+  <text x="225" y="1845" fill="black" font-family="Arial" font-size="8">+authenticateUser()</text>
+  
+  <!-- Arrow from Client to AuthenticationService -->
+  <line x1="180" y1="1820" x2="220" y2="1820" stroke="black" stroke-width="1" marker-end="url(#arrow1)"/>
+  <text x="195" y="1815" fill="black" font-family="Arial" font-size="8">uses</text>
+  
+  <!-- Self-reference arrow -->
+  <path d="M 400 1800 Q 420 1800 420 1820 Q 420 1840 400 1840" stroke="black" stroke-width="1" fill="none" marker-end="url(#arrow1)"/>
+  <text x="425" y="1825" fill="black" font-family="Arial" font-size="8">instance</text>
+  
+  <!-- Combined System Flow Diagram -->
+  <rect x="440" y="1760" width="340" height="100" fill="#ecf0f1" stroke="#27ae60" stroke-width="2" rx="5"/>
+  <text x="610" y="1780" text-anchor="middle" fill="#2c3e50" font-family="Arial" font-size="14" font-weight="bold">PrintingHouseMS System Flow</text>
+  
+  <!-- System components -->
+  <rect x="460" y="1800" width="60" height="20" fill="#3498db" stroke="black" stroke-width="1"/>
+  <text x="490" y="1812" text-anchor="middle" fill="white" font-family="Arial" font-size="8">Config</text>
+  
+  <rect x="540" y="1800" width="60" height="20" fill="#e74c3c" stroke="black" stroke-width="1"/>
+  <text x="570" y="1812" text-anchor="middle" fill="white" font-family="Arial" font-size="8">Queue</text>
+  
+  <rect x="620" y="1800" width="60" height="20" fill="#9b59b6" stroke="black" stroke-width="1"/>
+  <text x="650" y="1812" text-anchor="middle" fill="white" font-family="Arial" font-size="8">Auth</text>
+  
+  <rect x="700" y="1800" width="60" height="20" fill="#f39c12" stroke="black" stroke-width="1"/>
+  <text x="730" y="1812" text-anchor="middle" fill="white" font-family="Arial" font-size="8">Client</text>
+  
+  <!-- Flow arrows -->
+  <line x1="520" y1="1810" x2="540" y2="1810" stroke="black" stroke-width="1" marker-end="url(#arrow1)"/>
+  <line x1="600" y1="1810" x2="620" y2="1810" stroke="black" stroke-width="1" marker-end="url(#arrow1)"/>
+  <line x1="680" y1="1810" x2="700" y2="1810" stroke="black" stroke-width="1" marker-end="url(#arrow1)"/>
+  
+  <text x="460" y="1840" fill="black" font-family="Arial" font-size="8">Coordinated singleton instances</text>
+  <text x="460" y="1850" fill="black" font-family="Arial" font-size="8">ensure system-wide consistency</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Footer -->
+  <text x="600" y="1980" text-anchor="middle" fill="#7f8c8d" font-family="Arial" font-size="12" font-style="italic">PrintingHouseMS Singleton Pattern Implementation - Ensuring Single Instance Control</text>
+</svg>
