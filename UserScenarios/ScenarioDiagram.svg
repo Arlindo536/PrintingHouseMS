@@ -1,184 +1,287 @@
-<svg width="900" height="1200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="900" height="1200" fill="#f5f7fa"/>
+<!-- Enhanced Legend -->
+  <g transform="translate(600, 130)" filter="url(#dropshadow)">
+    <rect x="0" y="0" width="250" height="200" fill="white" stroke="#34495e" stroke-width="2" rx="15"/>
+    <rect x="0" y="0" width="250" height="40" fill="#34495e" rx="15"/>
+    <rect x="0" y="25" width="250" height="15" fill="#34495e"/>
+    
+    <text x="125" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="white">👥 User Types</text>
+    
+    <!-- Customer -->
+    <circle cx="30" cy="70" r="18" fill="white" stroke="#2196f3" stroke-width="2"/>
+    <circle cx="30" cy="70" r="12" fill="#2196f3"/>
+    <circle cx="27" cy="65" r="4" fill="white"/>
+    <path d="M 18 78 Q 27 72 36 78 L 36 82 L 18 82 Z" fill="white"/>
+    <text x="60" y="76" font-size="14" font-weight="bold" fill="#2196f3">Customer</text>
+    
+    <!-- Production Staff -->
+    <circle cx="30" cy="110" r="18" fill="white" stroke="#f44336" stroke-width="2"/>
+    <circle cx="30" cy="110" r="12" fill="#f44336"/>
+    <circle cx="27" cy="105" r="4" fill="white"/>
+    <path d="M 18 118 Q 27 112 36 118 L 36 122 L 18 122 Z" fill="white"/>
+    <rect x="22" y="97" width="16" height="4" fill="white" rx="2"/>
+    <text x="60" y="116" font-size="14" font-weight="bold" fill="#f44336">Production Staff</text>
+    
+    <!-- Quality Control -->
+    <circle cx="30" cy="150" r="18" fill="white" stroke="#03a9f4" stroke-width="2"/>
+    <circle cx="30" cy="150" r="12" fill="#03a9f4"/>
+    <circle cx="27" cy="145" r="4" fill="white"/>
+    <path d="M 18 158 Q 27 152 36 158 L 36 162 L 18 162 Z" fill="white"/>
+    <circle cx="45" cy="135" r="8" fill="#ffc107"/>
+    <text x="45" y="140" text-anchor="middle" font-size="8" font-weight="bold" fill="white">✓</text>
+    <text x="60" y="156" font-size="14" font-weight="bold" fill="#03a9f4">Quality Control</text>
+    
+    <!-- Manager -->
+    <circle cx="30" cy="190" r="18" fill="white" stroke="#ffeb3b" stroke-width="2"/>
+    <circle cx="30" cy="190" r="12" fill="#ffeb3b"/>
+    <circle cx="27" cy="185" r="4" fill="white"/>
+    <path d="M 18 198 Q 27 192 36 198 L 36 202 L 18 202 Z" fill="white"/>
+    <rect x="27" y="195" width="6" height="12" fill="#37474f" rx="1"/>
+    <text x="60" y="196" font-size="14" font-weight="bold" fill="#f57f17">Manager</text>
+  </g><svg width="900" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="backgroundGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="1200" fill="url(#backgroundGrad)"/>
+  
+  <!-- Header background -->
+  <rect x="0" y="0" width="900" height="100" fill="#34495e" opacity="0.9"/>
   
   <!-- Title -->
-  <text x="450" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#2c3e50">
-    PrintingHouseMS User Scenarios
+  <text x="450" y="40" text-anchor="middle" font-size="32" font-weight="bold" fill="white">
+    📚 PrintingHouseMS User Scenarios
   </text>
-  <text x="450" y="70" text-anchor="middle" font-size="16" fill="#7f8c8d">
+  <text x="450" y="70" text-anchor="middle" font-size="16" fill="#ecf0f1">
     Book Printing Management System - User Stories
   </text>
   
   <!-- Scenario 1: Customer Ordering -->
-  <g transform="translate(50, 120)">
-    <!-- Speech bubble -->
-    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
-          fill="#a8d8ff" stroke="#3498db" stroke-width="2"/>
+  <g transform="translate(50, 130)" filter="url(#dropshadow)">
+    <!-- Speech bubble with gradient -->
+    <path d="M 30 20 Q 30 10 40 10 L 440 10 Q 450 10 450 20 L 450 85 Q 450 95 440 95 L 160 95 L 130 115 L 150 95 L 40 95 Q 30 95 30 85 Z" 
+          fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
     
-    <!-- Text -->
-    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
-      1- As a customer, I want to configure my book specifications
-    </text>
-    <text x="40" y="55" font-size="14" fill="#2c3e50">
-      (binding type, paper quality, dimensions) online so that I can
-    </text>
-    <text x="40" y="75" font-size="14" fill="#2c3e50">
-      get an instant price quote before placing my order.
-    </text>
+    <!-- Icon background circle -->
+    <circle cx="500" cy="65" r="35" fill="white" stroke="#2196f3" stroke-width="3"/>
+    <circle cx="500" cy="65" r="28" fill="#2196f3"/>
     
     <!-- User icon -->
-    <circle cx="520" cy="60" r="30" fill="#3498db"/>
-    <circle cx="515" cy="52" r="8" fill="white"/>
-    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+    <circle cx="495" cy="57" r="9" fill="white"/>
+    <path d="M 480 75 Q 495 67 510 75 L 510 85 L 480 85 Z" fill="white"/>
+    
+    <!-- Number badge -->
+    <circle cx="470" cy="35" r="15" fill="#ff5722"/>
+    <text x="470" y="41" text-anchor="middle" font-size="16" font-weight="bold" fill="white">1</text>
+    
+    <!-- Text -->
+    <text x="50" y="35" font-size="15" font-weight="bold" fill="#1565c0">
+      As a customer, I want to configure my book specifications
+    </text>
+    <text x="50" y="55" font-size="13" fill="#37474f">
+      (binding type, paper quality, dimensions) online so that I can
+    </text>
+    <text x="50" y="75" font-size="13" fill="#37474f">
+      get an instant price quote before placing my order.
+    </text>
   </g>
   
   <!-- Scenario 2: File Upload -->
-  <g transform="translate(50, 270)">
+  <g transform="translate(50, 290)" filter="url(#dropshadow)">
     <!-- Speech bubble -->
-    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
-          fill="#b8e6b8" stroke="#27ae60" stroke-width="2"/>
+    <path d="M 30 20 Q 30 10 40 10 L 440 10 Q 450 10 450 20 L 450 85 Q 450 95 440 95 L 160 95 L 130 115 L 150 95 L 40 95 Q 30 95 30 85 Z" 
+          fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
     
-    <!-- Text -->
-    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
-      2- As a customer, I want to upload my manuscript files
-    </text>
-    <text x="40" y="55" font-size="14" fill="#2c3e50">
-      (PDF, DOCX, InDesign) securely so that the printing house
-    </text>
-    <text x="40" y="75" font-size="14" fill="#2c3e50">
-      can access them for production without file corruption.
-    </text>
+    <!-- Icon background circle -->
+    <circle cx="500" cy="65" r="35" fill="white" stroke="#4caf50" stroke-width="3"/>
+    <circle cx="500" cy="65" r="28" fill="#4caf50"/>
     
     <!-- User icon -->
-    <circle cx="520" cy="60" r="30" fill="#27ae60"/>
-    <circle cx="515" cy="52" r="8" fill="white"/>
-    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+    <circle cx="495" cy="57" r="9" fill="white"/>
+    <path d="M 480 75 Q 495 67 510 75 L 510 85 L 480 85 Z" fill="white"/>
+    
+    <!-- Number badge -->
+    <circle cx="470" cy="35" r="15" fill="#ff5722"/>
+    <text x="470" y="41" text-anchor="middle" font-size="16" font-weight="bold" fill="white">2</text>
+    
+    <!-- Text -->
+    <text x="50" y="35" font-size="15" font-weight="bold" fill="#2e7d32">
+      As a customer, I want to upload my manuscript files
+    </text>
+    <text x="50" y="55" font-size="13" fill="#37474f">
+      (PDF, DOCX, InDesign) securely so that the printing house
+    </text>
+    <text x="50" y="75" font-size="13" fill="#37474f">
+      can access them for production without file corruption.
+    </text>
   </g>
   
   <!-- Scenario 3: 3D Preview -->
-  <g transform="translate(50, 420)">
+  <g transform="translate(50, 450)" filter="url(#dropshadow)">
     <!-- Speech bubble -->
-    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
-          fill="#f9ca9b" stroke="#f39c12" stroke-width="2"/>
+    <path d="M 30 20 Q 30 10 40 10 L 440 10 Q 450 10 450 20 L 450 85 Q 450 95 440 95 L 160 95 L 130 115 L 150 95 L 40 95 Q 30 95 30 85 Z" 
+          fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
     
-    <!-- Text -->
-    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
-      3- As a customer, I want to see a 3D preview of my book
-    </text>
-    <text x="40" y="55" font-size="14" fill="#2c3e50">
-      with my selected cover and binding options so that I can
-    </text>
-    <text x="40" y="75" font-size="14" fill="#2c3e50">
-      visualize the final product before confirming my order.
-    </text>
+    <!-- Icon background circle -->
+    <circle cx="500" cy="65" r="35" fill="white" stroke="#ff9800" stroke-width="3"/>
+    <circle cx="500" cy="65" r="28" fill="#ff9800"/>
     
     <!-- User icon -->
-    <circle cx="520" cy="60" r="30" fill="#f39c12"/>
-    <circle cx="515" cy="52" r="8" fill="white"/>
-    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+    <circle cx="495" cy="57" r="9" fill="white"/>
+    <path d="M 480 75 Q 495 67 510 75 L 510 85 L 480 85 Z" fill="white"/>
+    
+    <!-- Number badge -->
+    <circle cx="470" cy="35" r="15" fill="#ff5722"/>
+    <text x="470" y="41" text-anchor="middle" font-size="16" font-weight="bold" fill="white">3</text>
+    
+    <!-- Text -->
+    <text x="50" y="35" font-size="15" font-weight="bold" fill="#ef6c00">
+      As a customer, I want to see a 3D preview of my book
+    </text>
+    <text x="50" y="55" font-size="13" fill="#37474f">
+      with my selected cover and binding options so that I can
+    </text>
+    <text x="50" y="75" font-size="13" fill="#37474f">
+      visualize the final product before confirming my order.
+    </text>
   </g>
   
   <!-- Scenario 4: Order Tracking -->
-  <g transform="translate(50, 570)">
+  <g transform="translate(50, 610)" filter="url(#dropshadow)">
     <!-- Speech bubble -->
-    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
-          fill="#dda0dd" stroke="#9b59b6" stroke-width="2"/>
+    <path d="M 30 20 Q 30 10 40 10 L 440 10 Q 450 10 450 20 L 450 85 Q 450 95 440 95 L 160 95 L 130 115 L 150 95 L 40 95 Q 30 95 30 85 Z" 
+          fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
     
-    <!-- Text -->
-    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
-      4- As a customer, I want to track my order status in real-time
-    </text>
-    <text x="40" y="55" font-size="14" fill="#2c3e50">
-      (received, in production, quality check, shipped) so that I know
-    </text>
-    <text x="40" y="75" font-size="14" fill="#2c3e50">
-      exactly when to expect my printed books.
-    </text>
+    <!-- Icon background circle -->
+    <circle cx="500" cy="65" r="35" fill="white" stroke="#9c27b0" stroke-width="3"/>
+    <circle cx="500" cy="65" r="28" fill="#9c27b0"/>
     
     <!-- User icon -->
-    <circle cx="520" cy="60" r="30" fill="#9b59b6"/>
-    <circle cx="515" cy="52" r="8" fill="white"/>
-    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+    <circle cx="495" cy="57" r="9" fill="white"/>
+    <path d="M 480 75 Q 495 67 510 75 L 510 85 L 480 85 Z" fill="white"/>
+    
+    <!-- Number badge -->
+    <circle cx="470" cy="35" r="15" fill="#ff5722"/>
+    <text x="470" y="41" text-anchor="middle" font-size="16" font-weight="bold" fill="white">4</text>
+    
+    <!-- Text -->
+    <text x="50" y="35" font-size="15" font-weight="bold" fill="#7b1fa2">
+      As a customer, I want to track my order status in real-time
+    </text>
+    <text x="50" y="55" font-size="13" fill="#37474f">
+      (received, in production, quality check, shipped) so that I know
+    </text>
+    <text x="50" y="75" font-size="13" fill="#37474f">
+      exactly when to expect my printed books.
+    </text>
   </g>
   
   <!-- Scenario 5: Staff Production Management -->
-  <g transform="translate(430, 720)">
+  <g transform="translate(350, 770)" filter="url(#dropshadow)">
     <!-- Speech bubble (right-aligned) -->
-    <path d="M 420 20 Q 430 10 440 20 L 440 80 Q 440 90 430 90 L 320 90 L 350 110 L 330 90 L 20 90 Q 10 90 10 80 L 10 20 Q 10 10 20 10 L 420 10 Z" 
-          fill="#ffb3ba" stroke="#e74c3c" stroke-width="2"/>
+    <path d="M 410 20 Q 420 10 430 20 L 430 85 Q 430 95 420 95 L 290 95 L 320 115 L 300 95 L 30 95 Q 20 95 20 85 L 20 20 Q 20 10 30 10 L 410 10 Z" 
+          fill="#ffebee" stroke="#f44336" stroke-width="2"/>
     
-    <!-- Text -->
-    <text x="30" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
-      5- As production staff, I want to update order status
-    </text>
-    <text x="30" y="55" font-size="14" fill="#2c3e50">
-      and add notes about production progress so that customers
-    </text>
-    <text x="30" y="75" font-size="14" fill="#2c3e50">
-      and managers stay informed about the workflow.
-    </text>
+    <!-- Icon background circle -->
+    <circle cx="50" cy="65" r="35" fill="white" stroke="#f44336" stroke-width="3"/>
+    <circle cx="50" cy="65" r="28" fill="#f44336"/>
     
     <!-- Staff icon -->
-    <circle cx="30" cy="60" r="30" fill="#e74c3c"/>
-    <circle cx="35" cy="52" r="8" fill="white"/>
-    <path d="M 15 68 Q 30 60 45 68 L 45 80 L 15 80 Z" fill="white"/>
+    <circle cx="55" cy="57" r="9" fill="white"/>
+    <path d="M 35 75 Q 50 67 65 75 L 65 85 L 35 85 Z" fill="white"/>
     <!-- Staff hat -->
-    <rect x="20" y="40" width="20" height="8" fill="white"/>
+    <rect x="40" y="45" width="20" height="6" fill="white" rx="3"/>
+    
+    <!-- Number badge -->
+    <circle cx="480" cy="35" r="15" fill="#ff5722"/>
+    <text x="480" y="41" text-anchor="middle" font-size="16" font-weight="bold" fill="white">5</text>
+    
+    <!-- Text -->
+    <text x="40" y="35" font-size="15" font-weight="bold" fill="#c62828">
+      As production staff, I want to update order status
+    </text>
+    <text x="40" y="55" font-size="13" fill="#37474f">
+      and add notes about production progress so that customers
+    </text>
+    <text x="40" y="75" font-size="13" fill="#37474f">
+      and managers stay informed about the workflow.
+    </text>
   </g>
   
   <!-- Scenario 6: Quality Control -->
-  <g transform="translate(430, 870)">
+  <g transform="translate(350, 930)" filter="url(#dropshadow)">
     <!-- Speech bubble (right-aligned) -->
-    <path d="M 420 20 Q 430 10 440 20 L 440 80 Q 440 90 430 90 L 320 90 L 350 110 L 330 90 L 20 90 Q 10 90 10 80 L 10 20 Q 10 10 20 10 L 420 10 Z" 
-          fill="#87ceeb" stroke="#3498db" stroke-width="2"/>
+    <path d="M 410 20 Q 420 10 430 20 L 430 85 Q 430 95 420 95 L 290 95 L 320 115 L 300 95 L 30 95 Q 20 95 20 85 L 20 20 Q 20 10 30 10 L 410 10 Z" 
+          fill="#e1f5fe" stroke="#03a9f4" stroke-width="2"/>
     
-    <!-- Text -->
-    <text x="30" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
-      6- As quality control staff, I want to upload sample photos
-    </text>
-    <text x="30" y="55" font-size="14" fill="#2c3e50">
-      and get customer approval before final production so that
-    </text>
-    <text x="30" y="75" font-size="14" fill="#2c3e50">
-      we ensure customer satisfaction with the final product.
-    </text>
+    <!-- Icon background circle -->
+    <circle cx="50" cy="65" r="35" fill="white" stroke="#03a9f4" stroke-width="3"/>
+    <circle cx="50" cy="65" r="28" fill="#03a9f4"/>
     
     <!-- Staff icon -->
-    <circle cx="30" cy="60" r="30" fill="#3498db"/>
-    <circle cx="35" cy="52" r="8" fill="white"/>
-    <path d="M 15 68 Q 30 60 45 68 L 45 80 L 15 80 Z" fill="white"/>
+    <circle cx="55" cy="57" r="9" fill="white"/>
+    <path d="M 35 75 Q 50 67 65 75 L 65 85 L 35 85 Z" fill="white"/>
     <!-- Quality badge -->
-    <circle cx="50" cy="45" r="8" fill="#f1c40f"/>
-    <text x="50" y="49" text-anchor="middle" font-size="8" fill="white">✓</text>
+    <circle cx="72" cy="48" r="10" fill="#ffc107"/>
+    <text x="72" y="53" text-anchor="middle" font-size="12" font-weight="bold" fill="white">✓</text>
+    
+    <!-- Number badge -->
+    <circle cx="480" cy="35" r="15" fill="#ff5722"/>
+    <text x="480" y="41" text-anchor="middle" font-size="16" font-weight="bold" fill="white">6</text>
+    
+    <!-- Text -->
+    <text x="40" y="35" font-size="15" font-weight="bold" fill="#0277bd">
+      As quality control staff, I want to upload sample photos
+    </text>
+    <text x="40" y="55" font-size="13" fill="#37474f">
+      and get customer approval before final production so that
+    </text>
+    <text x="40" y="75" font-size="13" fill="#37474f">
+      we ensure customer satisfaction with the final product.
+    </text>
   </g>
   
   <!-- Scenario 7: Manager Reports -->
-  <g transform="translate(50, 1020)">
+  <g transform="translate(50, 1090)" filter="url(#dropshadow)">
     <!-- Speech bubble -->
-    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
-          fill="#ffd700" stroke="#f1c40f" stroke-width="2"/>
+    <path d="M 30 20 Q 30 10 40 10 L 440 10 Q 450 10 450 20 L 450 85 Q 450 95 440 95 L 160 95 L 130 115 L 150 95 L 40 95 Q 30 95 30 85 Z" 
+          fill="#fffde7" stroke="#ffeb3b" stroke-width="2"/>
     
-    <!-- Text -->
-    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
-      7- As a manager, I want to generate financial and production
-    </text>
-    <text x="40" y="55" font-size="14" fill="#2c3e50">
-      reports (daily, weekly, monthly) so that I can analyze business
-    </text>
-    <text x="40" y="75" font-size="14" fill="#2c3e50">
-      performance and make data-driven operational decisions.
-    </text>
+    <!-- Icon background circle -->
+    <circle cx="500" cy="65" r="35" fill="white" stroke="#ffeb3b" stroke-width="3"/>
+    <circle cx="500" cy="65" r="28" fill="#ffeb3b"/>
     
     <!-- Manager icon -->
-    <circle cx="520" cy="60" r="30" fill="#f1c40f"/>
-    <circle cx="515" cy="52" r="8" fill="white"/>
-    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+    <circle cx="495" cy="57" r="9" fill="white"/>
+    <path d="M 480 75 Q 495 67 510 75 L 510 85 L 480 85 Z" fill="white"/>
     <!-- Tie -->
-    <rect x="518" y="65" width="4" height="15" fill="#2c3e50"/>
+    <rect x="497" y="67" width="6" height="18" fill="#37474f" rx="1"/>
+    
+    <!-- Number badge -->
+    <circle cx="470" cy="35" r="15" fill="#ff5722"/>
+    <text x="470" y="41" text-anchor="middle" font-size="16" font-weight="bold" fill="white">7</text>
+    
+    <!-- Text -->
+    <text x="50" y="35" font-size="15" font-weight="bold" fill="#f57f17">
+      As a manager, I want to generate financial and production
+    </text>
+    <text x="50" y="55" font-size="13" fill="#37474f">
+      reports (daily, weekly, monthly) so that I can analyze business
+    </text>
+    <text x="50" y="75" font-size="13" fill="#37474f">
+      performance and make data-driven operational decisions.
+    </text>
   </g>
   
-  <!-- Legend -->
+  <!-- Legend (updated) -->
   <g transform="translate(650, 120)">
     <rect x="0" y="0" width="200" height="120" fill="white" stroke="#bdc3c7" stroke-width="1" rx="10"/>
     <text x="100" y="20" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Legend</text>
