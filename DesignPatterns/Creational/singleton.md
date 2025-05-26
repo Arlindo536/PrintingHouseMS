@@ -96,38 +96,54 @@ In a multi-user printing environment, thread safety is crucial:
 - **Double-Checked Locking**: Prevents multiple instances in concurrent scenarios
 - **Synchronized Access**: Critical sections protected for queue and configuration updates
 
-┌─────────────────────────┐      ┌─────────────────────────────┐ ←─┐
-│     PrintingHouseMS     │ ──→  │    ConfigurationManager     │   │
-├─────────────────────────┤      ├─────────────────────────────┤   │
-│                         │      │ -instance : Configuration   │   │
-│                         │      │           Manager           │   │
-│ + processOrder(): void  │      ├─────────────────────────────┤   │
-│ + manageQueue(): void   │      │ - ConfigurationManager()    │   │
-│ + authenticateUser()    │      │ +getInstance():Configuration│   │
-│                         │      │           Manager           │   │
-└─────────────────────────┘      └─────────────────────────────┘ ──┘
+## Singleton Pattern Diagram
 
-┌─────────────────────────┐      ┌─────────────────────────────┐ ←─┐
-│     PrintingHouseMS     │ ──→  │     PrintQueueManager       │   │
-├─────────────────────────┤      ├─────────────────────────────┤   │
-│                         │      │ -instance : PrintQueue      │   │
-│                         │      │           Manager           │   │
-│ + processOrder(): void  │      ├─────────────────────────────┤   │
-│ + manageQueue(): void   │      │ - PrintQueueManager()       │   │
-│ + authenticateUser()    │      │ +getInstance():PrintQueue   │   │
-│                         │      │           Manager           │   │
-└─────────────────────────┘      └─────────────────────────────┘ ──┘
-
-┌─────────────────────────┐      ┌─────────────────────────────┐ ←─┐
-│     PrintingHouseMS     │ ──→  │   AuthenticationService     │   │
-├─────────────────────────┤      ├─────────────────────────────┤   │
-│                         │      │ -instance : Authentication  │   │
-│                         │      │           Service           │   │
-│ + processOrder(): void  │      ├─────────────────────────────┤   │
-│ + manageQueue(): void   │      │ - AuthenticationService()   │   │
-│ + authenticateUser()    │      │ +getInstance():Authentication│   │
-│                         │      │           Service           │   │
-└─────────────────────────┘      └─────────────────────────────┘ ──┘
+```mermaid
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'primaryColor': '#ffffff',
+    'primaryTextColor': '#000000',
+    'primaryBorderColor': '#000000',
+    'lineColor': '#000000',
+    'background': '#ffffff',
+    'mainBkg': '#ffffff',
+    'secondaryColor': '#ffffff',
+    'tertiaryColor': '#ffffff'
+  }
+}}%%
+classDiagram
+    class PrintingHouseMS {
+        +processOrder() void
+        +manageQueue() void
+        +authenticateUser() void
+    }
+    
+    class ConfigurationManager {
+        -instance ConfigurationManager
+        -ConfigurationManager()
+        +getInstance() ConfigurationManager
+    }
+    
+    class PrintQueueManager {
+        -instance PrintQueueManager
+        -PrintQueueManager()
+        +getInstance() PrintQueueManager
+    }
+    
+    class AuthenticationService {
+        -instance AuthenticationService
+        -AuthenticationService()
+        +getInstance() AuthenticationService
+    }
+    
+    PrintingHouseMS --> ConfigurationManager
+    PrintingHouseMS --> PrintQueueManager
+    PrintingHouseMS --> AuthenticationService
+    
+    ConfigurationManager --> ConfigurationManager : instance
+    PrintQueueManager --> PrintQueueManager : instance
+    AuthenticationService --> AuthenticationService : instance
 ## Real-World Benefits
 
 - **Operational Efficiency**: Single point of control for all printing operations
