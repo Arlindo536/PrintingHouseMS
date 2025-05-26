@@ -1,0 +1,105 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#2d3748"/>
+  
+  <!-- Main System Class -->
+  <g id="printing-house-system">
+    <rect x="450" y="50" width="300" height="120" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="450" y="50" width="300" height="30" fill="#4a5568"/>
+    <text x="600" y="70" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">PrintingHouseMS</text>
+    <line x1="450" y1="80" x2="750" y2="80" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="100" fill="white" font-family="Arial" font-size="12">+setupOrderChain(): void</text>
+    <text x="460" y="115" fill="white" font-family="Arial" font-size="12">+processOrder(order): OrderResult</text>
+    <text x="460" y="130" fill="white" font-family="Arial" font-size="12">+getOrderStatus(orderId): Status</text>
+    <text x="460" y="145" fill="white" font-family="Arial" font-size="12">+routeToHandler(request): void</text>
+  </g>
+  
+  <!-- Abstract OrderHandler Class -->
+  <g id="order-handler">
+    <rect x="450" y="220" width="300" height="140" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="450" y="220" width="300" height="30" fill="#4a5568"/>
+    <text x="600" y="235" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«abstract»</text>
+    <text x="600" y="250" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">OrderHandler</text>
+    <line x1="450" y1="260" x2="750" y2="260" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="280" fill="white" font-family="Arial" font-size="12">-nextHandler: OrderHandler</text>
+    <line x1="450" y1="290" x2="750" y2="290" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="310" fill="white" font-family="Arial" font-size="12">+setNextHandler(handler): void</text>
+    <text x="460" y="325" fill="white" font-family="Arial" font-size="12">+handleOrder(order): OrderResult</text>
+    <text x="460" y="340" fill="white" font-family="Arial" font-size="12">+canHandle(order): boolean</text>
+    <text x="460" y="355" fill="white" font-family="Arial" font-size="12">+processToNext(order): OrderResult</text>
+  </g>
+  
+  <!-- StandardOrderHandler -->
+  <g id="standard-handler">
+    <rect x="50" y="450" width="220" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="50" y="450" width="220" height="30" fill="#4a5568"/>
+    <text x="160" y="470" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">StandardOrderHandler</text>
+    <line x1="50" y1="480" x2="270" y2="480" stroke="#4a5568" stroke-width="1"/>
+    <text x="60" y="500" fill="white" font-family="Arial" font-size="12">+handleOrder(order): OrderResult</text>
+    <text x="60" y="515" fill="white" font-family="Arial" font-size="12">+calculatePrice(specs): Price</text>
+    <text x="60" y="530" fill="white" font-family="Arial" font-size="12">+checkCapacity(): boolean</text>
+  </g>
+  
+  <!-- RushOrderHandler -->
+  <g id="rush-handler">
+    <rect x="300" y="450" width="220" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="300" y="450" width="220" height="30" fill="#4a5568"/>
+    <text x="410" y="470" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">RushOrderHandler</text>
+    <line x1="300" y1="480" x2="520" y2="480" stroke="#4a5568" stroke-width="1"/>
+    <text x="310" y="500" fill="white" font-family="Arial" font-size="12">+handleOrder(order): OrderResult</text>
+    <text x="310" y="515" fill="white" font-family="Arial" font-size="12">+validateRushRequest(): boolean</text>
+    <text x="310" y="530" fill="white" font-family="Arial" font-size="12">+applyRushSurcharge(): Price</text>
+  </g>
+  
+  <!-- SpecialMaterialHandler -->
+  <g id="special-material-handler">
+    <rect x="550" y="450" width="220" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="550" y="450" width="220" height="30" fill="#4a5568"/>
+    <text x="660" y="470" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">SpecialMaterialHandler</text>
+    <line x1="550" y1="480" x2="770" y2="480" stroke="#4a5568" stroke-width="1"/>
+    <text x="560" y="500" fill="white" font-family="Arial" font-size="12">+handleOrder(order): OrderResult</text>
+    <text x="560" y="515" fill="white" font-family="Arial" font-size="12">+checkMaterialAvailability(): boolean</text>
+    <text x="560" y="530" fill="white" font-family="Arial" font-size="12">+calculateMaterialCost(): Price</text>
+  </g>
+  
+  <!-- CustomBindingHandler -->
+  <g id="custom-binding-handler">
+    <rect x="800" y="450" width="220" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="800" y="450" width="220" height="30" fill="#4a5568"/>
+    <text x="910" y="470" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">CustomBindingHandler</text>
+    <line x1="800" y1="480" x2="1020" y2="480" stroke="#4a5568" stroke-width="1"/>
+    <text x="810" y="500" fill="white" font-family="Arial" font-size="12">+handleOrder(order): OrderResult</text>
+    <text x="810" y="515" fill="white" font-family="Arial" font-size="12">+validateBindingSpecs(): boolean</text>
+    <text x="810" y="530" fill="white" font-family="Arial" font-size="12">+estimateBindingTime(): Duration</text>
+  </g>
+  
+  <!-- Inheritance arrows from concrete handlers to abstract handler -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="white"/>
+    </marker>
+  </defs>
+  
+  <!-- Inheritance lines -->
+  <line x1="160" y1="450" x2="520" y2="360" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="410" y1="450" x2="560" y2="360" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="660" y1="450" x2="620" y2="360" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="910" y1="450" x2="680" y2="360" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Composition line from System to OrderHandler -->
+  <line x1="600" y1="170" x2="600" y2="220" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Chain connections between handlers -->
+  <path d="M 270 500 Q 285 500 300 500" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 520 500 Q 535 500 550 500" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 770 500 Q 785 500 800 500" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Labels -->
+  <text x="600" y="200" text-anchor="middle" fill="white" font-family="Arial" font-size="12">manages</text>
+  <text x="285" y="490" text-anchor="middle" fill="white" font-family="Arial" font-size="10">next</text>
+  <text x="535" y="490" text-anchor="middle" fill="white" font-family="Arial" font-size="10">next</text>
+  <text x="785" y="490" text-anchor="middle" fill="white" font-family="Arial" font-size="10">next</text>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold">Chain of Responsibility Pattern - PrintingHouseMS</text>
+</svg>

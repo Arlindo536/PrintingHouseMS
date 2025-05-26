@@ -1,0 +1,49 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: none; stroke: white; stroke-width: 1.5; }
+    .title { fill: white; font: bold 14px sans-serif; }
+    .field { fill: white; font: 12px sans-serif; }
+    .separator { stroke: white; stroke-width: 1; }
+    .bg { fill: black; }
+    .arrow { stroke: white; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="white"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="100%" height="100%" />
+
+  <!-- Abstract Template Class -->
+  <rect x="280" y="30" width="240" height="160" class="box" />
+  <text x="400" y="50" text-anchor="middle" class="title">&lt;&lt;abstract&gt;&gt;</text>
+  <text x="400" y="70" text-anchor="middle" class="title">OrderProcessingTemplate</text>
+  <line x1="280" y1="80" x2="520" y2="80" class="separator" />
+  <text x="290" y="100" class="field">+ executeProcess()</text>
+  <text x="290" y="115" class="field">+ prepareFiles()</text>
+  <text x="290" y="130" class="field">+ printOrder()</text>
+  <text x="290" y="145" class="field">+ bindAndFinish()</text>
+  <text x="290" y="160" class="field">+ packageOrder()</text>
+
+  <!-- Concrete Subclasses -->
+  <rect x="50" y="240" width="180" height="70" class="box" />
+  <text x="140" y="260" text-anchor="middle" class="field">StandardOrderProcess</text>
+  <line x1="50" y1="265" x2="230" y2="265" class="separator" />
+  <text x="60" y="280" class="field">Overrides: printOrder()</text>
+
+  <rect x="310" y="240" width="180" height="85" class="box" />
+  <text x="400" y="260" text-anchor="middle" class="field">UrgentOrderProcess</text>
+  <line x1="310" y1="265" x2="490" y2="265" class="separator" />
+  <text x="320" y="280" class="field">Overrides: prepareFiles()</text>
+  <text x="320" y="295" class="field">Overrides: bindAndFinish()</text>
+
+  <rect x="570" y="240" width="180" height="70" class="box" />
+  <text x="660" y="260" text-anchor="middle" class="field">BulkOrderProcess</text>
+  <line x1="570" y1="265" x2="750" y2="265" class="separator" />
+  <text x="580" y="280" class="field">Overrides: packageOrder()</text>
+
+  <!-- Arrows -->
+  <line x1="400" y1="190" x2="140" y2="240" class="arrow" />
+  <line x1="400" y1="190" x2="400" y2="240" class="arrow" />
+  <line x1="400" y1="190" x2="660" y2="240" class="arrow" />
+</svg>

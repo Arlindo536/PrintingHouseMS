@@ -1,0 +1,58 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill: none; stroke: white; stroke-width: 1.5; }
+    .title { fill: white; font: bold 14px sans-serif; }
+    .field { fill: white; font: 12px sans-serif; }
+    .bg { fill: black; }
+  </style>
+  <rect class="bg" width="100%" height="100%" />
+
+  <!-- PrintingHouseMS -->
+  <rect x="450" y="20" width="300" height="80" class="box" />
+  <text x="600" y="40" text-anchor="middle" class="title">PrintingHouseMS</text>
+  <text x="460" y="60" class="field">- originator: OrderOriginator</text>
+  <text x="460" y="75" class="field">- caretaker: OrderCaretaker</text>
+  <text x="460" y="90" class="field">+ placeOrder()</text>
+  <text x="460" y="105" class="field">+ loadOrderHistory()</text>
+
+  <!-- OrderOriginator -->
+  <rect x="150" y="200" width="300" height="110" class="box" />
+  <text x="300" y="220" text-anchor="middle" class="title">OrderOriginator</text>
+  <text x="160" y="240" class="field">- state: OrderDetails</text>
+  <text x="160" y="260" class="field">+ saveToMemento(): OrderMemento</text>
+  <text x="160" y="275" class="field">+ restoreFromMemento(m: OrderMemento)</text>
+  <text x="160" y="290" class="field">+ setOrderDetails(details: OrderDetails)</text>
+  <text x="160" y="305" class="field">+ getOrderDetails(): OrderDetails</text>
+
+  <!-- OrderCaretaker -->
+  <rect x="750" y="200" width="300" height="90" class="box" />
+  <text x="900" y="220" text-anchor="middle" class="title">OrderCaretaker</text>
+  <text x="760" y="240" class="field">- mementos: List&lt;OrderMemento&gt;</text>
+  <text x="760" y="260" class="field">+ addMemento(m: OrderMemento)</text>
+  <text x="760" y="275" class="field">+ getMemento(index: int): OrderMemento</text>
+
+  <!-- OrderMemento -->
+  <rect x="450" y="400" width="300" height="70" class="box" />
+  <text x="600" y="420" text-anchor="middle" class="title">OrderMemento</text>
+  <text x="460" y="440" class="field">- state: OrderDetails</text>
+  <text x="460" y="460" class="field">+ getState(): OrderDetails</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="white"/>
+    </marker>
+  </defs>
+  
+  <!-- Arrows from PrintingHouseMS to Originator and Caretaker -->
+  <line x1="600" y1="100" x2="300" y2="200" stroke="white" marker-end="url(#arrow)" />
+  <line x1="600" y1="100" x2="900" y2="200" stroke="white" marker-end="url(#arrow)" />
+  
+  <!-- Arrows from Originator to Memento -->
+  <line x1="300" y1="310" x2="600" y2="400" stroke="white" marker-end="url(#arrow)" />
+  
+  <!-- Arrows from Caretaker to Memento -->
+  <line x1="900" y1="290" x2="600" y2="400" stroke="white" marker-end="url(#arrow)" />
+
+</svg>
+

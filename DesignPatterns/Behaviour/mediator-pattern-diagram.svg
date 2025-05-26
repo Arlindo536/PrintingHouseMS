@@ -1,0 +1,86 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0f0f0f"/>
+  
+  <!-- Border -->
+  <rect x="20" y="20" width="1160" height="760" fill="none" stroke="#333" stroke-width="2" rx="10"/>
+  
+  <!-- Dashed circles for connections -->
+  <ellipse cx="600" cy="400" rx="300" ry="200" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="5,5" opacity="0.6"/>
+  <ellipse cx="600" cy="400" rx="400" ry="280" fill="none" stroke="#666" stroke-width="1" stroke-dasharray="5,5" opacity="0.4"/>
+  
+  <!-- Connection lines -->
+  <!-- Abstract to Mediator -->
+  <line x1="600" y1="160" x2="600" y2="280" stroke="#555" stroke-width="2"/>
+  
+  <!-- Mediator to components -->
+  <line x1="540" y1="380" x2="280" y2="520" stroke="#555" stroke-width="2"/>
+  <line x1="580" y1="390" x2="420" y2="520" stroke="#555" stroke-width="2"/>
+  <line x1="620" y1="390" x2="780" y2="520" stroke="#555" stroke-width="2"/>
+  <line x1="660" y1="380" x2="920" y2="520" stroke="#555" stroke-width="2"/>
+  
+  <!-- Abstract Component -->
+  <rect x="480" y="80" width="240" height="80" fill="#1e2d1b" stroke="#10b981" stroke-width="2" rx="5"/>
+  <text x="600" y="100" text-anchor="middle" fill="#34d399" font-family="Arial, sans-serif" font-size="12" font-weight="bold">&lt;&lt;Abstract&gt;&gt;</text>
+  <text x="600" y="115" text-anchor="middle" fill="#34d399" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Component</text>
+  <line x1="490" y1="125" x2="710" y2="125" stroke="#444" stroke-width="1"/>
+  <text x="490" y="140" fill="#ffe66d" font-family="Arial, sans-serif" font-size="10">-mediator: Mediator</text>
+  <text x="490" y="152" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="10">+notify(sender, event)</text>
+  
+  <!-- Mediator -->
+  <rect x="420" y="280" width="360" height="120" fill="#2d1b3d" stroke="#8b5cf6" stroke-width="2" rx="5"/>
+  <text x="600" y="300" text-anchor="middle" fill="#c084fc" font-family="Arial, sans-serif" font-size="12" font-weight="bold">&lt;&lt;Concrete Mediator&gt;&gt;</text>
+  <text x="600" y="315" text-anchor="middle" fill="#c084fc" font-family="Arial, sans-serif" font-size="12" font-weight="bold">PrintingHouseMediator</text>
+  <line x1="430" y1="325" x2="770" y2="325" stroke="#444" stroke-width="1"/>
+  <text x="430" y="340" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-customerPortal: CustomerPortal</text>
+  <text x="430" y="352" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-orderManager: OrderManager</text>
+  <text x="430" y="364" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-productionTracker: ProductionTracker</text>
+  <text x="430" y="376" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-staffPortal: StaffPortal</text>
+  <text x="430" y="388" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+notify(sender, event)</text>
+  
+  <!-- CustomerPortal -->
+  <rect x="80" y="520" width="200" height="100" fill="#2d1b1e" stroke="#ef4444" stroke-width="2" rx="5"/>
+  <text x="180" y="540" text-anchor="middle" fill="#f87171" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CustomerPortal</text>
+  <line x1="90" y1="550" x2="270" y2="550" stroke="#444" stroke-width="1"/>
+  <text x="90" y="565" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-mediator: Mediator</text>
+  <text x="90" y="577" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+placeOrder(orderData)</text>
+  <text x="90" y="589" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+trackOrder()</text>
+  <text x="90" y="601" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+requestQuote()</text>
+  <text x="90" y="613" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+viewOrderHistory()</text>
+  
+  <!-- OrderManager -->
+  <rect x="320" y="520" width="200" height="100" fill="#1b2d2d" stroke="#06b6d4" stroke-width="2" rx="5"/>
+  <text x="420" y="540" text-anchor="middle" fill="#67e8f9" font-family="Arial, sans-serif" font-size="12" font-weight="bold">OrderManager</text>
+  <line x1="330" y1="550" x2="510" y2="550" stroke="#444" stroke-width="1"/>
+  <text x="330" y="565" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-mediator: Mediator</text>
+  <text x="330" y="577" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+processOrder(order)</text>
+  <text x="330" y="589" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+validateOrder()</text>
+  <text x="330" y="601" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+calculatePricing()</text>
+  <text x="330" y="613" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+scheduleProduction()</text>
+  
+  <!-- ProductionTracker -->
+  <rect x="680" y="520" width="200" height="100" fill="#2d2d1b" stroke="#eab308" stroke-width="2" rx="5"/>
+  <text x="780" y="540" text-anchor="middle" fill="#facc15" font-family="Arial, sans-serif" font-size="12" font-weight="bold">ProductionTracker</text>
+  <line x1="690" y1="550" x2="870" y2="550" stroke="#444" stroke-width="1"/>
+  <text x="690" y="565" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-mediator: Mediator</text>
+  <text x="690" y="577" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+updateStatus(orderId)</text>
+  <text x="690" y="589" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+trackProgress()</text>
+  <text x="690" y="601" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+manageWorkflow()</text>
+  <text x="690" y="613" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+generateReports()</text>
+  
+  <!-- StaffPortal -->
+  <rect x="920" y="520" width="200" height="100" fill="#2d1b2d" stroke="#a855f7" stroke-width="2" rx="5"/>
+  <text x="1020" y="540" text-anchor="middle" fill="#c084fc" font-family="Arial, sans-serif" font-size="12" font-weight="bold">StaffPortal</text>
+  <line x1="930" y1="550" x2="1110" y2="550" stroke="#444" stroke-width="1"/>
+  <text x="930" y="565" fill="#ffe66d" font-family="Arial, sans-serif" font-size="9">-mediator: Mediator</text>
+  <text x="930" y="577" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+manageOrders()</text>
+  <text x="930" y="589" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+assignTasks()</text>
+  <text x="930" y="601" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+viewDashboard()</text>
+  <text x="930" y="613" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="9">+generateInvoices()</text>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" fill="#c084fc" font-family="Arial, sans-serif" font-size="20" font-weight="bold">PrintingHouseMS - Mediator Pattern</text>
+  
+  <!-- Pattern label -->
+  <text x="1050" y="770" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14" font-style="italic">Mediator Pattern Structure</text>
+</svg>
