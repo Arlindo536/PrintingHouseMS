@@ -1,184 +1,208 @@
-<svg width="1000" height="1200" viewBox="0 0 1000 1200" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="12">
+<svg width="1200" height="1000" viewBox="0 0 1200 1000" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="12">
     <style>
-        .entity {
-            stroke: #333;
-            stroke-width: 1.5;
-            fill: #f9f9f9;
+        .entity-box {
+            stroke: #2c3e50;
+            stroke-width: 2;
+            fill: #ecf0f1;
         }
-        .header {
-            fill: #e0e0e0;
+        .entity-header-bg {
+            fill: #34495e;
+        }
+        .entity-header-text {
+            fill: white;
             font-weight: bold;
+            font-size: 14px;
         }
-        .attribute {
-            fill: #333;
+        .attribute-text {
+            fill: #2c3e50;
+            font-size: 11px;
         }
-        .pk {
+        .pk-attribute {
             font-weight: bold;
             text-decoration: underline;
         }
-        .fk {
+        .fk-attribute {
             font-style: italic;
         }
         .relationship-line {
-            stroke: #555;
+            stroke: #2c3e50;
             stroke-width: 1.5;
             fill: none;
-            marker-end: url(#arrow);
+        }
+        /* Cardinality markers */
+        .one-marker {
+            stroke: #2c3e50;
+            stroke-width: 1.5;
+        }
+        .many-marker {
+            stroke: #2c3e50;
+            stroke-width: 1.5;
+            fill: none;
+        }
+        .optional-marker {
+            stroke: #2c3e50;
+            stroke-width: 1.5;
+            fill: none;
+        }
+        .diamond {
+            stroke: #2c3e50;
+            stroke-width: 1.5;
+            fill: #c2d9e4;
         }
         .relationship-label {
-            font-size: 10px;
-            fill: #666;
-        }
-        .cardinality {
-            font-size: 10px;
-            fill: #333;
-            font-weight: bold;
+            font-size: 11px;
+            fill: #2c3e50;
+            text-anchor: middle;
         }
         .dashed-line {
-            stroke-dasharray: 4 2;
+            stroke-dasharray: 5 3;
         }
     </style>
 
-    <defs>
-        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-            <path d="M0,0 L0,6 L9,3 z" fill="#555" />
-        </marker>
-        <marker id="crowfoot" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="strokeWidth">
-            <path d="M0,5 L10,0 M0,5 L10,10" stroke="#555" stroke-width="1.5" fill="none"/>
-        </marker>
-        <marker id="one" markerWidth="4" markerHeight="10" refX="2" refY="5" orient="auto" markerUnits="strokeWidth">
-            <line x1="2" y1="0" x2="2" y2="10" stroke="#555" stroke-width="1.5"/>
-        </marker>
-        <marker id="one-many" markerWidth="14" markerHeight="10" refX="12" refY="5" orient="auto" markerUnits="strokeWidth">
-            <path d="M0,5 L10,0 M0,5 L10,10" stroke="#555" stroke-width="1.5" fill="none"/>
-            <line x1="0" y1="0" x2="0" y2="10" stroke="#555" stroke-width="1.5"/>
-        </marker>
-        <marker id="many-one" markerWidth="14" markerHeight="10" refX="2" refY="5" orient="auto" markerUnits="strokeWidth">
-            <path d="M12,5 L2,0 M12,5 L2,10" stroke="#555" stroke-width="1.5" fill="none"/>
-            <line x1="12" y1="0" x2="12" y2="10" stroke="#555" stroke-width="1.5"/>
-        </marker>
-    </defs>
+    <g id="customer_entity">
+        <rect x="50" y="50" width="180" height="195" rx="5" ry="5" class="entity-box"/>
+        <rect x="50" y="50" width="180" height="25" rx="5" ry="5" class="entity-header-bg"/>
+        <text x="140" y="68" text-anchor="middle" class="entity-header-text">CUSTOMER</text>
+        <text x="60" y="90" class="attribute-text pk-attribute">customer_id (PK)</text>
+        <text x="60" y="110" class="attribute-text">name</text>
+        <text x="60" y="130" class="attribute-text">email</text>
+        <text x="60" y="150" class="attribute-text">phone</text>
+        <text x="60" y="170" class="attribute-text">address</text>
+        <text x="60" y="190" class="attribute-text">registration_date</text>
+        <text x="60" y="210" class="attribute-text">password_hash</text>
+    </g>
 
-    <rect x="50" y="50" width="180" height="200" rx="5" ry="5" class="entity"/>
-    <rect x="50" y="50" width="180" height="25" rx="5" ry="5" class="header"/>
-    <text x="140" y="68" text-anchor="middle" font-weight="bold">CUSTOMER</text>
-    <text x="60" y="90" class="pk">customer_id (PK)</text>
-    <text x="60" y="110" class="attribute">name</text>
-    <text x="60" y="130" class="attribute">email</text>
-    <text x="60" y="150" class="attribute">phone</text>
-    <text x="60" y="170" class="attribute">address</text>
-    <text x="60" y="190" class="attribute">registration_date</text>
-    <text x="60" y="210" class="attribute">password_hash</text>
+    <g id="order_entity">
+        <rect x="350" y="50" width="200" height="225" rx="5" ry="5" class="entity-box"/>
+        <rect x="350" y="50" width="200" height="25" rx="5" ry="5" class="entity-header-bg"/>
+        <text x="450" y="68" text-anchor="middle" class="entity-header-text">ORDER</text>
+        <text x="360" y="90" class="attribute-text pk-attribute">order_id (PK)</text>
+        <text x="360" y="110" class="attribute-text fk-attribute">customer_id (FK)</text>
+        <text x="360" y="130" class="attribute-text">order_date</text>
+        <text x="360" y="150" class="attribute-text">total_amount</text>
+        <text x="360" y="170" class="attribute-text">payment_status</text>
+        <text x="360" y="190" class="attribute-text">order_status</text>
+        <text x="360" y="210" class="attribute-text">shipping_address</text>
+        <text x="360" y="230" class="attribute-text">billing_address</text>
+    </g>
 
-    <rect x="300" y="50" width="180" height="240" rx="5" ry="5" class="entity"/>
-    <rect x="300" y="50" width="180" height="25" rx="5" ry="5" class="header"/>
-    <text x="390" y="68" text-anchor="middle" font-weight="bold">ORDER</text>
-    <text x="310" y="90" class="pk">order_id (PK)</text>
-    <text x="310" y="110" class="fk">customer_id (FK)</text>
-    <text x="310" y="130" class="attribute">order_date</text>
-    <text x="310" y="150" class="attribute">total_amount</text>
-    <text x="310" y="170" class="attribute">payment_status</text>
-    <text x="310" y="190" class="attribute">order_status</text>
-    <text x="310" y="210" class="attribute">shipping_address</text>
-    <text x="310" y="230" class="attribute">billing_address</text>
+    <g id="book_config_entity">
+        <rect x="700" y="50" width="200" height="255" rx="5" ry="5" class="entity-box"/>
+        <rect x="700" y="50" width="200" height="25" rx="5" ry="5" class="entity-header-bg"/>
+        <text x="800" y="68" text-anchor="middle" class="entity-header-text">BOOK_CONFIG</text>
+        <text x="710" y="90" class="attribute-text pk-attribute">book_config_id (PK)</text>
+        <text x="710" y="110" class="attribute-text">title</text>
+        <text x="710" y="130" class="attribute-text">author</text>
+        <text x="710" y="150" class="attribute-text">page_count</text>
+        <text x="710" y="170" class="attribute-text">page_size</text>
+        <text x="710" y="190" class="attribute-text">cover_type</text>
+        <text x="710" y="210" class="attribute-text">binding_type</text>
+        <text x="710" y="230" class="attribute-text">paper_type</text>
+        <text x="710" y="250" class="attribute-text">color_printing</text>
+        <text x="710" y="270" class="attribute-text">manuscript_file_path</text>
+        <text x="710" y="290" class="attribute-text">cover_file_path</text>
+    </g>
 
-    <rect x="550" y="50" width="180" height="240" rx="5" ry="5" class="entity"/>
-    <rect x="550" y="50" width="180" height="25" rx="5" ry="5" class="header"/>
-    <text x="640" y="68" text-anchor="middle" font-weight="bold">BOOK_CONFIG</text>
-    <text x="560" y="90" class="pk">book_config_id (PK)</text>
-    <text x="560" y="110" class="attribute">title</text>
-    <text x="560" y="130" class="attribute">author</text>
-    <text x="560" y="150" class="attribute">page_count</text>
-    <text x="560" y="170" class="attribute">page_size</text>
-    <text x="560" y="190" class="attribute">cover_type</text>
-    <text x="560" y="210" class="attribute">binding_type</text>
-    <text x="560" y="230" class="attribute">paper_type</text>
-    <text x="560" y="250" class="attribute">color_printing</text>
-    <text x="560" y="270" class="attribute">manuscript_file_path</text>
-    <text x="560" y="290" class="attribute">cover_file_path</text>
+    <g id="order_item_entity">
+        <rect x="475" y="380" width="180" height="150" rx="5" ry="5" class="entity-box"/>
+        <rect x="475" y="380" width="180" height="25" rx="5" ry="5" class="entity-header-bg"/>
+        <text x="565" y="398" text-anchor="middle" class="entity-header-text">ORDER_ITEM</text>
+        <text x="485" y="420" class="attribute-text pk-attribute">item_id (PK)</text>
+        <text x="485" y="440" class="attribute-text fk-attribute">order_id (FK)</text>
+        <text x="485" y="460" class="attribute-text fk-attribute">book_config_id (FK)</text>
+        <text x="485" y="480" class="attribute-text">quantity</text>
+        <text x="485" y="500" class="attribute-text">unit_price</text>
+        <text x="485" y="520" class="attribute-text">subtotal</text>
+    </g>
 
-    <rect x="425" y="350" width="180" height="160" rx="5" ry="5" class="entity"/>
-    <rect x="425" y="350" width="180" height="25" rx="5" ry="5" class="header"/>
-    <text x="515" y="368" text-anchor="middle" font-weight="bold">ORDER_ITEM</text>
-    <text x="435" y="390" class="pk">item_id (PK)</text>
-    <text x="435" y="410" class="fk">order_id (FK)</text>
-    <text x="435" y="430" class="fk">book_config_id (FK)</text>
-    <text x="435" y="450" class="attribute">quantity</text>
-    <text x="435" y="470" class="attribute">unit_price</text>
-    <text x="435" y="490" class="attribute">subtotal</text>
+    <g id="staff_entity">
+        <rect x="50" y="600" width="180" height="175" rx="5" ry="5" class="entity-box"/>
+        <rect x="50" y="600" width="180" height="25" rx="5" ry="5" class="entity-header-bg"/>
+        <text x="140" y="618" text-anchor="middle" class="entity-header-text">STAFF</text>
+        <text x="60" y="640" class="attribute-text pk-attribute">staff_id (PK)</text>
+        <text x="60" y="660" class="attribute-text">name</text>
+        <text x="60" y="680" class="attribute-text">email</text>
+        <text x="60" y="700" class="attribute-text">role</text>
+        <text x="60" y="720" class="attribute-text">department</text>
+        <text x="60" y="740" class="attribute-text">password_hash</text>
+    </g>
 
-    <rect x="50" y="550" width="180" height="180" rx="5" ry="5" class="entity"/>
-    <rect x="50" y="550" width="180" height="25" rx="5" ry="5" class="header"/>
-    <text x="140" y="568" text-anchor="middle" font-weight="bold">STAFF</text>
-    <text x="60" y="590" class="pk">staff_id (PK)</text>
-    <text x="60" y="610" class="attribute">name</text>
-    <text x="60" y="630" class="attribute">email</text>
-    <text x="60" y="650" class="attribute">role</text>
-    <text x="60" y="670" class="attribute">department</text>
-    <text x="60" y="690" class="attribute">password_hash</text>
+    <g id="production_stage_entity">
+        <rect x="350" y="600" width="200" height="190" rx="5" ry="5" class="entity-box"/>
+        <rect x="350" y="600" width="200" height="25" rx="5" ry="5" class="entity-header-bg"/>
+        <text x="450" y="618" text-anchor="middle" class="entity-header-text">PRODUCTION_STAGE</text>
+        <text x="360" y="640" class="attribute-text pk-attribute">stage_id (PK)</text>
+        <text x="360" y="660" class="attribute-text fk-attribute">order_id (FK)</text>
+        <text x="360" y="680" class="attribute-text fk-attribute">staff_id (FK)</text>
+        <text x="360" y="700" class="attribute-text">stage_name</text>
+        <text x="360" y="720" class="attribute-text">start_date</text>
+        <text x="360" y="740" class="attribute-text">end_date</text>
+        <text x="360" y="760" class="attribute-text">status</text>
+        <text x="360" y="780" class="attribute-text">notes</text>
+    </g>
 
-    <rect x="300" y="600" width="180" height="210" rx="5" ry="5" class="entity"/>
-    <rect x="300" y="600" width="180" height="25" rx="5" ry="5" class="header"/>
-    <text x="390" y="618" text-anchor="middle" font-weight="bold">PRODUCTION_STAGE</text>
-    <text x="310" y="640" class="pk">stage_id (PK)</text>
-    <text x="310" y="660" class="fk">order_id (FK)</text>
-    <text x="310" y="680" class="fk">staff_id (FK)</text>
-    <text x="310" y="700" class="attribute">stage_name</text>
-    <text x="310" y="720" class="attribute">start_date</text>
-    <text x="310" y="740" class="attribute">end_date</text>
-    <text x="310" y="760" class="attribute">status</text>
-    <text x="310" y="780" class="attribute">notes</text>
+    <g id="notification_entity">
+        <rect x="700" y="600" width="220" height="195" rx="5" ry="5" class="entity-box"/>
+        <rect x="700" y="600" width="220" height="25" rx="5" ry="5" class="entity-header-bg"/>
+        <text x="810" y="618" text-anchor="middle" class="entity-header-text">NOTIFICATION</text>
+        <text x="710" y="640" class="attribute-text pk-attribute">notification_id (PK)</text>
+        <text x="710" y="660" class="attribute-text">recipient_id</text>
+        <text x="710" y="680" class="attribute-text">recipient_type</text>
+        <text x="710" y="700" class="attribute-text">message</text>
+        <text x="710" y="720" class="attribute-text">created_at</text>
+        <text x="710" y="740" class="attribute-text">is_read</text>
+        <text x="710" y="760" class="attribute-text">notification_type</text>
+    </g>
 
-    <rect x="550" y="650" width="200" height="190" rx="5" ry="5" class="entity"/>
-    <rect x="550" y="650" width="200" height="25" rx="5" ry="5" class="header"/>
-    <text x="650" y="668" text-anchor="middle" font-weight="bold">NOTIFICATION</text>
-    <text x="560" y="690" class="pk">notification_id (PK)</text>
-    <text x="560" y="710" class="attribute">recipient_id</text>
-    <text x="560" y="730" class="attribute">recipient_type</text>
-    <text x="560" y="750" class="attribute">message</text>
-    <text x="560" y="770" class="attribute">created_at</text>
-    <text x="560" y="790" class="attribute">is_read</text>
-    <text x="560" y="810" class="attribute">notification_type</text>
+    <g id="rel_customer_order">
+        <line x1="230" y1="150" x2="350" y2="150" class="relationship-line"/>
+        <line x1="230" y1="140" x2="230" y2="160" class="one-marker"/>
+        <path d="M340,140 L350,150 M340,160 L350,150 M340,150 L350,150" class="many-marker"/>
+        <text x="290" y="140" class="relationship-label">places</text>
+    </g>
 
-    <line x1="230" y1="150" x2="300" y2="150" class="relationship-line"/>
-    <text x="265" y="145" text-anchor="middle" class="cardinality">1</text>
-    <line x1="300" y1="145" x2="300" y2="155" stroke="#555" stroke-width="1.5"/>
-    <path d="M290,150 L300,145 M290,150 L300,155" stroke="#555" stroke-width="1.5" fill="none"/>
-    <text x="265" y="165" text-anchor="middle" class="cardinality">N</text>
+    <g id="rel_order_order_item">
+        <line x1="450" y1="275" x2="450" y2="380" class="relationship-line"/>
+        <line x1="440" y1="275" x2="460" y2="275" class="one-marker"/>
+        <path d="M440,370 L450,380 M460,370 L450,380 M450,370 L450,380" class="many-marker"/>
+        <text x="455" y="325" class="relationship-label">contains</text>
+    </g>
 
-    <line x1="390" y1="290" x2="390" y2="350" class="relationship-line"/>
-    <text x="395" y="320" text-anchor="middle" class="cardinality">1</text>
-    <line x1="385" y1="350" x2="395" y2="350" stroke="#555" stroke-width="1.5"/>
-    <path d="M390,340 L380,350 M390,340 L400,350" stroke="#555" stroke-width="1.5" fill="none"/>
-    <text x="395" y="330" text-anchor="middle" class="cardinality">N</text>
+    <g id="rel_bookconfig_orderitem">
+        <line x1="750" y1="305" x2="565" y2="380" class="relationship-line"/>
+        <line x1="750" y1="295" x2="750" y2="315" class="one-marker"/>
+        <path d="M575,370 L565,380 M555,370 L565,380 M565,370 L565,380" class="many-marker"/>
+        <text x="650" y="340" class="relationship-label">references</text>
+    </g>
 
+    <g id="rel_order_prodstage">
+        <line x1="450" y1="275" x2="450" y2="600" class="relationship-line"/>
+        <line x1="440" y1="275" x2="460" y2="275" class="one-marker"/>
+        <path d="M440,590 L450,600 M460,590 L450,600 M450,590 L450,600" class="many-marker"/>
+        <text x="455" y="435" class="relationship-label">tracks</text>
+    </g>
 
-    <line x1="640" y1="290" x2="640" y2="350" class="relationship-line"/>
-    <text x="645" y="320" text-anchor="middle" class="cardinality">1</text>
-    <line x1="635" y1="350" x2="645" y2="350" stroke="#555" stroke-width="1.5"/>
-    <path d="M640,340 L630,350 M640,340 L650,350" stroke="#555" stroke-width="1.5" fill="none"/>
-    <text x="645" y="330" text-anchor="middle" class="cardinality">N</text>
+    <g id="rel_staff_prodstage">
+        <line x1="230" y1="690" x2="350" y2="690" class="relationship-line"/>
+        <line x1="230" y1="680" x2="230" y2="700" class="one-marker"/>
+        <path d="M340,680 L350,690 M340,700 L350,690 M340,690 L350,690" class="many-marker"/>
+        <text x="290" y="680" class="relationship-label">assigned_to</text>
+    </g>
 
-    <line x1="390" y1="290" x2="390" y2="600" class="relationship-line"/>
-    <text x="385" y="445" text-anchor="end" class="cardinality">1</text>
-    <text x="395" y="445" text-anchor="start" class="cardinality">N</text>
-    <line x1="385" y1="600" x2="395" y2="600" stroke="#555" stroke-width="1.5"/>
-    <path d="M390,590 L380,600 M390,590 L400,600" stroke="#555" stroke-width="1.5" fill="none"/>
+    <g id="rel_customer_notification">
+        <line x1="230" y1="200" x2="700" y2="690" class="relationship-line dashed-line"/>
+        <line x1="230" y1="190" x2="230" y2="210" class="one-marker"/>
+        <path d="M690,680 L700,690 M690,700 L700,690 M690,690 L700,690" class="many-marker"/>
+        <circle cx="690" cy="690" r="4" fill="white" stroke="#2c3e50" stroke-width="1.5"/>
+        <text x="480" y="450" class="relationship-label">receives</text>
+    </g>
 
-    <line x1="230" y1="650" x2="300" y2="650" class="relationship-line"/>
-    <text x="265" y="645" text-anchor="middle" class="cardinality">1</text>
-    <line x1="300" y1="645" x2="300" y2="655" stroke="#555" stroke-width="1.5"/>
-    <path d="M290,650 L300,645 M290,650 L300,655" stroke="#555" stroke-width="1.5" fill="none"/>
-    <text x="265" y="665" text-anchor="middle" class="cardinality">N</text>
-
-    <line x1="230" y1="200" x2="550" y2="700" class="relationship-line dashed-line"/>
-    <text x="390" y="450" text-anchor="middle" class="cardinality">1</text>
-    <path d="M540,700 L550,695 M540,700 L550,705" stroke="#555" stroke-width="1.5" fill="none"/>
-    <text x="400" y="460" text-anchor="middle" class="cardinality">N</text>
-
-    <line x1="230" y1="680" x2="550" y2="760" class="relationship-line dashed-line"/>
-    <text x="390" y="700" text-anchor="middle" class="cardinality">1</text>
-    <path d="M540,760 L550,755 M540,760 L550,765" stroke="#555" stroke-width="1.5" fill="none"/>
-    <text x="400" y="710" text-anchor="middle" class="cardinality">N</text>
+    <g id="rel_staff_notification">
+        <line x1="230" y1="720" x2="700" y2="720" class="relationship-line dashed-line"/>
+        <line x1="230" y1="710" x2="230" y2="730" class="one-marker"/>
+        <path d="M690,710 L700,720 M690,730 L700,720 M690,720 L700,720" class="many-marker"/>
+        <circle cx="690" cy="720" r="4" fill="white" stroke="#2c3e50" stroke-width="1.5"/>
+        <text x="465" y="710" class="relationship-label">receives</text>
+    </g>
 
 </svg>
