@@ -1,0 +1,26 @@
+graph TD
+
+Customer([Customer])
+Staff([Staff])
+PaymentGateway([Payment Gateway])
+DS1[(Customer Account DB)]
+DS2[(Order Details DB)]
+
+P1.1((1.1<br>Create Account))
+P1.2((1.2<br>Place Order))
+P1.3((1.3<br>Payment Processing))
+P1.4((1.4<br>Order Validation))
+P1.5((1.5<br>Quote Generation))
+
+Customer -->|"1. Register"| P1.1
+P1.1 -->|"2. Save info"| DS1
+Customer -->|"3. Select book options"| P1.2
+P1.2 -->|"4. Validate order"| P1.4
+P1.4 -->|"5. Confirm order"| DS2
+P1.2 -->|"6. Request quote"| P1.5
+P1.5 -->|"7. Display quote"| Customer
+
+Customer -->|"8. Make payment"| P1.3
+P1.3 -->|"9. Verify payment"| PaymentGateway
+P1.3 -->|"10. Confirm payment"| DS2
+Staff -->|"11. Review order"| P1.2
