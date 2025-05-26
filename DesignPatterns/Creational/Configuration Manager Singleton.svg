@@ -41,5 +41,5 @@
   
   <!-- Labels -->
   <text x="200" y="115" fill="black" font-family="Arial" font-size="9">uses</text>
-  <text x="590" y="175" fill="black" font-family="Arial" font-size="9">instance</text>
+  <text x="570" y="175" fill="black" font-family="Arial" font-size="9">instance</text>
 </svg>
