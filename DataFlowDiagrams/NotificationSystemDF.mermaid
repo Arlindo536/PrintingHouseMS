@@ -1,0 +1,20 @@
+graph TD
+
+Customer([Customer])
+Staff([Staff])
+DS4[(Production Status DB)]
+DS5[(Messaging DB)]
+
+P4.1((4.1<br>Track Status))
+P4.2((4.2<br>Send Notification))
+P4.3((4.3<br>Staff Messaging))
+P4.4((4.4<br>Customer Messaging))
+
+P4.1 -->|"1. Query update"| DS4
+P4.1 -->|"2. Notify"| P4.2
+P4.2 -->|"3. Send email/SMS"| Customer
+
+Staff -->|"4. Chat with customer"| P4.3
+Customer -->|"5. Send message"| P4.4
+P4.3 -->|"6. Log msg"| DS5
+P4.4 -->|"7. Log msg"| DS5
