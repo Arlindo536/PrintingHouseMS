@@ -1,0 +1,44 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" fill="black" font-family="Arial" font-size="16" font-weight="bold">Factory Method - PrintingHouseMS Equipment Factory</text>
+  
+  <!-- Abstract Creator -->
+  <rect x="200" y="70" width="200" height="70" fill="white" stroke="black" stroke-width="1"/>
+  <text x="300" y="90" text-anchor="middle" fill="black" font-family="Arial" font-size="10">«abstract»</text>
+  <text x="300" y="105" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">EquipmentFactory</text>
+  <line x1="200" y1="115" x2="400" y2="115" stroke="black" stroke-width="1"/>
+  <text x="210" y="130" fill="black" font-family="Arial" font-size="10">+createEquipment(): Equipment</text>
+  
+  <!-- Concrete Creator -->
+  <rect x="200" y="180" width="200" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="300" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">PrinterFactory</text>
+  <line x1="200" y1="210" x2="400" y2="210" stroke="black" stroke-width="1"/>
+  <text x="210" y="225" fill="black" font-family="Arial" font-size="10">+createEquipment(): Printer</text>
+  
+  <!-- Product -->
+  <rect x="200" y="280" width="200" height="80" fill="white" stroke="black" stroke-width="1"/>
+  <text x="300" y="300" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Printer</text>
+  <line x1="200" y1="310" x2="400" y2="310" stroke="black" stroke-width="1"/>
+  <text x="210" y="325" fill="black" font-family="Arial" font-size="10">-capacity: int</text>
+  <text x="210" y="340" fill="black" font-family="Arial" font-size="10">-model: String</text>
+  <text x="210" y="355" fill="black" font-family="Arial" font-size="10">+print(): void</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Inheritance arrow -->
+  <line x1="300" y1="180" x2="300" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Creates arrow -->
+  <line x1="300" y1="240" x2="300" y2="280" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  
+  <!-- Label -->
+  <text x="320" y="265" fill="black" font-family="Arial" font-size="9">creates</text>
+</svg>
