@@ -1,0 +1,179 @@
+<svg viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .pool { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .lane { fill: #ffffff; stroke: #000000; stroke-width: 1; }
+    .lane-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; writing-mode: tb; text-anchor: middle; }
+    .task { fill: #ffffff; stroke: #000000; stroke-width: 1; rx: 10; ry: 10; }
+    .event { fill: #ffffff; stroke: #000000; stroke-width: 2; }
+    .gateway { fill: #ffffff; stroke: #000000; stroke-width: 1; }
+    .flow { stroke: #000000; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .flow-label { font-family: Arial, sans-serif; font-size: 11px; fill: #333333; }
+    .text { font-family: Arial, sans-serif; font-size: 11px; fill: #000000; text-anchor: middle; }
+    .title { font-family: Arial, sans-serif; font-size: 22px; font-weight: bold; fill: #000000; text-anchor: middle; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#000000" />
+    </marker>
+  </defs>
+  
+  <text class="title" x="700" y="30">Customer Order Placement Process</text>
+  
+  <!-- Main Pool -->
+  <rect class="pool" x="50" y="60" width="1300" height="580" />
+  
+  <!-- Customer Lane -->
+  <rect class="lane" x="50" y="60" width="1300" height="180" />
+  <text class="lane-title" x="80" y="150">Customer</text>
+  <line x1="110" y1="60" x2="110" y2="240" stroke="#000000" stroke-width="1" />
+  
+  <!-- System Lane -->
+  <rect class="lane" x="50" y="240" width="1300" height="200" />
+  <text class="lane-title" x="80" y="340">System</text>
+  <line x1="110" y1="240" x2="110" y2="440" stroke="#000000" stroke-width="1" />
+  
+  <!-- Order Management Lane -->
+  <rect class="lane" x="50" y="440" width="1300" height="200" />
+  <text class="lane-title" x="80" y="540">Order Management</text>
+  <line x1="110" y1="440" x2="110" y2="640" stroke="#000000" stroke-width="1" />
+  
+  <!-- Customer Process -->
+  <!-- Start Event -->
+  <circle class="event" cx="150" cy="150" r="18" />
+  <text class="text" x="150" y="190">Order Request</text>
+  
+  <!-- Login/Register -->
+  <rect class="task" x="210" y="120" width="100" height="60" />
+  <text class="text" x="260" y="145">Login - </text>
+  <text class="text" x="260" y="165">Register Account</text>
+
+  
+  <!-- Select Book Options -->
+  <rect class="task" x="350" y="120" width="100" height="60" />
+  <text class="text" x="400" y="140">Select Binding Type</text>
+  <text class="text" x="400" y="160">-Paper Options</text>
+  
+  <!-- Configure Dimensions -->
+  <rect class="task" x="490" y="120" width="100" height="60" />
+  <text class="text" x="540" y="140">Configure</text>
+    <text class="text" x="540" y="160">Book Dimensions</text>
+
+  
+  <!-- Upload Files -->
+  <rect class="task" x="630" y="120" width="100" height="60" />
+  <text class="text" x="680" y="140">Upload</text>
+    <text class="text" x="680" y="160">Manuscript Files</text>
+
+  
+  <!-- Preview & Confirm -->
+  <rect class="task" x="770" y="120" width="100" height="60" />
+  <text class="text" x="820" y="140">Preview 3D Book -</text>
+    <text class="text" x="820" y="160">Confirm</text>
+
+  
+  <!-- Review Quote -->
+  <rect class="task" x="1050" y="120" width="100" height="60" />
+  <text class="text" x="1100" y="155">Review Final Quote</text>
+  
+  <!-- Submit Order -->
+  <rect class="task" x="1190" y="120" width="100" height="60" />
+  <text class="text" x="1240" y="155">Submit Order</text>
+  
+  <!-- System Process -->
+  <!-- Validate Account -->
+  <rect class="task" x="210" y="310" width="100" height="60" />
+  <text class="text" x="260" y="330">Validate </text>
+    <text class="text" x="260" y="350">User Credentials</text>
+
+  
+  <!-- Check Inventory -->
+  <rect class="task" x="350" y="310" width="100" height="60" />
+  <text class="text" x="400" y="330">Check Paper </text>
+  <text class="text" x="400" y="350">Material Availability</text>
+  
+  <!-- Validate Files -->
+  <rect class="task" x="630" y="310" width="100" height="60" />
+  <text class="text" x="680" y="330">Validate File Format</text>
+  <text class="text" x="680" y="350">Size</text>
+
+  
+  <!-- Generate Preview -->
+  <rect class="task" x="770" y="310" width="100" height="60" />
+  <text class="text" x="820" y="330">Generate</text>
+    <text class="text" x="820" y="350">3D Preview</text>
+
+  
+  <!-- Calculate Pricing -->
+  <rect class="task" x="910" y="310" width="100" height="60" />
+  <text class="text" x="960" y="330">Calculate </text>
+    <text class="text" x="960" y="350">Dynamic Pricing</text>
+
+  
+  
+  <!-- Order Management Process -->
+  <!-- Create Order Record -->
+  <rect class="task" x="1190" y="510" width="100" height="60" />
+  <text class="text" x="1240" y="530">Create</text>
+    <text class="text" x="1240" y="550">Order Record</text>
+
+  
+  <!-- Generate Job Ticket -->
+  <rect class="task" x="1050" y="510" width="100" height="60" />
+  <text class="text" x="1100" y="530">Generate Job Ticket</text>
+    <text class="text" x="1100" y="550">QR Code</text>
+
+  
+  <!-- Send Confirmation -->
+  <rect class="task" x="910" y="510" width="100" height="60" />
+  <text class="text" x="960" y="530">Send Order </text>
+    <text class="text" x="960" y="550">Confirmation</text>
+
+  
+  <!-- End Event -->
+  <circle class="event" cx="850" cy="540" r="18" />
+  <circle cx="850" cy="540" r="14" fill="#ffffff" stroke="#000000" stroke-width="2" />
+  <text class="text" x="850" y="580">Order Created</text>
+  
+  <!-- Flow Connections -->
+  <!-- Customer Flow -->
+  <path class="flow" d="M168 150 H210" />
+  <path class="flow" d="M310 150 H350" />
+  <path class="flow" d="M450 150 H490" />
+  <path class="flow" d="M590 150 H630" />
+  <path class="flow" d="M730 150 H770" />
+  <path class="flow" d="M870 150 H1050" />
+  <path class="flow" d="M1150 150 H1190" />
+  
+  <!-- Cross-lane flows -->
+  <path class="flow" d="M260 180 V310" />
+  <path class="flow" d="M400 180 V310" />
+  <path class="flow" d="M680 180 V310" />
+  <path class="flow" d="M820 180 V310" />
+  <path class="flow" d="M1240 180 V510" />
+  
+  <!-- System internal flows -->
+  <path class="flow" d="M730 340 H770" />
+  <path class="flow" d="M875 340 H910" />
+  <path class="flow" d="M1010 340 H1100 V180" stroke-dasharray="3,3" />
+  
+
+  
+  <!-- Order Management flows -->
+  <path class="flow" d="M1190 540 H1150" />
+  <path class="flow" d="M1050 540 H1010" />
+  <path class="flow" d="M910 540 H868" />
+  
+  <!-- Back to customer notification -->
+  <path class="flow" d="M960 510 V480 H1100 V480 H1250 V180" stroke-dasharray="3,3" />
+  <text class="flow-label" x="1105" y="475">Order Confirmation</text>
+  
+  <!-- Validation feedback flows -->
+  <path class="flow" d="M260 310 V280 H400 V180" stroke-dasharray="3,3" />
+  <path class="flow" d="M400 310 V280 H540 V180" stroke-dasharray="3,3" />
+  <path class="flow" d="M820 310 V280 H1100 V180" stroke-dasharray="3,3" />
+  
+  <text class="flow-label" x="300" y="275">Account Status</text>
+  <text class="flow-label" x="430" y="275">Availability Status</text>
+  <text class="flow-label" x="960" y="275">Preview - Quote</text>
+</svg>
