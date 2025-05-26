@@ -1,0 +1,78 @@
+<svg width="700" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="700" height="450" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" fill="black" font-family="Arial" font-size="16" font-weight="bold">Factory Method - PrintingHouseMS Payment Factory</text>
+  
+  <!-- Abstract Creator -->
+  <rect x="250" y="70" width="200" height="70" fill="white" stroke="black" stroke-width="1"/>
+  <text x="350" y="90" text-anchor="middle" fill="black" font-family="Arial" font-size="10">«abstract»</text>
+  <text x="350" y="105" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">PaymentFactory</text>
+  <line x1="250" y1="115" x2="450" y2="115" stroke="black" stroke-width="1"/>
+  <text x="260" y="130" fill="black" font-family="Arial" font-size="10">+createPayment(): Payment</text>
+  
+  <!-- Concrete Creators -->
+  <rect x="100" y="180" width="150" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="175" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">CreditCardFactory</text>
+  <line x1="100" y1="210" x2="250" y2="210" stroke="black" stroke-width="1"/>
+  <text x="110" y="225" fill="black" font-family="Arial" font-size="10">+createPayment(): CreditCard</text>
+  
+  <rect x="300" y="180" width="150" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="375" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">BankTransferFactory</text>
+  <line x1="300" y1="210" x2="450" y2="210" stroke="black" stroke-width="1"/>
+  <text x="310" y="225" fill="black" font-family="Arial" font-size="10">+createPayment(): BankTransfer</text>
+  
+  <rect x="500" y="180" width="150" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="575" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">CashPaymentFactory</text>
+  <line x1="500" y1="210" x2="650" y2="210" stroke="black" stroke-width="1"/>
+  <text x="510" y="225" fill="black" font-family="Arial" font-size="10">+createPayment(): CashPayment</text>
+  
+  <!-- Products -->
+  <rect x="100" y="290" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="160" y="310" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">CreditCard</text>
+  <line x1="100" y1="320" x2="220" y2="320" stroke="black" stroke-width="1"/>
+  <text x="110" y="335" fill="black" font-family="Arial" font-size="10">+processPayment(): void</text>
+  
+  <rect x="290" y="290" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="350" y="310" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">BankTransfer</text>
+  <line x1="290" y1="320" x2="410" y2="320" stroke="black" stroke-width="1"/>
+  <text x="300" y="335" fill="black" font-family="Arial" font-size="10">+processPayment(): void</text>
+  
+  <rect x="480" y="290" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="540" y="310" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">CashPayment</text>
+  <line x1="480" y1="320" x2="600" y2="320" stroke="black" stroke-width="1"/>
+  <text x="490" y="335" fill="black" font-family="Arial" font-size="10">+processPayment(): void</text>
+  
+  <!-- Abstract Product -->
+  <rect x="300" y="380" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+  <text x="350" y="395" text-anchor="middle" fill="black" font-family="Arial" font-size="10">«interface»</text>
+  <text x="350" y="408" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Payment</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Inheritance arrows -->
+  <line x1="175" y1="180" x2="300" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="375" y1="180" x2="350" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="575" y1="180" x2="400" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Creates arrows -->
+  <line x1="175" y1="240" x2="160" y2="290" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="375" y1="240" x2="350" y2="290" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="575" y1="240" x2="540" y2="290" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  
+  <!-- Product inheritance -->
+  <line x1="160" y1="340" x2="330" y2="380" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="350" y1="340" x2="350" y2="380" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="540" y1="340" x2="370" y2="380" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Labels -->
+  <text x="140" y="270" fill="black" font-family="Arial" font-size="9">creates</text>
+  <text x="330" y="270" fill="black" font-family="Arial" font-size="9">creates</text>
+  <text x="520" y="270" fill="black" font-family="Arial" font-size="9">creates</text>
+</svg>
