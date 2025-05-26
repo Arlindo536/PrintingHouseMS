@@ -1,0 +1,74 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#0f0f0f"/>
+  
+  <!-- Border -->
+  <rect x="20" y="20" width="1160" height="760" fill="none" stroke="#333" stroke-width="2" rx="10"/>
+  
+  <!-- Connection lines with arrows -->
+  <!-- MobileApp to Originator -->
+  <path d="M 500 410 Q 400 450 363 465" fill="none" stroke="#666" stroke-width="2"/>
+  <polygon points="363,465 370,460 370,470" fill="#666"/>
+  
+  <!-- MobileApp to Caretaker -->
+  <path d="M 580 410 Q 650 450 674 475" fill="none" stroke="#666" stroke-width="2"/>
+  <polygon points="674,475 670,480 680,480" fill="#666"/>
+  
+  <!-- Originator to Memento -->
+  <path d="M 363 635 Q 450 680 519 710" fill="none" stroke="#666" stroke-width="2"/>
+  <polygon points="519,710 515,705 525,705" fill="#666"/>
+  
+  <!-- Caretaker to Memento -->
+  <path d="M 674 615 Q 650 650 619 685" fill="none" stroke="#666" stroke-width="2"/>
+  <polygon points="619,685 625,680 625,690" fill="#666"/>
+  
+  <!-- Relationship labels -->
+  <text x="420" y="440" fill="#ccc" font-family="Arial, sans-serif" font-size="10">creates</text>
+  <text x="650" y="440" fill="#ccc" font-family="Arial, sans-serif" font-size="10">stores</text>
+  <text x="430" y="670" fill="#ccc" font-family="Arial, sans-serif" font-size="10">creates</text>
+  <text x="640" y="650" fill="#ccc" font-family="Arial, sans-serif" font-size="10">stores</text>
+  
+  <!-- MobileApp (Client) -->
+  <rect x="450" y="250" width="280" height="120" fill="#1e1e1e" stroke="#444" stroke-width="2" rx="5"/>
+  <text x="590" y="275" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">PrintingHouseApp</text>
+  <line x1="460" y1="285" x2="720" y2="285" stroke="#444" stroke-width="1"/>
+  <text x="460" y="305" fill="#ffe66d" font-family="Arial, sans-serif" font-size="11">-originator: OrderOriginator</text>
+  <text x="460" y="320" fill="#ffe66d" font-family="Arial, sans-serif" font-size="11">-caretaker: OrderCaretaker</text>
+  <text x="460" y="340" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+saveOrderState()</text>
+  <text x="460" y="355" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+loadSavedOrder()</text>
+  
+  <!-- Originator -->
+  <rect x="80" y="465" width="280" height="170" fill="#1e1e1e" stroke="#444" stroke-width="2" rx="5"/>
+  <text x="220" y="490" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">OrderOriginator</text>
+  <line x1="90" y1="500" x2="350" y2="500" stroke="#444" stroke-width="1"/>
+  <text x="90" y="520" fill="#ffe66d" font-family="Arial, sans-serif" font-size="11">-state: OrderDetails</text>
+  <text x="90" y="540" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+saveToMemento() : OrderMemento</text>
+  <text x="90" y="555" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+restoreFromMemento(OrderMemento)</text>
+  <text x="90" y="570" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+setOrderDetails(OrderDetails)</text>
+  <text x="90" y="585" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+getOrderDetails() : OrderDetails</text>
+  <text x="90" y="600" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+processOrder()</text>
+  <text x="90" y="615" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+updateOrderStatus()</text>
+  
+  <!-- Caretaker -->
+  <rect x="550" y="475" width="280" height="140" fill="#1e1e1e" stroke="#444" stroke-width="2" rx="5"/>
+  <text x="690" y="500" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">OrderCaretaker</text>
+  <line x1="560" y1="510" x2="820" y2="510" stroke="#444" stroke-width="1"/>
+  <text x="560" y="530" fill="#ffe66d" font-family="Arial, sans-serif" font-size="11">-mementos: List&lt;OrderMemento&gt;</text>
+  <text x="560" y="550" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+addMemento(OrderMemento)</text>
+  <text x="560" y="565" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+getMemento(index) : OrderMemento</text>
+  <text x="560" y="580" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+getOrderHistory()</text>
+  <text x="560" y="595" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+clearHistory()</text>
+  
+  <!-- Memento -->
+  <rect x="400" y="700" width="280" height="80" fill="#1e1e1e" stroke="#444" stroke-width="2" rx="5"/>
+  <text x="540" y="725" text-anchor="middle" fill="#ff6b6b" font-family="Arial, sans-serif" font-size="14" font-weight="bold">OrderMemento</text>
+  <line x1="410" y1="735" x2="670" y2="735" stroke="#444" stroke-width="1"/>
+  <text x="410" y="755" fill="#ffe66d" font-family="Arial, sans-serif" font-size="11">-state: OrderDetails</text>
+  <text x="410" y="770" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11">+getState() : OrderDetails</text>
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" fill="#c084fc" font-family="Arial, sans-serif" font-size="20" font-weight="bold">PrintingHouseMS - Memento Pattern</text>
+  
+  <!-- Pattern label -->
+  <text x="1050" y="770" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14" font-style="italic">Memento Pattern Structure</text>
+</svg>
