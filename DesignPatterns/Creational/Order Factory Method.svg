@@ -1,0 +1,82 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="black" font-family="Arial" font-size="16" font-weight="bold">Factory Method - PrintingHouseMS Order Generator</text>
+  
+  <!-- Abstract Creator -->
+  <rect x="300" y="70" width="200" height="80" fill="white" stroke="black" stroke-width="1"/>
+  <text x="400" y="90" text-anchor="middle" fill="black" font-family="Arial" font-size="10">«abstract»</text>
+  <text x="400" y="105" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">OrderGenerator</text>
+  <line x1="300" y1="115" x2="500" y2="115" stroke="black" stroke-width="1"/>
+  <text x="310" y="130" fill="black" font-family="Arial" font-size="10">+createOrder(): Order</text>
+  <text x="310" y="145" fill="black" font-family="Arial" font-size="10">+processOrder(): void</text>
+  
+  <!-- Concrete Creators -->
+  <rect x="100" y="200" width="150" height="70" fill="white" stroke="black" stroke-width="1"/>
+  <text x="175" y="220" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">StandardOrderGenerator</text>
+  <line x1="100" y1="230" x2="250" y2="230" stroke="black" stroke-width="1"/>
+  <text x="110" y="245" fill="black" font-family="Arial" font-size="10">+createOrder(): StandardOrder</text>
+  <text x="110" y="260" fill="black" font-family="Arial" font-size="10">+setStandardSpecs(): void</text>
+  
+  <rect x="300" y="200" width="150" height="70" fill="white" stroke="black" stroke-width="1"/>
+  <text x="375" y="220" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">RushOrderGenerator</text>
+  <line x1="300" y1="230" x2="450" y2="230" stroke="black" stroke-width="1"/>
+  <text x="310" y="245" fill="black" font-family="Arial" font-size="10">+createOrder(): RushOrder</text>
+  <text x="310" y="260" fill="black" font-family="Arial" font-size="10">+addUrgencyFee(): void</text>
+  
+  <rect x="500" y="200" width="150" height="70" fill="white" stroke="black" stroke-width="1"/>
+  <text x="575" y="220" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">BulkOrderGenerator</text>
+  <line x1="500" y1="230" x2="650" y2="230" stroke="black" stroke-width="1"/>
+  <text x="510" y="245" fill="black" font-family="Arial" font-size="10">+createOrder(): BulkOrder</text>
+  <text x="510" y="260" fill="black" font-family="Arial" font-size="10">+applyVolumeDiscount(): void</text>
+  
+  <!-- Products -->
+  <rect x="100" y="320" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="160" y="340" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">StandardOrder</text>
+  <line x1="100" y1="350" x2="220" y2="350" stroke="black" stroke-width="1"/>
+  <text x="110" y="365" fill="black" font-family="Arial" font-size="10">+calculate(): void</text>
+  
+  <rect x="300" y="320" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="360" y="340" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">RushOrder</text>
+  <line x1="300" y1="350" x2="420" y2="350" stroke="black" stroke-width="1"/>
+  <text x="310" y="365" fill="black" font-family="Arial" font-size="10">+calculate(): void</text>
+  
+  <rect x="500" y="320" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="560" y="340" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">BulkOrder</text>
+  <line x1="500" y1="350" x2="620" y2="350" stroke="black" stroke-width="1"/>
+  <text x="510" y="365" fill="black" font-family="Arial" font-size="10">+calculate(): void</text>
+  
+  <!-- Abstract Product -->
+  <rect x="350" y="420" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+  <text x="400" y="435" text-anchor="middle" fill="black" font-family="Arial" font-size="10">«abstract»</text>
+  <text x="400" y="448" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Order</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Inheritance arrows -->
+  <line x1="175" y1="200" x2="350" y2="150" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="375" y1="200" x2="400" y2="150" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="575" y1="200" x2="450" y2="150" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Creates arrows -->
+  <line x1="175" y1="270" x2="160" y2="320" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="375" y1="270" x2="360" y2="320" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="575" y1="270" x2="560" y2="320" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  
+  <!-- Product inheritance -->
+  <line x1="160" y1="370" x2="380" y2="420" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="360" y1="370" x2="400" y2="420" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="560" y1="370" x2="420" y2="420" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Labels -->
+  <text x="140" y="300" fill="black" font-family="Arial" font-size="9">creates</text>
+  <text x="340" y="300" fill="black" font-family="Arial" font-size="9">creates</text>
+  <text x="540" y="300" fill="black" font-family="Arial" font-size="9">creates</text>
+</svg>
