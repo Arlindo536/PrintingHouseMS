@@ -8,8 +8,8 @@
   <!-- Client -->
   <rect x="50" y="70" width="100" height="60" fill="white" stroke="black" stroke-width="1"/>
   <text x="100" y="90" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Client</text>
-  <line x1="50" y1="100" x2="150" y2="100" stroke="black" stroke-width="1"/>
-  <text x="60" y="115" fill="black" font-family="Arial" font-size="10">+constructOrder(): void</text>
+  <text x="100" y="110" text-anchor="middle" fill="black" font-family="Arial" font-size="10">+constructOrder(): void</text>
+  <line x1="50" y1="115" x2="150" y2="115" stroke="black" stroke-width="1"/>
   
   <!-- Builder -->
   <rect x="250" y="50" width="200" height="180" fill="white" stroke="black" stroke-width="1"/>
