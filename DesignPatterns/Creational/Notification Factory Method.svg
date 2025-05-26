@@ -1,0 +1,92 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" fill="black" font-family="Arial" font-size="16" font-weight="bold">Factory Method - PrintingHouseMS Notification Factory</text>
+  
+  <!-- Abstract Creator -->
+  <rect x="300" y="70" width="200" height="70" fill="white" stroke="black" stroke-width="1"/>
+  <text x="400" y="90" text-anchor="middle" fill="black" font-family="Arial" font-size="10">«abstract»</text>
+  <text x="400" y="105" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">NotificationFactory</text>
+  <line x1="300" y1="115" x2="500" y2="115" stroke="black" stroke-width="1"/>
+  <text x="310" y="130" fill="black" font-family="Arial" font-size="10">+createNotification(): Notification</text>
+  
+  <!-- Concrete Creators -->
+  <rect x="50" y="180" width="150" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="125" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">EmailNotificationFactory</text>
+  <line x1="50" y1="210" x2="200" y2="210" stroke="black" stroke-width="1"/>
+  <text x="60" y="225" fill="black" font-family="Arial" font-size="10">+createNotification(): Email</text>
+  
+  <rect x="225" y="180" width="150" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="300" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">SMSNotificationFactory</text>
+  <line x1="225" y1="210" x2="375" y2="210" stroke="black" stroke-width="1"/>
+  <text x="235" y="225" fill="black" font-family="Arial" font-size="10">+createNotification(): SMS</text>
+  
+  <rect x="400" y="180" width="150" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="475" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">InAppNotificationFactory</text>
+  <line x1="400" y1="210" x2="550" y2="210" stroke="black" stroke-width="1"/>
+  <text x="410" y="225" fill="black" font-family="Arial" font-size="10">+createNotification(): InApp</text>
+  
+  <rect x="575" y="180" width="150" height="60" fill="white" stroke="black" stroke-width="1"/>
+  <text x="650" y="200" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">PrintNotificationFactory</text>
+  <line x1="575" y1="210" x2="725" y2="210" stroke="black" stroke-width="1"/>
+  <text x="585" y="225" fill="black" font-family="Arial" font-size="10">+createNotification(): Print</text>
+  
+  <!-- Products -->
+  <rect x="50" y="290" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="110" y="310" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">EmailNotification</text>
+  <line x1="50" y1="320" x2="170" y2="320" stroke="black" stroke-width="1"/>
+  <text x="60" y="335" fill="black" font-family="Arial" font-size="10">+send(): void</text>
+  
+  <rect x="225" y="290" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="285" y="310" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">SMSNotification</text>
+  <line x1="225" y1="320" x2="345" y2="320" stroke="black" stroke-width="1"/>
+  <text x="235" y="335" fill="black" font-family="Arial" font-size="10">+send(): void</text>
+  
+  <rect x="400" y="290" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="460" y="310" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">InAppNotification</text>
+  <line x1="400" y1="320" x2="520" y2="320" stroke="black" stroke-width="1"/>
+  <text x="410" y="335" fill="black" font-family="Arial" font-size="10">+send(): void</text>
+  
+  <rect x="575" y="290" width="120" height="50" fill="white" stroke="black" stroke-width="1"/>
+  <text x="635" y="310" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">PrintNotification</text>
+  <line x1="575" y1="320" x2="695" y2="320" stroke="black" stroke-width="1"/>
+  <text x="585" y="335" fill="black" font-family="Arial" font-size="10">+send(): void</text>
+  
+  <!-- Abstract Product -->
+  <rect x="350" y="380" width="100" height="40" fill="white" stroke="black" stroke-width="1"/>
+  <text x="400" y="395" text-anchor="middle" fill="black" font-family="Arial" font-size="10">«interface»</text>
+  <text x="400" y="408" text-anchor="middle" fill="black" font-family="Arial" font-size="12" font-weight="bold">Notification</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  
+  <!-- Inheritance arrows -->
+  <line x1="125" y1="180" x2="350" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="180" x2="380" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="475" y1="180" x2="420" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="650" y1="180" x2="450" y2="140" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Creates arrows -->
+  <line x1="125" y1="240" x2="110" y2="290" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="300" y1="240" x2="285" y2="290" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="475" y1="240" x2="460" y2="290" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  <line x1="650" y1="240" x2="635" y2="290" stroke="black" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+  
+  <!-- Product inheritance -->
+  <line x1="110" y1="340" x2="370" y2="380" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="285" y1="340" x2="390" y2="380" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="340" x2="410" y2="380" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  <line x1="635" y1="340" x2="430" y2="380" stroke="black" stroke-width="1" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+  
+  <!-- Labels -->
+  <text x="90" y="270" fill="black" font-family="Arial" font-size="9">creates</text>
+  <text x="265" y="270" fill="black" font-family="Arial" font-size="9">creates</text>
+  <text x="440" y="270" fill="black" font-family="Arial" font-size="9">creates</text>
+  <text x="615" y="270" fill="black" font-family="Arial" font-size="9">creates</text>
+</svg>
