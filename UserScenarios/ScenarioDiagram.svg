@@ -1,43 +1,4 @@
-<!-- Enhanced Legend -->
-  <g transform="translate(600, 130)" filter="url(#dropshadow)">
-    <rect x="0" y="0" width="250" height="200" fill="white" stroke="#34495e" stroke-width="2" rx="15"/>
-    <rect x="0" y="0" width="250" height="40" fill="#34495e" rx="15"/>
-    <rect x="0" y="25" width="250" height="15" fill="#34495e"/>
-    
-    <text x="125" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="white">👥 User Types</text>
-    
-    <!-- Customer -->
-    <circle cx="30" cy="70" r="18" fill="white" stroke="#2196f3" stroke-width="2"/>
-    <circle cx="30" cy="70" r="12" fill="#2196f3"/>
-    <circle cx="27" cy="65" r="4" fill="white"/>
-    <path d="M 18 78 Q 27 72 36 78 L 36 82 L 18 82 Z" fill="white"/>
-    <text x="60" y="76" font-size="14" font-weight="bold" fill="#2196f3">Customer</text>
-    
-    <!-- Production Staff -->
-    <circle cx="30" cy="110" r="18" fill="white" stroke="#f44336" stroke-width="2"/>
-    <circle cx="30" cy="110" r="12" fill="#f44336"/>
-    <circle cx="27" cy="105" r="4" fill="white"/>
-    <path d="M 18 118 Q 27 112 36 118 L 36 122 L 18 122 Z" fill="white"/>
-    <rect x="22" y="97" width="16" height="4" fill="white" rx="2"/>
-    <text x="60" y="116" font-size="14" font-weight="bold" fill="#f44336">Production Staff</text>
-    
-    <!-- Quality Control -->
-    <circle cx="30" cy="150" r="18" fill="white" stroke="#03a9f4" stroke-width="2"/>
-    <circle cx="30" cy="150" r="12" fill="#03a9f4"/>
-    <circle cx="27" cy="145" r="4" fill="white"/>
-    <path d="M 18 158 Q 27 152 36 158 L 36 162 L 18 162 Z" fill="white"/>
-    <circle cx="45" cy="135" r="8" fill="#ffc107"/>
-    <text x="45" y="140" text-anchor="middle" font-size="8" font-weight="bold" fill="white">✓</text>
-    <text x="60" y="156" font-size="14" font-weight="bold" fill="#03a9f4">Quality Control</text>
-    
-    <!-- Manager -->
-    <circle cx="30" cy="190" r="18" fill="white" stroke="#ffeb3b" stroke-width="2"/>
-    <circle cx="30" cy="190" r="12" fill="#ffeb3b"/>
-    <circle cx="27" cy="185" r="4" fill="white"/>
-    <path d="M 18 198 Q 27 192 36 198 L 36 202 L 18 202 Z" fill="white"/>
-    <rect x="27" y="195" width="6" height="12" fill="#37474f" rx="1"/>
-    <text x="60" y="196" font-size="14" font-weight="bold" fill="#f57f17">Manager</text>
-  </g><svg width="900" height="1200" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="1300" xmlns="http://www.w3.org/2000/svg">
   <!-- Background gradient -->
   <defs>
     <linearGradient id="backgroundGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -51,7 +12,7 @@
     </filter>
   </defs>
   
-  <rect width="900" height="1200" fill="url(#backgroundGrad)"/>
+  <rect width="900" height="1300" fill="url(#backgroundGrad)"/>
   
   <!-- Header background -->
   <rect x="0" y="0" width="900" height="100" fill="#34495e" opacity="0.9"/>
@@ -66,7 +27,7 @@
   
   <!-- Scenario 1: Customer Ordering -->
   <g transform="translate(50, 130)" filter="url(#dropshadow)">
-    <!-- Speech bubble with gradient -->
+    <!-- Speech bubble -->
     <path d="M 30 20 Q 30 10 40 10 L 440 10 Q 450 10 450 20 L 450 85 Q 450 95 440 95 L 160 95 L 130 115 L 150 95 L 40 95 Q 30 95 30 85 Z" 
           fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
     
@@ -281,24 +242,44 @@
     </text>
   </g>
   
-  <!-- Legend (updated) -->
-  <g transform="translate(650, 120)">
-    <rect x="0" y="0" width="200" height="120" fill="white" stroke="#bdc3c7" stroke-width="1" rx="10"/>
-    <text x="100" y="20" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Legend</text>
+  <!-- Enhanced Legend -->
+  <g transform="translate(600, 130)" filter="url(#dropshadow)">
+    <rect x="0" y="0" width="250" height="200" fill="white" stroke="#34495e" stroke-width="2" rx="15"/>
+    <rect x="0" y="0" width="250" height="40" fill="#34495e" rx="15"/>
+    <rect x="0" y="25" width="250" height="15" fill="#34495e"/>
     
-    <circle cx="20" cy="40" r="10" fill="#3498db"/>
-    <text x="40" y="45" font-size="12" fill="#2c3e50">Customer</text>
+    <text x="125" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="white">👥 User Types</text>
     
-    <circle cx="20" cy="60" r="10" fill="#e74c3c"/>
-    <rect x="15" y="52" width="10" height="4" fill="white"/>
-    <text x="40" y="65" font-size="12" fill="#2c3e50">Staff Member</text>
+    <!-- Customer -->
+    <circle cx="30" cy="70" r="18" fill="white" stroke="#2196f3" stroke-width="2"/>
+    <circle cx="30" cy="70" r="12" fill="#2196f3"/>
+    <circle cx="27" cy="65" r="4" fill="white"/>
+    <path d="M 18 78 Q 27 72 36 78 L 36 82 L 18 82 Z" fill="white"/>
+    <text x="60" y="76" font-size="14" font-weight="bold" fill="#2196f3">Customer</text>
     
-    <circle cx="20" cy="80" r="10" fill="#f1c40f"/>
-    <rect x="18" y="75" width="2" height="8" fill="#2c3e50"/>
-    <text x="40" y="85" font-size="12" fill="#2c3e50">Manager</text>
+    <!-- Production Staff -->
+    <circle cx="30" cy="110" r="18" fill="white" stroke="#f44336" stroke-width="2"/>
+    <circle cx="30" cy="110" r="12" fill="#f44336"/>
+    <circle cx="27" cy="105" r="4" fill="white"/>
+    <path d="M 18 118 Q 27 112 36 118 L 36 122 L 18 122 Z" fill="white"/>
+    <rect x="22" y="97" width="16" height="4" fill="white" rx="2"/>
+    <text x="60" y="116" font-size="14" font-weight="bold" fill="#f44336">Production Staff</text>
     
-    <circle cx="20" cy="100" r="10" fill="#3498db"/>
-    <circle cx="28" cy="92" r="4" fill="#f1c40f"/>
-    <text x="40" y="105" font-size="12" fill="#2c3e50">Quality Control</text>
+    <!-- Quality Control -->
+    <circle cx="30" cy="150" r="18" fill="white" stroke="#03a9f4" stroke-width="2"/>
+    <circle cx="30" cy="150" r="12" fill="#03a9f4"/>
+    <circle cx="27" cy="145" r="4" fill="white"/>
+    <path d="M 18 158 Q 27 152 36 158 L 36 162 L 18 162 Z" fill="white"/>
+    <circle cx="45" cy="135" r="8" fill="#ffc107"/>
+    <text x="45" y="140" text-anchor="middle" font-size="8" font-weight="bold" fill="white">✓</text>
+    <text x="60" y="156" font-size="14" font-weight="bold" fill="#03a9f4">Quality Control</text>
+    
+    <!-- Manager -->
+    <circle cx="30" cy="190" r="18" fill="white" stroke="#ffeb3b" stroke-width="2"/>
+    <circle cx="30" cy="190" r="12" fill="#ffeb3b"/>
+    <circle cx="27" cy="185" r="4" fill="white"/>
+    <path d="M 18 198 Q 27 192 36 198 L 36 202 L 18 202 Z" fill="white"/>
+    <rect x="27" y="195" width="6" height="12" fill="#37474f" rx="1"/>
+    <text x="60" y="196" font-size="14" font-weight="bold" fill="#f57f17">Manager</text>
   </g>
 </svg>
