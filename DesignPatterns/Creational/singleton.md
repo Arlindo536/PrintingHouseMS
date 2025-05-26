@@ -144,6 +144,7 @@ classDiagram
     ConfigurationManager --> ConfigurationManager : instance
     PrintQueueManager --> PrintQueueManager : instance
     AuthenticationService --> AuthenticationService : instance
+```
 ## Real-World Benefits
 
 - **Operational Efficiency**: Single point of control for all printing operations
