@@ -1,0 +1,131 @@
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#2d3748"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold">Prototype Pattern - PrintingHouseMS Order Planning System</text>
+  
+  <!-- Prototype Registry -->
+  <g id="planning-registry">
+    <rect x="450" y="70" width="300" height="120" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="450" y="70" width="300" height="30" fill="#4a5568"/>
+    <text x="600" y="90" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">PlanningPrototypeRegistry</text>
+    <line x1="450" y1="100" x2="750" y2="100" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="120" fill="white" font-family="Arial" font-size="12">-prototypes: Map</text>
+    <line x1="450" y1="130" x2="750" y2="130" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="150" fill="white" font-family="Arial" font-size="12">+addPrototype(name, prototype): void</text>
+    <text x="460" y="165" fill="white" font-family="Arial" font-size="12">+getPrototype(name): PlanningPrototype</text>
+    <text x="460" y="180" fill="white" font-family="Arial" font-size="12">+removePrototype(name): void</text>
+  </g>
+  
+  <!-- Abstract Prototype -->
+  <g id="planning-prototype">
+    <rect x="450" y="240" width="300" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="450" y="240" width="300" height="30" fill="#4a5568"/>
+    <text x="600" y="258" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«interface»</text>
+    <text x="600" y="272" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">PlanningPrototype</text>
+    <line x1="450" y1="280" x2="750" y2="280" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="300" fill="white" font-family="Arial" font-size="12">+clone(): PlanningPrototype</text>
+    <text x="460" y="315" fill="white" font-family="Arial" font-size="12">+setPrototype(name): void</text>
+    <text x="460" y="330" fill="white" font-family="Arial" font-size="12">+getPrototype(name): void</text>
+  </g>
+  
+  <!-- Main Order Plan -->
+  <g id="order-plan">
+    <rect x="400" y="400" width="400" height="220" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="400" y="400" width="400" height="30" fill="#4a5568"/>
+    <text x="600" y="420" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">OrderPlan</text>
+    <line x1="400" y1="430" x2="800" y2="430" stroke="#4a5568" stroke-width="1"/>
+    <text x="410" y="450" fill="white" font-family="Arial" font-size="12">-planId: String</text>
+    <text x="410" y="465" fill="white" font-family="Arial" font-size="12">-customerId: String</text>
+    <text x="410" y="480" fill="white" font-family="Arial" font-size="12">-startPoint: String</text>
+    <text x="410" y="495" fill="white" font-family="Arial" font-size="12">-destination: String</text>
+    <text x="410" y="510" fill="white" font-family="Arial" font-size="12">-departureTime: DateTime</text>
+    <text x="410" y="525" fill="white" font-family="Arial" font-size="12">-arrivalTime: DateTime</text>
+    <text x="410" y="540" fill="white" font-family="Arial" font-size="12">-routeOptions: List&lt;RouteOption&gt;</text>
+    <line x1="400" y1="550" x2="800" y2="550" stroke="#4a5568" stroke-width="1"/>
+    <text x="410" y="570" fill="white" font-family="Arial" font-size="12">+clone(): PlanningPrototype</text>
+    <text x="410" y="585" fill="white" font-family="Arial" font-size="12">+calculateRoute(): void</text>
+    <text x="410" y="600" fill="white" font-family="Arial" font-size="12">+setRoute(): void</text>
+    <text x="410" y="615" fill="white" font-family="Arial" font-size="12">+selectRoute(): void</text>
+  </g>
+  
+  <!-- Concrete Prototypes -->
+  <g id="fastest-plan">
+    <rect x="50" y="700" width="200" height="140" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="50" y="700" width="200" height="30" fill="#4a5568"/>
+    <text x="150" y="720" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">FastestPlan</text>
+    <line x1="50" y1="730" x2="250" y2="730" stroke="#4a5568" stroke-width="1"/>
+    <text x="60" y="750" fill="white" font-family="Arial" font-size="12">-costOptimized: boolean</text>
+    <text x="60" y="765" fill="white" font-family="Arial" font-size="12">-timeOptimized: boolean</text>
+    <line x1="50" y1="775" x2="250" y2="775" stroke="#4a5568" stroke-width="1"/>
+    <text x="60" y="795" fill="white" font-family="Arial" font-size="12">+clone(): PlanningPrototype</text>
+    <text x="60" y="810" fill="white" font-family="Arial" font-size="12">+optimizeForSpeed(): void</text>
+    <text x="60" y="825" fill="white" font-family="Arial" font-size="12">+suggestAlternatives(): void</text>
+  </g>
+  
+  <g id="cheapest-plan">
+    <rect x="300" y="700" width="200" height="140" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="300" y="700" width="200" height="30" fill="#4a5568"/>
+    <text x="400" y="720" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">CheapestPlan</text>
+    <line x1="300" y1="730" x2="500" y2="730" stroke="#4a5568" stroke-width="1"/>
+    <text x="310" y="750" fill="white" font-family="Arial" font-size="12">-costOptimized: boolean</text>
+    <text x="310" y="765" fill="white" font-family="Arial" font-size="12">-accessibilityNeeded: boolean</text>
+    <line x1="300" y1="775" x2="500" y2="775" stroke="#4a5568" stroke-width="1"/>
+    <text x="310" y="795" fill="white" font-family="Arial" font-size="12">+clone(): PlanningPrototype</text>
+    <text x="310" y="810" fill="white" font-family="Arial" font-size="12">+optimizeForCost(): void</text>
+    <text x="310" y="825" fill="white" font-family="Arial" font-size="12">+suggestAlternatives(): void</text>
+  </g>
+  
+  <g id="accessible-plan">
+    <rect x="550" y="700" width="200" height="140" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="550" y="700" width="200" height="30" fill="#4a5568"/>
+    <text x="650" y="720" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">AccessiblePlan</text>
+    <line x1="550" y1="730" x2="750" y2="730" stroke="#4a5568" stroke-width="1"/>
+    <text x="560" y="750" fill="white" font-family="Arial" font-size="12">-assistanceNeeded: boolean</text>
+    <text x="560" y="765" fill="white" font-family="Arial" font-size="12">-accessibilityNeeded: boolean</text>
+    <line x1="550" y1="775" x2="750" y2="775" stroke="#4a5568" stroke-width="1"/>
+    <text x="560" y="795" fill="white" font-family="Arial" font-size="12">+clone(): PlanningPrototype</text>
+    <text x="560" y="810" fill="white" font-family="Arial" font-size="12">+ensureAccessibility(): void</text>
+    <text x="560" y="825" fill="white" font-family="Arial" font-size="12">+requestAssistance(): void</text>
+  </g>
+  
+  <g id="time-optimized-plan">
+    <rect x="800" y="700" width="200" height="140" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="800" y="700" width="200" height="30" fill="#4a5568"/>
+    <text x="900" y="720" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">TimeOptimizedPlan</text>
+    <line x1="800" y1="730" x2="1000" y2="730" stroke="#4a5568" stroke-width="1"/>
+    <text x="810" y="750" fill="white" font-family="Arial" font-size="12">-timeOptimized: boolean</text>
+    <text x="810" y="765" fill="white" font-family="Arial" font-size="12">-requestSkipAssistance: boolean</text>
+    <line x1="800" y1="775" x2="1000" y2="775" stroke="#4a5568" stroke-width="1"/>
+    <text x="810" y="795" fill="white" font-family="Arial" font-size="12">+clone(): PlanningPrototype</text>
+    <text x="810" y="810" fill="white" font-family="Arial" font-size="12">+optimizeForTime(): void</text>
+    <text x="810" y="825" fill="white" font-family="Arial" font-size="12">+skipAssistance(): void</text>
+  </g>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="white"/>
+    </marker>
+  </defs>
+  
+  <!-- Registry manages prototypes -->
+  <line x1="600" y1="190" x2="600" y2="240" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="620" y="220" fill="white" font-family="Arial" font-size="10">manages</text>
+  
+  <!-- Prototype implementation -->
+  <line x1="600" y1="340" x2="600" y2="400" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Concrete implementations -->
+  <line x1="150" y1="700" x2="500" y2="620" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="700" x2="550" y2="620" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="700" x2="650" y2="620" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="900" y1="700" x2="700" y2="620" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Clone relationships -->
+  <path d="M 150 700 Q 100 650 150 600 Q 200 550 300 500" stroke="white" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 400 700 Q 350 650 400 600 Q 450 550 500 500" stroke="white" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 650 700 Q 700 650 650 600 Q 600 550 600 500" stroke="white" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 900 700 Q 950 650 900 600 Q 850 550 700 500" stroke="white" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+</svg>
