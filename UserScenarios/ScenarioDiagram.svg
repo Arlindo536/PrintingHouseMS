@@ -1,0 +1,201 @@
+<svg width="900" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="1200" fill="#f5f7fa"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#2c3e50">
+    PrintingHouseMS User Scenarios
+  </text>
+  <text x="450" y="70" text-anchor="middle" font-size="16" fill="#7f8c8d">
+    Book Printing Management System - User Stories
+  </text>
+  
+  <!-- Scenario 1: Customer Ordering -->
+  <g transform="translate(50, 120)">
+    <!-- Speech bubble -->
+    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
+          fill="#a8d8ff" stroke="#3498db" stroke-width="2"/>
+    
+    <!-- Text -->
+    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
+      1- As a customer, I want to configure my book specifications
+    </text>
+    <text x="40" y="55" font-size="14" fill="#2c3e50">
+      (binding type, paper quality, dimensions) online so that I can
+    </text>
+    <text x="40" y="75" font-size="14" fill="#2c3e50">
+      get an instant price quote before placing my order.
+    </text>
+    
+    <!-- User icon -->
+    <circle cx="520" cy="60" r="30" fill="#3498db"/>
+    <circle cx="515" cy="52" r="8" fill="white"/>
+    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+  </g>
+  
+  <!-- Scenario 2: File Upload -->
+  <g transform="translate(50, 270)">
+    <!-- Speech bubble -->
+    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
+          fill="#b8e6b8" stroke="#27ae60" stroke-width="2"/>
+    
+    <!-- Text -->
+    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
+      2- As a customer, I want to upload my manuscript files
+    </text>
+    <text x="40" y="55" font-size="14" fill="#2c3e50">
+      (PDF, DOCX, InDesign) securely so that the printing house
+    </text>
+    <text x="40" y="75" font-size="14" fill="#2c3e50">
+      can access them for production without file corruption.
+    </text>
+    
+    <!-- User icon -->
+    <circle cx="520" cy="60" r="30" fill="#27ae60"/>
+    <circle cx="515" cy="52" r="8" fill="white"/>
+    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+  </g>
+  
+  <!-- Scenario 3: 3D Preview -->
+  <g transform="translate(50, 420)">
+    <!-- Speech bubble -->
+    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
+          fill="#f9ca9b" stroke="#f39c12" stroke-width="2"/>
+    
+    <!-- Text -->
+    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
+      3- As a customer, I want to see a 3D preview of my book
+    </text>
+    <text x="40" y="55" font-size="14" fill="#2c3e50">
+      with my selected cover and binding options so that I can
+    </text>
+    <text x="40" y="75" font-size="14" fill="#2c3e50">
+      visualize the final product before confirming my order.
+    </text>
+    
+    <!-- User icon -->
+    <circle cx="520" cy="60" r="30" fill="#f39c12"/>
+    <circle cx="515" cy="52" r="8" fill="white"/>
+    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+  </g>
+  
+  <!-- Scenario 4: Order Tracking -->
+  <g transform="translate(50, 570)">
+    <!-- Speech bubble -->
+    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
+          fill="#dda0dd" stroke="#9b59b6" stroke-width="2"/>
+    
+    <!-- Text -->
+    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
+      4- As a customer, I want to track my order status in real-time
+    </text>
+    <text x="40" y="55" font-size="14" fill="#2c3e50">
+      (received, in production, quality check, shipped) so that I know
+    </text>
+    <text x="40" y="75" font-size="14" fill="#2c3e50">
+      exactly when to expect my printed books.
+    </text>
+    
+    <!-- User icon -->
+    <circle cx="520" cy="60" r="30" fill="#9b59b6"/>
+    <circle cx="515" cy="52" r="8" fill="white"/>
+    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+  </g>
+  
+  <!-- Scenario 5: Staff Production Management -->
+  <g transform="translate(430, 720)">
+    <!-- Speech bubble (right-aligned) -->
+    <path d="M 420 20 Q 430 10 440 20 L 440 80 Q 440 90 430 90 L 320 90 L 350 110 L 330 90 L 20 90 Q 10 90 10 80 L 10 20 Q 10 10 20 10 L 420 10 Z" 
+          fill="#ffb3ba" stroke="#e74c3c" stroke-width="2"/>
+    
+    <!-- Text -->
+    <text x="30" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
+      5- As production staff, I want to update order status
+    </text>
+    <text x="30" y="55" font-size="14" fill="#2c3e50">
+      and add notes about production progress so that customers
+    </text>
+    <text x="30" y="75" font-size="14" fill="#2c3e50">
+      and managers stay informed about the workflow.
+    </text>
+    
+    <!-- Staff icon -->
+    <circle cx="30" cy="60" r="30" fill="#e74c3c"/>
+    <circle cx="35" cy="52" r="8" fill="white"/>
+    <path d="M 15 68 Q 30 60 45 68 L 45 80 L 15 80 Z" fill="white"/>
+    <!-- Staff hat -->
+    <rect x="20" y="40" width="20" height="8" fill="white"/>
+  </g>
+  
+  <!-- Scenario 6: Quality Control -->
+  <g transform="translate(430, 870)">
+    <!-- Speech bubble (right-aligned) -->
+    <path d="M 420 20 Q 430 10 440 20 L 440 80 Q 440 90 430 90 L 320 90 L 350 110 L 330 90 L 20 90 Q 10 90 10 80 L 10 20 Q 10 10 20 10 L 420 10 Z" 
+          fill="#87ceeb" stroke="#3498db" stroke-width="2"/>
+    
+    <!-- Text -->
+    <text x="30" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
+      6- As quality control staff, I want to upload sample photos
+    </text>
+    <text x="30" y="55" font-size="14" fill="#2c3e50">
+      and get customer approval before final production so that
+    </text>
+    <text x="30" y="75" font-size="14" fill="#2c3e50">
+      we ensure customer satisfaction with the final product.
+    </text>
+    
+    <!-- Staff icon -->
+    <circle cx="30" cy="60" r="30" fill="#3498db"/>
+    <circle cx="35" cy="52" r="8" fill="white"/>
+    <path d="M 15 68 Q 30 60 45 68 L 45 80 L 15 80 Z" fill="white"/>
+    <!-- Quality badge -->
+    <circle cx="50" cy="45" r="8" fill="#f1c40f"/>
+    <text x="50" y="49" text-anchor="middle" font-size="8" fill="white">✓</text>
+  </g>
+  
+  <!-- Scenario 7: Manager Reports -->
+  <g transform="translate(50, 1020)">
+    <!-- Speech bubble -->
+    <path d="M 20 20 Q 20 10 30 10 L 450 10 Q 460 10 460 20 L 460 80 Q 460 90 450 90 L 150 90 L 120 110 L 140 90 L 30 90 Q 20 90 20 80 Z" 
+          fill="#ffd700" stroke="#f1c40f" stroke-width="2"/>
+    
+    <!-- Text -->
+    <text x="40" y="35" font-size="14" font-weight="bold" fill="#2c3e50">
+      7- As a manager, I want to generate financial and production
+    </text>
+    <text x="40" y="55" font-size="14" fill="#2c3e50">
+      reports (daily, weekly, monthly) so that I can analyze business
+    </text>
+    <text x="40" y="75" font-size="14" fill="#2c3e50">
+      performance and make data-driven operational decisions.
+    </text>
+    
+    <!-- Manager icon -->
+    <circle cx="520" cy="60" r="30" fill="#f1c40f"/>
+    <circle cx="515" cy="52" r="8" fill="white"/>
+    <path d="M 500 68 Q 515 60 530 68 L 530 80 L 500 80 Z" fill="white"/>
+    <!-- Tie -->
+    <rect x="518" y="65" width="4" height="15" fill="#2c3e50"/>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(650, 120)">
+    <rect x="0" y="0" width="200" height="120" fill="white" stroke="#bdc3c7" stroke-width="1" rx="10"/>
+    <text x="100" y="20" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Legend</text>
+    
+    <circle cx="20" cy="40" r="10" fill="#3498db"/>
+    <text x="40" y="45" font-size="12" fill="#2c3e50">Customer</text>
+    
+    <circle cx="20" cy="60" r="10" fill="#e74c3c"/>
+    <rect x="15" y="52" width="10" height="4" fill="white"/>
+    <text x="40" y="65" font-size="12" fill="#2c3e50">Staff Member</text>
+    
+    <circle cx="20" cy="80" r="10" fill="#f1c40f"/>
+    <rect x="18" y="75" width="2" height="8" fill="#2c3e50"/>
+    <text x="40" y="85" font-size="12" fill="#2c3e50">Manager</text>
+    
+    <circle cx="20" cy="100" r="10" fill="#3498db"/>
+    <circle cx="28" cy="92" r="4" fill="#f1c40f"/>
+    <text x="40" y="105" font-size="12" fill="#2c3e50">Quality Control</text>
+  </g>
+</svg>
