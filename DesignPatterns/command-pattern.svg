@@ -1,0 +1,172 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .class-box {
+      fill: #2d3748;
+      stroke: #4a5568;
+      stroke-width: 2;
+    }
+    .interface-box {
+      fill: #1a202c;
+      stroke: #2d3748;
+      stroke-width: 2;
+      stroke-dasharray: 5,5;
+    }
+    .class-title {
+      fill: #e2e8f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-anchor: middle;
+    }
+    .class-method {
+      fill: #cbd5e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 11px;
+    }
+    .class-field {
+      fill: #a0aec0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 10px;
+    }
+    .arrow {
+      stroke: #4299e1;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .dashed-arrow {
+      stroke: #4299e1;
+      stroke-width: 2;
+      stroke-dasharray: 5,5;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+    .inheritance-arrow {
+      stroke: #48bb78;
+      stroke-width: 2;
+      fill: none;
+      marker-end: url(#triangle);
+    }
+  </style>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4299e1" />
+    </marker>
+    <marker id="triangle" markerWidth="12" markerHeight="10" refX="12" refY="5" orient="auto">
+      <polygon points="0 0, 12 5, 0 10" fill="none" stroke="#48bb78" stroke-width="2" />
+    </marker>
+  </defs>
+
+  <!-- PrintingHouseApp (Invoker) -->
+  <rect x="500" y="50" width="200" height="100" class="class-box" />
+  <text x="600" y="75" class="class-title">PrintingHouseApp</text>
+  <line x1="510" y1="85" x2="690" y2="85" stroke="#4a5568" stroke-width="1"/>
+  <text x="515" y="105" class="class-method">+executeCommand(Command)</text>
+  <text x="515" y="125" class="class-method">+undoLastCommand()</text>
+  <text x="515" y="145" class="class-method">+getCommandHistory()</text>
+
+  <!-- ICommand Interface -->
+  <rect x="500" y="220" width="200" height="80" class="interface-box" />
+  <text x="600" y="245" class="class-title">&lt;&lt;Interface&gt;&gt;</text>
+  <text x="600" y="265" class="class-title">ICommand</text>
+  <line x1="510" y1="275" x2="690" y2="275" stroke="#2d3748" stroke-width="1"/>
+  <text x="515" y="295" class="class-method">+execute()</text>
+
+  <!-- Concrete Commands -->
+  <!-- CreateOrderCommand -->
+  <rect x="50" y="380" width="220" height="120" class="class-box" />
+  <text x="160" y="405" class="class-title">CreateOrderCommand</text>
+  <line x1="60" y1="415" x2="260" y2="415" stroke="#4a5568" stroke-width="1"/>
+  <text x="65" y="435" class="class-field">-orderManager: OrderManager</text>
+  <text x="65" y="455" class="class-field">-orderDetails: OrderDetails</text>
+  <text x="65" y="475" class="class-field">-customerInfo: CustomerInfo</text>
+  <line x1="60" y1="485" x2="260" y2="485" stroke="#4a5568" stroke-width="1"/>
+  <text x="65" y="505" class="class-method">+execute()</text>
+
+  <!-- UpdateProductionCommand -->
+  <rect x="320" y="380" width="220" height="120" class="class-box" />
+  <text x="430" y="405" class="class-title">UpdateProductionCommand</text>
+  <line x1="330" y1="415" x2="530" y2="415" stroke="#4a5568" stroke-width="1"/>
+  <text x="335" y="435" class="class-field">-productionManager: ProductionManager</text>
+  <text x="335" y="455" class="class-field">-orderId: String</text>
+  <text x="335" y="475" class="class-field">-newStatus: ProductionStatus</text>
+  <line x1="330" y1="485" x2="530" y2="485" stroke="#4a5568" stroke-width="1"/>
+  <text x="335" y="505" class="class-method">+execute()</text>
+
+  <!-- GenerateReportCommand -->
+  <rect x="590" y="380" width="220" height="120" class="class-box" />
+  <text x="700" y="405" class="class-title">GenerateReportCommand</text>
+  <line x1="600" y1="415" x2="800" y2="415" stroke="#4a5568" stroke-width="1"/>
+  <text x="605" y="435" class="class-field">-reportManager: ReportManager</text>
+  <text x="605" y="455" class="class-field">-reportType: ReportType</text>
+  <text x="605" y="475" class="class-field">-dateRange: DateRange</text>
+  <line x1="600" y1="485" x2="800" y2="485" stroke="#4a5568" stroke-width="1"/>
+  <text x="605" y="505" class="class-method">+execute()</text>
+
+  <!-- NotifyCustomerCommand -->
+  <rect x="860" y="380" width="220" height="120" class="class-box" />
+  <text x="970" y="405" class="class-title">NotifyCustomerCommand</text>
+  <line x1="870" y1="415" x2="1070" y2="415" stroke="#4a5568" stroke-width="1"/>
+  <text x="875" y="435" class="class-field">-notificationService: NotificationService</text>
+  <text x="875" y="455" class="class-field">-customerId: String</text>
+  <text x="875" y="475" class="class-field">-message: String</text>
+  <line x1="870" y1="485" x2="1070" y2="485" stroke="#4a5568" stroke-width="1"/>
+  <text x="875" y="505" class="class-method">+execute()</text>
+
+  <!-- Receiver Classes -->
+  <!-- OrderManager -->
+  <rect x="50" y="580" width="180" height="100" class="class-box" />
+  <text x="140" y="605" class="class-title">OrderManager</text>
+  <line x1="60" y1="615" x2="220" y2="615" stroke="#4a5568" stroke-width="1"/>
+  <text x="65" y="635" class="class-method">+createOrder(OrderDetails)</text>
+  <text x="65" y="655" class="class-method">+updateOrder()</text>
+  <text x="65" y="675" class="class-method">+cancelOrder(orderId)</text>
+
+  <!-- ProductionManager -->
+  <rect x="280" y="580" width="200" height="100" class="class-box" />
+  <text x="380" y="605" class="class-title">ProductionManager</text>
+  <line x1="290" y1="615" x2="470" y2="615" stroke="#4a5568" stroke-width="1"/>
+  <text x="295" y="635" class="class-method">+updateProductionStatus()</text>
+  <text x="295" y="655" class="class-method">+scheduleProduction()</text>
+  <text x="295" y="675" class="class-method">+getProductionProgress()</text>
+
+  <!-- ReportManager -->
+  <rect x="530" y="580" width="180" height="100" class="class-box" />
+  <text x="620" y="605" class="class-title">ReportManager</text>
+  <line x1="540" y1="615" x2="700" y2="615" stroke="#4a5568" stroke-width="1"/>
+  <text x="545" y="635" class="class-method">+generateOrderReport()</text>
+  <text x="545" y="655" class="class-method">+generateProductionReport()</text>
+  <text x="545" y="675" class="class-method">+generateFinancialReport()</text>
+
+  <!-- NotificationService -->
+  <rect x="760" y="580" width="200" height="100" class="class-box" />
+  <text x="860" y="605" class="class-title">NotificationService</text>
+  <line x1="770" y1="615" x2="950" y2="615" stroke="#4a5568" stroke-width="1"/>
+  <text x="775" y="635" class="class-method">+sendEmailNotification()</text>
+  <text x="775" y="655" class="class-method">+sendSMSNotification()</text>
+  <text x="775" y="675" class="class-method">+logNotification()</text>
+
+  <!-- Arrows -->
+  <!-- App to ICommand -->
+  <line x1="600" y1="150" x2="600" y2="220" class="arrow" />
+  
+  <!-- ICommand to Concrete Commands -->
+  <line x1="500" y1="300" x2="160" y2="380" class="inheritance-arrow" />
+  <line x1="550" y1="300" x2="430" y2="380" class="inheritance-arrow" />
+  <line x1="650" y1="300" x2="700" y2="380" class="inheritance-arrow" />
+  <line x1="700" y1="300" x2="970" y2="380" class="inheritance-arrow" />
+  
+  <!-- Commands to Receivers -->
+  <line x1="160" y1="500" x2="140" y2="580" class="dashed-arrow" />
+  <line x1="430" y1="500" x2="380" y2="580" class="dashed-arrow" />
+  <line x1="700" y1="500" x2="620" y2="580" class="dashed-arrow" />
+  <line x1="970" y1="500" x2="860" y2="580" class="dashed-arrow" />
+
+  <!-- Labels for relationships -->
+  <text x="520" y="190" class="class-field">invokes</text>
+  <text x="350" y="340" class="class-field">implements</text>
+  <text x="270" y="540" class="class-field">uses</text>
+
+</svg>
