@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintingHouseMS Mediator Pattern</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            min-height: 100vh;
+            overflow-x: auto;
+        }
+
+        .diagram-container {
+            width: 1200px;
+            height: 800px;
+            position: relative;
+            margin: 0 auto;
+            background: #0f0f0f;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 40px;
+        }
+
+        .component-box {
+            position: absolute;
+            background: #1e1e1e;
+            border: 2px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .component-box:hover {
+            border-color: #666;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+            transform: translateY(-2px);
+        }
+
+        .component-title {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-align: center;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .component-content {
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .method {
+            color: #4ecdc4;
+            margin: 3px 0;
+            display: block;
+        }
+
+        .property {
+            color: #ffe66d;
+            margin: 3px 0;
+            display: block;
+        }
+
+        /* Mediator - Center */
+        .mediator {
+            top: 280px;
+            left: 420px;
+            width: 240px;
+            background: #2d1b3d;
+            border-color: #8b5cf6;
+        }
+
+        .mediator .component-title {
+            color: #c084fc;
+        }
+
+        /* Abstract Component - Top */
+        .abstract-component {
+            top: 80px;
+            left: 480px;
+            width: 200px;
+            background: #1e2d1b;
+            border-color: #10b981;
+        }
+
+        .abstract-component .component-title {
+            color: #34d399;
+        }
+
+        /* Concrete Components - Bottom Row */
+        .customer-portal {
+            top: 520px;
+            left: 80px;
+            width: 200px;
+            background: #2d1b1e;
+            border-color: #ef4444;
+        }
+
+        .customer-portal .component-title {
+            color: #f87171;
+        }
+
+        .order-manager {
+            top: 520px;
+            left: 320px;
+            width: 200px;
+            background: #1b2d2d;
+            border-color: #06b6d4;
+        }
+
+        .order-manager .component-title {
+            color: #67e8f9;
+        }
+
+        .production-tracker {
+            top: 520px;
+            left: 560px;
+            width: 200px;
+            background: #2d2d1b;
+            border-color: #eab308;
+        }
+
+        .production-tracker .component-title {
+            color: #facc15;
+        }
+
+        .staff-portal {
+            top: 520px;
+            left: 800px;
+            width: 200px;
+            background: #2d1b2d;
+            border-color: #a855f7;
+        }
+
+        .staff-portal .component-title {
+            color: #c084fc;
+        }
+
+        /* Connection Lines */
+        .connection-line {
+            position: absolute;
+            background: #555;
+            z-index: 1;
+        }
+
+        /* Vertical lines from mediator to components */
+        .line-to-customer {
+            width: 2px;
+            height: 80px;
+            top: 420px;
+            left: 180px;
+            transform: rotate(-45deg);
+            transform-origin: top;
+        }
+
+        .line-to-order {
+            width: 2px;
+            height: 60px;
+            top: 420px;
+            left: 420px;
+            transform: rotate(-15deg);
+            transform-origin: top;
+        }
+
+        .line-to-production {
+            width: 2px;
+            height: 60px;
+            top: 420px;
+            left: 660px;
+            transform: rotate(15deg);
+            transform-origin: top;
+        }
+
+        .line-to-staff {
+            width: 2px;
+            height: 80px;
+            top: 420px;
+            left: 900px;
+            transform: rotate(45deg);
+            transform-origin: top;
+        }
+
+        /* Line from abstract to mediator */
+        .line-abstract-mediator {
+            width: 2px;
+            height: 120px;
+            top: 160px;
+            left: 540px;
+        }
+
+        /* Curved connection lines */
+        .curved-line {
+            position: absolute;
+            border: 1px dashed #666;
+            border-radius: 50%;
+            background: transparent;
+            z-index: 0;
+        }
+
+        .main-circle {
+            width: 400px;
+            height: 300px;
+            top: 200px;
+            left: 340px;
+            border-width: 1px;
+        }
+
+        .outer-circle {
+            width: 600px;
+            height: 400px;
+            top: 150px;
+            left: 240px;
+            border-width: 1px;
+            opacity: 0.5;
+        }
+
+        .title {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #c084fc;
+            text-align: center;
+        }
+
+        .pattern-label {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 18px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram-container">
+        <div class="title">PrintingHouseMS - Mediator Pattern</div>
+        
+        <!-- Connection circles -->
+        <div class="curved-line main-circle"></div>
+        <div class="curved-line outer-circle"></div>
+        
+        <!-- Connection lines -->
+        <div class="connection-line line-abstract-mediator"></div>
+        <div class="connection-line line-to-customer"></div>
+        <div class="connection-line line-to-order"></div>
+        <div class="connection-line line-to-production"></div>
+        <div class="connection-line line-to-staff"></div>
+
+        <!-- Abstract Component -->
+        <div class="component-box abstract-component">
+            <div class="component-title"><<Abstract>><br>Component</div>
+            <div class="component-content">
+                <span class="property">-mediator: Mediator</span>
+                <span class="method">+notify(sender, event)</span>
+            </div>
+        </div>
+
+        <!-- Mediator -->
+        <div class="component-box mediator">
+            <div class="component-title"><<Concrete Mediator>><br>PrintingHouseMediator</div>
+            <div class="component-content">
+                <span class="property">-customerPortal: CustomerPortal</span>
+                <span class="property">-orderManager: OrderManager</span>
+                <span class="property">-productionTracker: ProductionTracker</span>
+                <span class="property">-staffPortal: StaffPortal</span>
+                <span class="method">+notify(sender, event)</span>
+                <span class="method">+processOrder()</span>
+                <span class="method">+updateProductionStatus()</span>
+                <span class="method">+sendNotifications()</span>
+            </div>
+        </div>
+
+        <!-- Concrete Components -->
+        <div class="component-box customer-portal">
+            <div class="component-title">CustomerPortal</div>
+            <div class="component-content">
+                <span class="property">-mediator: Mediator</span>
+                <span class="method">+placeOrder(orderData)</span>
+                <span class="method">+trackOrder()</span>
+                <span class="method">+requestQuote()</span>
+                <span class="method">+viewOrderHistory()</span>
+            </div>
+        </div>
+
+        <div class="component-box order-manager">
+            <div class="component-title">OrderManager</div>
+            <div class="component-content">
+                <span class="property">-mediator: Mediator</span>
+                <span class="method">+processOrder(order)</span>
+                <span class="method">+validateOrder()</span>
+                <span class="method">+calculatePricing()</span>
+                <span class="method">+scheduleProduction()</span>
+            </div>
+        </div>
+
+        <div class="component-box production-tracker">
+            <div class="component-title">ProductionTracker</div>
+            <div class="component-content">
+                <span class="property">-mediator: Mediator</span>
+                <span class="method">+updateStatus(orderId)</span>
+                <span class="method">+trackProgress()</span>
+                <span class="method">+manageWorkflow()</span>
+                <span class="method">+generateReports()</span>
+            </div>
+        </div>
+
+        <div class="component-box staff-portal">
+            <div class="component-title">StaffPortal</div>
+            <div class="component-content">
+                <span class="property">-mediator: Mediator</span>
+                <span class="method">+manageOrders()</span>
+                <span class="method">+assignTasks()</span>
+                <span class="method">+viewDashboard()</span>
+                <span class="method">+generateInvoices()</span>
+            </div>
+        </div>
+
+        <div class="pattern-label">Mediator Pattern Structure</div>
+    </div>
+</body>
+</html>
