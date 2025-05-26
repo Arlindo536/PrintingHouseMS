@@ -1,0 +1,115 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#2d3748"/>
+  
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold">Prototype Pattern - PrintingHouseMS Production Workflow System</text>
+  
+  <!-- Prototype Registry -->
+  <g id="workflow-registry">
+    <rect x="450" y="70" width="300" height="120" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="450" y="70" width="300" height="30" fill="#4a5568"/>
+    <text x="600" y="90" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">WorkflowPrototypeRegistry</text>
+    <line x1="450" y1="100" x2="750" y2="100" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="120" fill="white" font-family="Arial" font-size="12">-prototypes: Map</text>
+    <line x1="450" y1="130" x2="750" y2="130" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="150" fill="white" font-family="Arial" font-size="12">+addPrototype(name, prototype): void</text>
+    <text x="460" y="165" fill="white" font-family="Arial" font-size="12">+getPrototype(name): WorkflowPrototype</text>
+    <text x="460" y="180" fill="white" font-family="Arial" font-size="12">+removePrototype(name): void</text>
+  </g>
+  
+  <!-- Abstract Prototype -->
+  <g id="workflow-prototype">
+    <rect x="450" y="240" width="300" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="450" y="240" width="300" height="30" fill="#4a5568"/>
+    <text x="600" y="258" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«interface»</text>
+    <text x="600" y="272" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">WorkflowPrototype</text>
+    <line x1="450" y1="280" x2="750" y2="280" stroke="#4a5568" stroke-width="1"/>
+    <text x="460" y="300" fill="white" font-family="Arial" font-size="12">+clone(): WorkflowPrototype</text>
+    <text x="460" y="315" fill="white" font-family="Arial" font-size="12">+customize(order): void</text>
+    <text x="460" y="330" fill="white" font-family="Arial" font-size="12">+execute(): void</text>
+  </g>
+  
+  <!-- Concrete Workflow Template -->
+  <g id="workflow-template">
+    <rect x="400" y="400" width="400" height="200" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="400" y="400" width="400" height="30" fill="#4a5568"/>
+    <text x="600" y="420" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">ProductionWorkflow</text>
+    <line x1="400" y1="430" x2="800" y2="430" stroke="#4a5568" stroke-width="1"/>
+    <text x="410" y="450" fill="white" font-family="Arial" font-size="12">-workflowId: String</text>
+    <text x="410" y="465" fill="white" font-family="Arial" font-size="12">-stages: List&lt;ProductionStage&gt;</text>
+    <text x="410" y="480" fill="white" font-family="Arial" font-size="12">-timeline: Duration</text>
+    <text x="410" y="495" fill="white" font-family="Arial" font-size="12">-resources: List&lt;Resource&gt;</text>
+    <text x="410" y="510" fill="white" font-family="Arial" font-size="12">-qualityChecks: List&lt;QualityCheck&gt;</text>
+    <text x="410" y="525" fill="white" font-family="Arial" font-size="12">-priority: Priority</text>
+    <text x="410" y="540" fill="white" font-family="Arial" font-size="12">-status: WorkflowStatus</text>
+    <line x1="400" y1="550" x2="800" y2="550" stroke="#4a5568" stroke-width="1"/>
+    <text x="410" y="570" fill="white" font-family="Arial" font-size="12">+clone(): WorkflowPrototype</text>
+    <text x="410" y="585" fill="white" font-family="Arial" font-size="12">+customize(order): void</text>
+  </g>
+  
+  <!-- Concrete Prototypes -->
+  <g id="standard-workflow">
+    <rect x="50" y="650" width="200" height="120" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="50" y="650" width="200" height="30" fill="#4a5568"/>
+    <text x="150" y="670" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">StandardWorkflow</text>
+    <line x1="50" y1="680" x2="250" y2="680" stroke="#4a5568" stroke-width="1"/>
+    <text x="60" y="700" fill="white" font-family="Arial" font-size="12">+clone(): WorkflowPrototype</text>
+    <text x="60" y="715" fill="white" font-family="Arial" font-size="12">+setStandardStages(): void</text>
+    <text x="60" y="730" fill="white" font-family="Arial" font-size="12">+assignRegularStaff(): void</text>
+    <text x="60" y="745" fill="white" font-family="Arial" font-size="12">+execute(): void</text>
+  </g>
+  
+  <g id="rush-workflow">
+    <rect x="300" y="650" width="200" height="120" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="300" y="650" width="200" height="30" fill="#4a5568"/>
+    <text x="400" y="670" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">RushWorkflow</text>
+    <line x1="300" y1="680" x2="500" y2="680" stroke="#4a5568" stroke-width="1"/>
+    <text x="310" y="700" fill="white" font-family="Arial" font-size="12">+clone(): WorkflowPrototype</text>
+    <text x="310" y="715" fill="white" font-family="Arial" font-size="12">+setParallelStages(): void</text>
+    <text x="310" y="730" fill="white" font-family="Arial" font-size="12">+assignPriorityStaff(): void</text>
+    <text x="310" y="745" fill="white" font-family="Arial" font-size="12">+execute(): void</text>
+  </g>
+  
+  <g id="quality-workflow">
+    <rect x="550" y="650" width="200" height="120" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="550" y="650" width="200" height="30" fill="#4a5568"/>
+    <text x="650" y="670" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">QualityWorkflow</text>
+    <line x1="550" y1="680" x2="750" y2="680" stroke="#4a5568" stroke-width="1"/>
+    <text x="560" y="700" fill="white" font-family="Arial" font-size="12">+clone(): WorkflowPrototype</text>
+    <text x="560" y="715" fill="white" font-family="Arial" font-size="12">+addQualityStages(): void</text>
+    <text x="560" y="730" fill="white" font-family="Arial" font-size="12">+assignQualityExperts(): void</text>
+    <text x="560" y="745" fill="white" font-family="Arial" font-size="12">+execute(): void</text>
+  </g>
+  
+  <g id="bulk-workflow">
+    <rect x="800" y="650" width="200" height="120" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="800" y="650" width="200" height="30" fill="#4a5568"/>
+    <text x="900" y="670" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">BulkOrderWorkflow</text>
+    <line x1="800" y1="680" x2="1000" y2="680" stroke="#4a5568" stroke-width="1"/>
+    <text x="810" y="700" fill="white" font-family="Arial" font-size="12">+clone(): WorkflowPrototype</text>
+    <text x="810" y="715" fill="white" font-family="Arial" font-size="12">+setBatchStages(): void</text>
+    <text x="810" y="730" fill="white" font-family="Arial" font-size="12">+optimizeForVolume(): void</text>
+    <text x="810" y="745" fill="white" font-family="Arial" font-size="12">+execute(): void</text>
+  </g>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="white"/>
+    </marker>
+  </defs>
+  
+  <!-- Registry manages prototypes -->
+  <line x1="600" y1="190" x2="600" y2="240" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="620" y="220" fill="white" font-family="Arial" font-size="10">manages</text>
+  
+  <!-- Prototype implementation -->
+  <line x1="600" y1="340" x2="600" y2="400" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Concrete implementations -->
+  <line x1="150" y1="650" x2="500" y2="600" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="650" x2="550" y2="600" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="650" x2="650" y2="600" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="900" y1="650" x2="700" y2="600" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+</svg>
