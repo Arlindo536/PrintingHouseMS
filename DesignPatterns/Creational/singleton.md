@@ -12,18 +12,46 @@ The Singleton Pattern restricts the instantiation of a class to a single instanc
 
 ## Implementation in PrintingHouseMS
 
-### Structure
+```mermaid
+classDiagram
+    class ConfigurationManager {
+        -instance: ConfigurationManager
+        -printerSettings: Map
+        -paperTypes: List
+        -bindingOptions: List
+        -pricingRules: Map
+        -ConfigurationManager()
+        +getInstance(): ConfigurationManager
+    }
 
-#### ConfigurationManager
-ConfigurationManager ├─ -instance: ConfigurationManager (static) ├─ -printerSettings: Map ├─ -paperTypes: List ├─ -bindingOptions: List ├─ -pricingRules: Map ├─ -ConfigurationManager() (private constructor) └─ +getInstance(): ConfigurationManager (static)
+    class PrintQueueManager {
+        -instance: PrintQueueManager
+        -activeJobs: Queue
+        -printerRegistry: Map
+        -queueStatus: Status
+        -PrintQueueManager()
+        +getInstance(): PrintQueueManager
+    }
 
+    class AuthenticationService {
+        -instance: AuthenticationService
+        -userSession: Session
+        -tokenManager: TokenManager
+        -securityPolicies: Map
+        -AuthenticationService()
+        +getInstance(): AuthenticationService
+    }
 
-#### PrintQueueManager
-PrintQueueManager ├─ -instance: PrintQueueManager (static) ├─ -activeJobs: Queue ├─ -printerRegistry: Map ├─ -queueStatus: Status ├─ -PrintQueueManager() (private constructor) └─ +getInstance(): PrintQueueManager (static)
+    class PrintingHouseMS {
+        +processOrder(): void
+        +manageQueue(): void
+        +authenticateUser(): void
+    }
 
-
-#### AuthenticationService
-AuthenticationService ├─ -instance: AuthenticationService (static) ├─ -userSession: Session ├─ -tokenManager: TokenManager ├─ -securityPolicies: Map ├─ -AuthenticationService() (private constructor) └─ +getInstance(): AuthenticationService (static)
+    PrintingHouseMS ..> ConfigurationManager : uses
+    PrintingHouseMS ..> PrintQueueManager : uses
+    PrintingHouseMS ..> AuthenticationService : uses
+```
 
 
 ### Key Components
