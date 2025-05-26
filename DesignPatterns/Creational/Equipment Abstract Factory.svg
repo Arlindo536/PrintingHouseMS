@@ -1,0 +1,125 @@
+<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="800" fill="#2d3748"/>
+  
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" fill="white" font-family="Arial" font-size="18" font-weight="bold">Abstract Factory Pattern - PrintingHouseMS Equipment Factory</text>
+  
+  <!-- Client -->
+  <g id="client">
+    <rect x="400" y="70" width="200" height="80" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="400" y="70" width="200" height="30" fill="#4a5568"/>
+    <text x="500" y="90" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">Client</text>
+    <line x1="400" y1="100" x2="600" y2="100" stroke="#4a5568" stroke-width="1"/>
+    <text x="410" y="120" fill="white" font-family="Arial" font-size="12">-factory: AbstractFactory</text>
+    <line x1="400" y1="130" x2="600" y2="130" stroke="#4a5568" stroke-width="1"/>
+    <text x="410" y="145" fill="white" font-family="Arial" font-size="12">+useProducts(): void</text>
+  </g>
+  
+  <!-- Abstract Factory -->
+  <g id="abstract-factory">
+    <rect x="350" y="220" width="300" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="350" y="220" width="300" height="30" fill="#4a5568"/>
+    <text x="500" y="238" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«interface»</text>
+    <text x="500" y="252" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">AbstractFactory</text>
+    <line x1="350" y1="260" x2="650" y2="260" stroke="#4a5568" stroke-width="1"/>
+    <text x="360" y="280" fill="white" font-family="Arial" font-size="12">+createPrinter(): Printer</text>
+    <text x="360" y="295" fill="white" font-family="Arial" font-size="12">+createBinder(): Binder</text>
+    <text x="360" y="310" fill="white" font-family="Arial" font-size="12">+createCutter(): Cutter</text>
+  </g>
+  
+  <!-- Concrete Factory -->
+  <g id="digital-factory">
+    <rect x="350" y="380" width="300" height="100" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="350" y="380" width="300" height="30" fill="#4a5568"/>
+    <text x="500" y="400" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">DigitalPrintingFactory</text>
+    <line x1="350" y1="410" x2="650" y2="410" stroke="#4a5568" stroke-width="1"/>
+    <text x="360" y="430" fill="white" font-family="Arial" font-size="12">+createPrinter(): DigitalPrinter</text>
+    <text x="360" y="445" fill="white" font-family="Arial" font-size="12">+createBinder(): AutoBinder</text>
+    <text x="360" y="460" fill="white" font-family="Arial" font-size="12">+createCutter(): LaserCutter</text>
+  </g>
+  
+  <!-- Products -->
+  <g id="digital-printer">
+    <rect x="100" y="550" width="180" height="80" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="100" y="550" width="180" height="30" fill="#4a5568"/>
+    <text x="190" y="570" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">DigitalPrinter</text>
+    <line x1="100" y1="580" x2="280" y2="580" stroke="#4a5568" stroke-width="1"/>
+    <text x="110" y="600" fill="white" font-family="Arial" font-size="12">+print(): void</text>
+    <text x="110" y="615" fill="white" font-family="Arial" font-size="12">+setQuality(): void</text>
+  </g>
+  
+  <g id="auto-binder">
+    <rect x="320" y="550" width="180" height="80" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="320" y="550" width="180" height="30" fill="#4a5568"/>
+    <text x="410" y="570" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">AutoBinder</text>
+    <line x1="320" y1="580" x2="500" y2="580" stroke="#4a5568" stroke-width="1"/>
+    <text x="330" y="600" fill="white" font-family="Arial" font-size="12">+bind(): void</text>
+    <text x="330" y="615" fill="white" font-family="Arial" font-size="12">+setBindingType(): void</text>
+  </g>
+  
+  <g id="laser-cutter">
+    <rect x="540" y="550" width="180" height="80" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="540" y="550" width="180" height="30" fill="#4a5568"/>
+    <text x="630" y="570" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">LaserCutter</text>
+    <line x1="540" y1="580" x2="720" y2="580" stroke="#4a5568" stroke-width="1"/>
+    <text x="550" y="600" fill="white" font-family="Arial" font-size="12">+cut(): void</text>
+    <text x="550" y="615" fill="white" font-family="Arial" font-size="12">+setPrecision(): void</text>
+  </g>
+  
+  <!-- Abstract Products -->
+  <g id="printer-interface">
+    <rect x="100" y="680" width="180" height="60" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="100" y="680" width="180" height="30" fill="#4a5568"/>
+    <text x="190" y="698" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«interface»</text>
+    <text x="190" y="712" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">Printer</text>
+    <line x1="100" y1="720" x2="280" y2="720" stroke="#4a5568" stroke-width="1"/>
+    <text x="110" y="735" fill="white" font-family="Arial" font-size="12">+print(): void</text>
+  </g>
+  
+  <g id="binder-interface">
+    <rect x="320" y="680" width="180" height="60" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="320" y="680" width="180" height="30" fill="#4a5568"/>
+    <text x="410" y="698" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«interface»</text>
+    <text x="410" y="712" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">Binder</text>
+    <line x1="320" y1="720" x2="500" y2="720" stroke="#4a5568" stroke-width="1"/>
+    <text x="330" y="735" fill="white" font-family="Arial" font-size="12">+bind(): void</text>
+  </g>
+  
+  <g id="cutter-interface">
+    <rect x="540" y="680" width="180" height="60" fill="none" stroke="#4a5568" stroke-width="2"/>
+    <rect x="540" y="680" width="180" height="30" fill="#4a5568"/>
+    <text x="630" y="698" text-anchor="middle" fill="white" font-family="Arial" font-size="12">«interface»</text>
+    <text x="630" y="712" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">Cutter</text>
+    <line x1="540" y1="720" x2="720" y2="720" stroke="#4a5568" stroke-width="1"/>
+    <text x="550" y="735" fill="white" font-family="Arial" font-size="12">+cut(): void</text>
+  </g>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="white"/>
+    </marker>
+  </defs>
+  
+  <!-- Client uses factory -->
+  <line x1="500" y1="150" x2="500" y2="220" stroke="white" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Factory inheritance -->
+  <line x1="500" y1="380" x2="500" y2="320" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Creates relationships -->
+  <line x1="400" y1="480" x2="190" y2="550" stroke="white" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="480" x2="410" y2="550" stroke="white" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+  <line x1="550" y1="480" x2="630" y2="550" stroke="white" stroke-width="2" stroke-dasharray="3,3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Product inheritance -->
+  <line x1="190" y1="630" x2="190" y2="680" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="410" y1="630" x2="410" y2="680" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <line x1="630" y1="630" x2="630" y2="680" stroke="white" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  
+  <!-- Labels -->
+  <text x="200" y="520" text-anchor="middle" fill="white" font-family="Arial" font-size="10">creates</text>
+  <text x="420" y="520" text-anchor="middle" fill="white" font-family="Arial" font-size="10">creates</text>
+  <text x="640" y="520" text-anchor="middle" fill="white" font-family="Arial" font-size="10">creates</text>
+</svg>
