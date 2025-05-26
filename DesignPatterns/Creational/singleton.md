@@ -10,49 +10,6 @@ The Singleton Pattern restricts the instantiation of a class to a single instanc
 - **System Coordination**: Centralizes management of shared resources like print queues and configurations
 - **Print Job Coordination**: Prevents conflicts in printer assignments and job scheduling
 
-## Implementation in PrintingHouseMS
-
-```mermaid
-classDiagram
-    class ConfigurationManager {
-        -instance: ConfigurationManager
-        -printerSettings: Map
-        -paperTypes: List
-        -bindingOptions: List
-        -pricingRules: Map
-        -ConfigurationManager()
-        +getInstance(): ConfigurationManager
-    }
-
-    class PrintQueueManager {
-        -instance: PrintQueueManager
-        -activeJobs: Queue
-        -printerRegistry: Map
-        -queueStatus: Status
-        -PrintQueueManager()
-        +getInstance(): PrintQueueManager
-    }
-
-    class AuthenticationService {
-        -instance: AuthenticationService
-        -userSession: Session
-        -tokenManager: TokenManager
-        -securityPolicies: Map
-        -AuthenticationService()
-        +getInstance(): AuthenticationService
-    }
-
-    class PrintingHouseMS {
-        +processOrder(): void
-        +manageQueue(): void
-        +authenticateUser(): void
-    }
-
-    PrintingHouseMS ..> ConfigurationManager : uses
-    PrintingHouseMS ..> PrintQueueManager : uses
-    PrintingHouseMS ..> AuthenticationService : uses
-```
-
 
 ### Key Components
 
@@ -149,20 +106,33 @@ classDiagram
     
     class ConfigurationManager {
         -instance ConfigurationManager
+        -printerSettings Map
+        -paperTypes List
+        -bindingOptions List
+        -pricingRules Map
         -ConfigurationManager()
         +getInstance() ConfigurationManager
+        <<Thread-Safe>>
     }
     
     class PrintQueueManager {
         -instance PrintQueueManager
+        -activeJobs Queue
+        -printerRegistry Map
+        -queueStatus Status
         -PrintQueueManager()
         +getInstance() PrintQueueManager
+        <<Thread-Safe>>
     }
     
     class AuthenticationService {
         -instance AuthenticationService
+        -userSession Session
+        -tokenManager TokenManager
+        -securityPolicies Map
         -AuthenticationService()
         +getInstance() AuthenticationService
+        <<Thread-Safe>>
     }
     
     PrintingHouseMS ..> ConfigurationManager : uses
