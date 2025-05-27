@@ -1,0 +1,55 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f9f9f9"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-family="Arial" font-weight="bold">🧱 MVC Architecture Implementation</text>
+
+  <!-- Model Box -->
+  <rect x="50" y="120" width="200" height="300" fill="#e0f7fa" stroke="#00796b" stroke-width="2" rx="10"/>
+  <text x="150" y="145" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold" fill="#00796b">Model</text>
+  <text x="150" y="175" text-anchor="middle" font-size="12" font-family="Arial">BookModel</text>
+  <text x="150" y="195" text-anchor="middle" font-size="12" font-family="Arial">OrderModel</text>
+  <text x="150" y="215" text-anchor="middle" font-size="12" font-family="Arial">CustomerModel</text>
+  <text x="150" y="255" text-anchor="middle" font-size="11" font-family="Arial">• Business Logic</text>
+  <text x="150" y="275" text-anchor="middle" font-size="11" font-family="Arial">• Data Persistence</text>
+  <text x="150" y="295" text-anchor="middle" font-size="11" font-family="Arial">• Validation</text>
+
+  <!-- View Box -->
+  <rect x="300" y="120" width="200" height="300" fill="#fff3e0" stroke="#ef6c00" stroke-width="2" rx="10"/>
+  <text x="400" y="145" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold" fill="#ef6c00">View</text>
+  <text x="400" y="175" text-anchor="middle" font-size="12" font-family="Arial">CustomerPortalViews</text>
+  <text x="400" y="195" text-anchor="middle" font-size="12" font-family="Arial">StaffPortalViews</text>
+  <text x="400" y="235" text-anchor="middle" font-size="11" font-family="Arial">• UI Rendering</text>
+  <text x="400" y="255" text-anchor="middle" font-size="11" font-family="Arial">• Data Display</text>
+  <text x="400" y="275" text-anchor="middle" font-size="11" font-family="Arial">• Input Capture</text>
+
+  <!-- Controller Box -->
+  <rect x="550" y="120" width="200" height="300" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="10"/>
+  <text x="650" y="145" text-anchor="middle" font-size="16" font-family="Arial" font-weight="bold" fill="#2e7d32">Controller</text>
+  <text x="650" y="175" text-anchor="middle" font-size="12" font-family="Arial">OrderController</text>
+  <text x="650" y="195" text-anchor="middle" font-size="12" font-family="Arial">BookConfigController</text>
+  <text x="650" y="215" text-anchor="middle" font-size="12" font-family="Arial">PaymentController</text>
+  <text x="650" y="255" text-anchor="middle" font-size="11" font-family="Arial">• Handle Requests</text>
+  <text x="650" y="275" text-anchor="middle" font-size="11" font-family="Arial">• Update Models</text>
+  <text x="650" y="295" text-anchor="middle" font-size="11" font-family="Arial">• Choose Views</text>
+
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- View → Controller -->
+  <line x1="500" y1="270" x2="550" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="525" y="260" text-anchor="middle" font-size="11" font-family="Arial">Action</text>
+
+  <!-- Controller → Model -->
+  <line x1="550" y1="370" x2="250" y2="370" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="400" y="360" text-anchor="middle" font-size="11" font-family="Arial">Update</text>
+
+  <!-- Model → View -->
+  <line x1="250" y1="420" x2="300" y2="420" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="275" y="410" text-anchor="middle" font-size="11" font-family="Arial">Data</text>
+</svg>
